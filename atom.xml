@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>코딩알짜북</title>
   
-  <subtitle>내눈높이에서적은블로그</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-01-05T15:23:27.194Z</updated>
+  <updated>2020-01-06T17:44:21.870Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -17,21 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>github-page-and-hexo</title>
-    <link href="https://newtype94.github.io/2020/01/05/test-page/"/>
-    <id>https://newtype94.github.io/2020/01/05/test-page/</id>
-    <published>2020-01-05T14:27:16.000Z</published>
-    <updated>2020-01-05T15:23:27.194Z</updated>
+    <title>ubuntu</title>
+    <link href="https://newtype94.github.io/2020/01/07/ubuntu/"/>
+    <id>https://newtype94.github.io/2020/01/07/ubuntu/</id>
+    <published>2020-01-06T17:28:05.000Z</published>
+    <updated>2020-01-06T17:44:21.870Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="찾기"><a href="#찾기" class="headerlink" title="찾기"></a>찾기</h1><h2 id="find-경로-옵션-파일명"><a href="#find-경로-옵션-파일명" class="headerlink" title="find [경로] [옵션] [파일명]"></a>find [경로] [옵션] [파일명]</h2><p>“ * = any string “ 이라는 점을 활용</p><ul><li>find / -name ‘*.png’<ul><li>최상위 디렉토리, (root)에서 부터 검색을 해서 확장자가 png로 끝나는 모든 파일을 찾는다.</li></ul></li><li>find / -name ‘afreeca*’ <ul><li>afreeca로 시작하는 모든 파일을 찾는다.</li></ul></li><li>find / -name ‘1676075537’<ul><li>이름이 ‘1676075537’인 모든 파일을 찾는다.</li></ul></li><li>find -name ‘fileName’<ul><li>경로를 생략하고 명령어를 입력하면 해당 디렉토리에서부터 그 하위 디렉토리까지 찾는다.</li></ul></li></ul><hr><h1 id="삭제"><a href="#삭제" class="headerlink" title="삭제"></a>삭제</h1><h2 id="rm-option-folderName"><a href="#rm-option-folderName" class="headerlink" title="rm [option] [folderName]"></a>rm [option] [folderName]</h2><p>옵션은 아래 세가지를 이어붙여서 사용</p><ol><li>r : 파일 디렉토리 함께 삭제하기</li><li>f : 파일 유무와 상관없이 삭제하기</li><li>v : 어떻게 완료되었는지 설명하기</li></ol><hr><h1 id="방화벽"><a href="#방화벽" class="headerlink" title="방화벽"></a>방화벽</h1><h3 id="방화벽-룰-설정파일"><a href="#방화벽-룰-설정파일" class="headerlink" title="방화벽 룰 설정파일"></a>방화벽 룰 설정파일</h3><pre><code>/etc/iptables/rules.v4</code></pre><h3 id="방화벽-룰-저장"><a href="#방화벽-룰-저장" class="headerlink" title="방화벽 룰 저장"></a>방화벽 룰 저장</h3><pre><code>netfilter-persistent save</code></pre><h3 id="설정-완료-후-재시작"><a href="#설정-완료-후-재시작" class="headerlink" title="설정 완료 후 재시작"></a>설정 완료 후 재시작</h3><pre><code>netfilter-persistent reload</code></pre><h3 id="리눅스에서-현재-열려-있는-포트를-확인하는-방법"><a href="#리눅스에서-현재-열려-있는-포트를-확인하는-방법" class="headerlink" title="리눅스에서 현재 열려 있는 포트를 확인하는 방법"></a>리눅스에서 현재 열려 있는 포트를 확인하는 방법</h3><pre><code>열려 있는 모든 포트를 표시하기 : netstat -nap</code></pre><ul><li>n:host명으로 표시 안함</li><li>a:모든소켓 표시</li><li>p:프로세스ID와 프로그램명 표시</li></ul><h3 id="LISTEN중인-포트를-표시하기"><a href="#LISTEN중인-포트를-표시하기" class="headerlink" title="LISTEN중인 포트를 표시하기"></a>LISTEN중인 포트를 표시하기</h3><pre><code>netstat -nap | grep LISTEN)</code></pre><h3 id="상대방-포트가-열려-있는지를-확인하는-방법-netcat-nc"><a href="#상대방-포트가-열려-있는지를-확인하는-방법-netcat-nc" class="headerlink" title="상대방 포트가 열려 있는지를 확인하는 방법 : netcat(nc)"></a>상대방 포트가 열려 있는지를 확인하는 방법 : netcat(nc)</h3><pre><code>nc -z 호스트주소 포트- ex) nc -z www.google.com 80</code></pre><ul><li>z: 포트 검색</li></ul><h3 id="상대의-포트-범위를-지정하여-열린-포트를-확인하기"><a href="#상대의-포트-범위를-지정하여-열린-포트를-확인하기" class="headerlink" title="상대의 포트 범위를 지정하여 열린 포트를 확인하기"></a>상대의 포트 범위를 지정하여 열린 포트를 확인하기</h3><pre><code>nc 호스트주소 -z 시작포트-끝포트ex) nc 10.20.30.40 -z 19-21</code></pre><h3 id="포트를-열기"><a href="#포트를-열기" class="headerlink" title="포트를 열기"></a>포트를 열기</h3><h4 id="포트가-LISTEN중이다-상대방-호스트에서-포트가-열려있지-않다고-나온다-gt-호스트의-포트가-막혀-있다"><a href="#포트가-LISTEN중이다-상대방-호스트에서-포트가-열려있지-않다고-나온다-gt-호스트의-포트가-막혀-있다" class="headerlink" title="포트가 LISTEN중이다 + 상대방 호스트에서 포트가 열려있지 않다고 나온다 =&gt; 호스트의 포트가 막혀 있다."></a>포트가 LISTEN중이다 + 상대방 호스트에서 포트가 열려있지 않다고 나온다 =&gt; 호스트의 포트가 막혀 있다.</h4><pre><code>iptables -I INPUT 1 -p tcp --dport 3000 -j ACCEPT 외부에서 들어오는(INBOUND) TCP포트 12345의 연결을 받아들인다는 규칙을 방화벽 1번 방화벽 규칙으로 추가한다.</code></pre><ul><li>I: 새로운 규칙을 추가한다.</li><li>p: 패킷의 프로토콜을 명시한다.</li><li>j: 규칙에 해당되는 패킷을 어떻게 처리할지를 정한다.</li></ul><h3 id="조회"><a href="#조회" class="headerlink" title="조회"></a>조회</h3><pre><code>iptables -L -v</code></pre><ul><li>L: 규칙을 출력</li><li>v: 자세히</li></ul><h3 id="삭제-1"><a href="#삭제-1" class="headerlink" title="삭제"></a>삭제</h3><p>추가할 때 명령어의 “-I”를 “-D”로 바꾸어 준다</p><h4 id="규칙번호로-삭제하기"><a href="#규칙번호로-삭제하기" class="headerlink" title="규칙번호로 삭제하기"></a>규칙번호로 삭제하기</h4><pre><code>iptables -D INPUT 1- D: 규칙을 삭제</code></pre><h4 id="추가한-규칙으로-삭제하기"><a href="#추가한-규칙으로-삭제하기" class="headerlink" title="추가한 규칙으로 삭제하기"></a>추가한 규칙으로 삭제하기</h4><pre><code>iptables -D INPUT -p tcp --dport 12345 -j ACCEPT </code></pre>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;찾기&quot;&gt;&lt;a href=&quot;#찾기&quot; class=&quot;headerlink&quot; title=&quot;찾기&quot;&gt;&lt;/a&gt;찾기&lt;/h1&gt;&lt;h2 id=&quot;find-경로-옵션-파일명&quot;&gt;&lt;a href=&quot;#find-경로-옵션-파일명&quot; class=&quot;headerlink&quot; titl
+      
     
     </summary>
     
     
-      <category term="category" scheme="https://newtype94.github.io/categories/category/"/>
+      <category term="서버관리" scheme="https://newtype94.github.io/categories/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/"/>
+    
+      <category term="ubuntu" scheme="https://newtype94.github.io/categories/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/ubuntu/"/>
     
     
-      <category term="tag" scheme="https://newtype94.github.io/tags/tag/"/>
+      <category term="ubuntu" scheme="https://newtype94.github.io/tags/ubuntu/"/>
+    
+      <category term="방화벽" scheme="https://newtype94.github.io/tags/%EB%B0%A9%ED%99%94%EB%B2%BD/"/>
     
   </entry>
   
@@ -40,7 +51,7 @@
     <link href="https://newtype94.github.io/2020/01/05/hello-world/"/>
     <id>https://newtype94.github.io/2020/01/05/hello-world/</id>
     <published>2020-01-05T13:23:06.974Z</published>
-    <updated>2020-01-05T13:23:06.975Z</updated>
+    <updated>2020-01-06T17:37:27.114Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -54,6 +65,12 @@
     </summary>
     
     
+      <category term="서버관리" scheme="https://newtype94.github.io/categories/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/"/>
+    
+      <category term="this" scheme="https://newtype94.github.io/categories/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/this/"/>
+    
+    
+      <category term="njkse" scheme="https://newtype94.github.io/tags/njkse/"/>
     
   </entry>
   
