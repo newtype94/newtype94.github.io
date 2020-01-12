@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>넓고 얕은 개념 정리 - 자바 편 | 코딩곳간</title><meta name="description" content="넓고 얕은 개념 정리 - 자바 편"><meta name="keywords" content="면접"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="넓고 얕은 개념 정리 - 자바 편"><meta name="twitter:description" content="넓고 얕은 개념 정리 - 자바 편"><meta name="twitter:image" content="https://newtype94.github.io/img/grey.jpg"><meta property="og:type" content="article"><meta property="og:title" content="넓고 얕은 개념 정리 - 자바 편"><meta property="og:url" content="https://newtype94.github.io/2019/09/20/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84%20copy/"><meta property="og:site_name" content="코딩곳간"><meta property="og:description" content="넓고 얕은 개념 정리 - 자바 편"><meta property="og:image" content="https://newtype94.github.io/img/grey.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://newtype94.github.io/2019/09/20/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84%20copy/"><link rel="next" title="넓고 얕은 개념 정리 - 전산학 편" href="https://newtype94.github.io/2019/09/15/%EB%A9%B4%EC%A0%91_%EC%A0%84%EC%82%B0%ED%95%99/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="코딩곳간" type="application/atom+xml">
+</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">코딩곳간</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/categories/portfolio/"><i class="fa-fw fa fa-book"></i><span> 포트폴리오</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/categories/portfolio/"><i class="fa-fw fa fa-book"></i><span> 포트폴리오</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#객체지향-프로그래밍-언어"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">객체지향 프로그래밍 언어</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#객체"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">객체</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#클래스와-인스턴스"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">클래스와 인스턴스</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#상속"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">상속</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#객체지향-프로그래밍의-주요-특징"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text">객체지향 프로그래밍의 주요 특징</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#캡슐화"><span class="toc_mobile_items-number">5.1.</span> <span class="toc_mobile_items-text">캡슐화</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#상속-1"><span class="toc_mobile_items-number">5.2.</span> <span class="toc_mobile_items-text">상속</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#다형성"><span class="toc_mobile_items-number">5.3.</span> <span class="toc_mobile_items-text">다형성</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#자바-클래스의-기본-구조"><span class="toc_mobile_items-number">6.</span> <span class="toc_mobile_items-text">자바 클래스의 기본 구조</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#접근-한정자-제한자"><span class="toc_mobile_items-number">7.</span> <span class="toc_mobile_items-text">접근 한정자, 제한자</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#일반-한정자의-종류"><span class="toc_mobile_items-number">8.</span> <span class="toc_mobile_items-text">일반 한정자의 종류</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#인스턴스-변수와-클래스-변수"><span class="toc_mobile_items-number">9.</span> <span class="toc_mobile_items-text">인스턴스 변수와 클래스 변수</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#추상-클래스와-인터페이스"><span class="toc_mobile_items-number">10.</span> <span class="toc_mobile_items-text">추상 클래스와 인터페이스</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#추상-클래스"><span class="toc_mobile_items-number">10.1.</span> <span class="toc_mobile_items-text">추상 클래스</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#인터페이스"><span class="toc_mobile_items-number">10.2.</span> <span class="toc_mobile_items-text">인터페이스</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#메서드-오버로딩과-메서드-오버라이딩"><span class="toc_mobile_items-number">11.</span> <span class="toc_mobile_items-text">메서드 오버로딩과 메서드 오버라이딩</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#JAVA의-특징"><span class="toc_mobile_items-number">12.</span> <span class="toc_mobile_items-text">JAVA의 특징</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#OOP-객체지향-프로그래밍"><span class="toc_mobile_items-number">13.</span> <span class="toc_mobile_items-text">OOP(객체지향 프로그래밍)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Servlet-JSP"><span class="toc_mobile_items-number">14.</span> <span class="toc_mobile_items-text">Servlet, JSP</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#JDBC"><span class="toc_mobile_items-number">15.</span> <span class="toc_mobile_items-text">JDBC</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Interface-vs-Abstract"><span class="toc_mobile_items-number">16.</span> <span class="toc_mobile_items-text">Interface vs Abstract</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#공통점"><span class="toc_mobile_items-number">16.1.</span> <span class="toc_mobile_items-text">공통점</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#차이점"><span class="toc_mobile_items-number">16.2.</span> <span class="toc_mobile_items-text">차이점</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Call-by-Reference-Call-by-Value"><span class="toc_mobile_items-number">17.</span> <span class="toc_mobile_items-text">Call by Reference, Call by Value</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Static의-의미"><span class="toc_mobile_items-number">18.</span> <span class="toc_mobile_items-text">Static의 의미</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Primitive-type과-Reference-type"><span class="toc_mobile_items-number">19.</span> <span class="toc_mobile_items-text">Primitive type과 Reference type</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#Wrapper-Class"><span class="toc_mobile_items-number">19.1.</span> <span class="toc_mobile_items-text">Wrapper Class</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#객체지향-프로그래밍-언어"><span class="toc-number">1.</span> <span class="toc-text">객체지향 프로그래밍 언어</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#객체"><span class="toc-number">2.</span> <span class="toc-text">객체</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#클래스와-인스턴스"><span class="toc-number">3.</span> <span class="toc-text">클래스와 인스턴스</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#상속"><span class="toc-number">4.</span> <span class="toc-text">상속</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#객체지향-프로그래밍의-주요-특징"><span class="toc-number">5.</span> <span class="toc-text">객체지향 프로그래밍의 주요 특징</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#캡슐화"><span class="toc-number">5.1.</span> <span class="toc-text">캡슐화</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#상속-1"><span class="toc-number">5.2.</span> <span class="toc-text">상속</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#다형성"><span class="toc-number">5.3.</span> <span class="toc-text">다형성</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#자바-클래스의-기본-구조"><span class="toc-number">6.</span> <span class="toc-text">자바 클래스의 기본 구조</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#접근-한정자-제한자"><span class="toc-number">7.</span> <span class="toc-text">접근 한정자, 제한자</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#일반-한정자의-종류"><span class="toc-number">8.</span> <span class="toc-text">일반 한정자의 종류</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#인스턴스-변수와-클래스-변수"><span class="toc-number">9.</span> <span class="toc-text">인스턴스 변수와 클래스 변수</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#추상-클래스와-인터페이스"><span class="toc-number">10.</span> <span class="toc-text">추상 클래스와 인터페이스</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#추상-클래스"><span class="toc-number">10.1.</span> <span class="toc-text">추상 클래스</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#인터페이스"><span class="toc-number">10.2.</span> <span class="toc-text">인터페이스</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#메서드-오버로딩과-메서드-오버라이딩"><span class="toc-number">11.</span> <span class="toc-text">메서드 오버로딩과 메서드 오버라이딩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JAVA의-특징"><span class="toc-number">12.</span> <span class="toc-text">JAVA의 특징</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OOP-객체지향-프로그래밍"><span class="toc-number">13.</span> <span class="toc-text">OOP(객체지향 프로그래밍)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet-JSP"><span class="toc-number">14.</span> <span class="toc-text">Servlet, JSP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBC"><span class="toc-number">15.</span> <span class="toc-text">JDBC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interface-vs-Abstract"><span class="toc-number">16.</span> <span class="toc-text">Interface vs Abstract</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#공통점"><span class="toc-number">16.1.</span> <span class="toc-text">공통점</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#차이점"><span class="toc-number">16.2.</span> <span class="toc-text">차이점</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Call-by-Reference-Call-by-Value"><span class="toc-number">17.</span> <span class="toc-text">Call by Reference, Call by Value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Static의-의미"><span class="toc-number">18.</span> <span class="toc-text">Static의 의미</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Primitive-type과-Reference-type"><span class="toc-number">19.</span> <span class="toc-text">Primitive type과 Reference type</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Wrapper-Class"><span class="toc-number">19.1.</span> <span class="toc-text">Wrapper Class</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(/img/grey.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">넓고 얕은 개념 정리 - 자바 편</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2019-09-20<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2020-01-13</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EB%A9%B4%EC%A0%91-%EC%A4%80%EB%B9%84/">면접 준비</a><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EB%A9%B4%EC%A0%91-%EC%A4%80%EB%B9%84/%EC%9E%90%EB%B0%94-%ED%8E%B8/">자바 편</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>본 페이지는 면접 속성 준비를 위하여 다양한 블로그를 참고했습니다.</p>
+</blockquote>
+<h2 id="객체지향-프로그래밍-언어"><a href="#객체지향-프로그래밍-언어" class="headerlink" title="객체지향 프로그래밍 언어"></a>객체지향 프로그래밍 언어</h2><p>객체지향이란 현실 세계의 개체 모델을 바탕으로 프로그램을 구조화하고 개발하는 프로그래밍 기법을 말한다.<br>함수와 메서드(Method)가 비슷하며, 기본적으로는 객체 간의 메시지 교환을 이용한 프로그래밍 모델이다.<br>상속, 추상화, 캡슐화 등 특징을 활요한 구조적이고 재활용 가능한 모듈화로 생산성과 유지보수 효율성을 높인 프로그래밍 언어이다. 대표적으로 스몰토크(SmallTalk), C++, C#, Net, 자바, 파이썬(Python) 등이 있다.</p>
+<h2 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h2><p>객체를 뜻하는 ‘Object’는 기본적으로는 ‘사물’이라고 해석된다. 사물은 우리 눈에 보이는 모든 것을 말하며, 그 사물이 가진 속성(Attribute)과 행위(Behavior)로 설명할 수 있는 대상이다.</p>
+<h2 id="클래스와-인스턴스"><a href="#클래스와-인스턴스" class="headerlink" title="클래스와 인스턴스"></a>클래스와 인스턴스</h2><p>속성이 같은 객체들을 대표할 수 있는 대상을 클래스(Class)라고 한다. 예를 들어 소나무는 클래스가 되고, 주변에 보이는 각 소나무들은 모두 소나무 클래스의 인스턴스(객체)가 되는 것이다.</p>
+<ol>
+<li>클래스는 객체를 정의하는 틀이며, 필드(속성)와 메서드(행위)로 구성한다. 클래스는 추상화를 이용하여 슈퍼 클래스(상위 클래스, 부모 클래스)와 서브 클래스(하위 클래스, 자식 클래스)로 구분한다.</li>
+<li>인스턴스는 클래스에서 생성한 객체로, 고유한 상태가 있다. 동일한 클래스에서 생성된 객체라 할지라도 필드 값과 메서드의 내용은 다를 수 있다.</li>
+</ol>
+<h2 id="상속"><a href="#상속" class="headerlink" title="상속"></a>상속</h2><p>상속은 어떤 클래스에서 좀 더 내용이 구체적인 새로운 클래스가 필요할 때 기존 클래스를 물려받아 새로운 부분만 추가하거나 수정하려고 만든 개념이다.<br>상속을 이용하면 슈퍼 클래스의 기본 구성 요소(필드, 메서드)를 물려받으며(상속), 자신만의 필드나 메서드를 추가하여 구체화하는 것이 가능하다. 물론 물려받은 메서드의 내용을 수정하는 것도 가능하다.<br>상속은 클래스를 선언할 때 extends 키워드를 사용하여 정의한다.</p>
+<h2 id="객체지향-프로그래밍의-주요-특징"><a href="#객체지향-프로그래밍의-주요-특징" class="headerlink" title="객체지향 프로그래밍의 주요 특징"></a>객체지향 프로그래밍의 주요 특징</h2><h3 id="캡슐화"><a href="#캡슐화" class="headerlink" title="캡슐화"></a>캡슐화</h3><p>생성한 객체를 어떤 메서드와 필드로 어떻게 일을 수행할지 외부에 숨기는 특성을 말한다.</p>
+<h3 id="상속-1"><a href="#상속-1" class="headerlink" title="상속"></a>상속</h3><p>클래스는 추상화된 슈퍼 클래스와 구체화된 서브 클래스로 구성한다. 그리고 슈퍼 클래스와 서브 클래스의 고나계를 상속이라고 한다. 자바에서는 다른 객체지향 언어와 달리 다중 상속을 지원하지 않는다.</p>
+<h3 id="다형성"><a href="#다형성" class="headerlink" title="다형성"></a>다형성</h3><p>클래스의 상속 관계를 이용하여 슈퍼 클래스가 같은 서버 클래스들이 동일한 요청을 다르게 처리할 수 있는 특징을 말한다. 실제 프로그램에서는 메서드를 오버라이딩(재정의)하여 구현한다.</p>
+<h2 id="자바-클래스의-기본-구조"><a href="#자바-클래스의-기본-구조" class="headerlink" title="자바 클래스의 기본 구조"></a>자바 클래스의 기본 구조</h2><ol>
+<li>패키지: 자바 클래스들을 같은 성격으로 묶어서 관리하는 일종의 디렉터리 개념이다. 역 도메인(Reverse Domain) 방식으로 이름을 부여한다.</li>
+<li>클래스: 자바 프로그램은 기본적으로 클래스를 만드는 것에서부터 시작한다. 클래스는 자바 프로그램의 기본 단위이며, 프로그램 실행을 위한 main() 메서드를 반드시 클래스에 포함해야 하는 것으 아니다.</li>
+<li>인스턴스: 객체지향의 개념에 따라 클래스는 바로 사용할 수 없고, 인스턴스로 사용해야 한다. main() 메서드에서는 클래스의 인스턴스를 만들고, 인스턴스를 이용하여 메서드 호출 등 필요한 작업을 처리한다.</li>
+<li>참조 변수: 자바 클래스의 인스턴스 참조를 위한 변수이다. 구조는 일반적인 변수와 유사하지만, 참조 변수에는 데이터가 없고 클래스 인스턴스를 가리킨다.</li>
+<li>생성자: 클래스를 생성할 때 제일 먼저 실행되는 특수한 형태의 메서드로, 리턴값이 없으면 메서드 이름은 반드시 클래스 이름과 일치해야 한다.<br>리턴값이 없다. 따라서 void를 비롯한 리턴값의 데이터형을 입력하면 안 된다.<br>파라미터가 있는 다른 여러 생성자를 정의할 수 있다(메서드 오버로딩).<br>파라미터가 없는 기본 생성자(Default Constructor)는 특별히 생성자에서 처리해야 하는 일이 없다면 굳이 프로그램에서 구현할 필요가 없다. 다만 생성자를 여러 개 정의할 때는 반드시 기본 생성자를 명시해야 기본 생성자로 객체 생성이 가능하다.</li>
+</ol>
+<h2 id="접근-한정자-제한자"><a href="#접근-한정자-제한자" class="headerlink" title="접근 한정자, 제한자"></a>접근 한정자, 제한자</h2><p>public &gt; protected &gt; default &gt; private</p>
+<table>
+<thead>
+<tr>
+<th>한정자</th>
+<th>클래스 내부</th>
+<th>동일 패키지</th>
+<th>하위 클래스</th>
+<th>그 외의 영역</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr>
+<td>default</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>private</td>
+<td>O</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody></table>
+<p>public - 접근 제한이 없다.(같은 프로젝트 내에 어디서든 사용가능)<br>protected - 같은 패키지 내, 다른 패키지에서 상속받아 자손클래스에서 접근 가능<br>default - 같은 패키지 내에서만 접근 가능<br>private - 같은 클래스 내에서만 접근 가능</p>
+<h2 id="일반-한정자의-종류"><a href="#일반-한정자의-종류" class="headerlink" title="일반 한정자의 종류"></a>일반 한정자의 종류</h2><ol>
+<li>static: 클래스 메서드와 클래스 변수를 선언하는 데 사용한다. static은 자바의 정적 영역에 할당되는 리소스를 선언하는 데 사용하며, 동일 가상머신상에서 실행 중인 모든 클래스에서 공유한다. 인스턴스를 생성하지 않고도 클래스의 메서드나 멤버에 접근할 수 있다.</li>
+<li>final: 더 이상 변경할 수 없도록 선언하는 한정자. 클래스에 사용할 때는 서브 클래스를 만들 수 없고, 메서드에 사용할 때는 오버라이딩을 할 수 없다. 변수에 사용하면 변수에 저장된 값이 변할 수 없으므로 변수가 아닌 상수의 역할을 한다.</li>
+<li>abstract: 추상 클래스를 선언하는 데 사용하는 한정자.</li>
+<li>synchronized/volatile: 스레드 프로그래밍에서 여러 스레드가 동시에 자원에 접근할 때 발생하는 데이터 동기화를 처리하는 한정자.</li>
+</ol>
+<h2 id="인스턴스-변수와-클래스-변수"><a href="#인스턴스-변수와-클래스-변수" class="headerlink" title="인스턴스 변수와 클래스 변수"></a>인스턴스 변수와 클래스 변수</h2><ol>
+<li>인스턴스 변수는 클래스의 인스턴스로만 접근 가능한 변수를 말하며, 일반적인 멤버 변수가 여기에 속한다. 클래스 외부에서 접근을 차단하려고 private 키워드를 사용하기도 한다.</li>
+<li>동일 클래스의 인스턴스라 해도 각 인스턴스 변수는 값이 서로 다르고 서로에 영향을 주지 않는다.</li>
+<li>클래스 변수는 모든 클래스의 인스턴스로 공유되는 변수로, static 키워드를 사용하여 선언한다. 클래스가 인스턴스되기 전(main() 메서드 시작 부분)에는 인스턴스 변수에 접근할 수 없으므로 main()에서 멤버 변수에 바로 접근하는 것은 불가능하다.<br>자바 가상머신의 메모리 구조<br>Method 영역 Heap 영역 Stack 영역<br>메서드 바이트코드 자바 객체 메서드 파라미터<br>클래스(static) 변수 인스턴스 변수 지역 변수</li>
+</ol>
+<h2 id="추상-클래스와-인터페이스"><a href="#추상-클래스와-인터페이스" class="headerlink" title="추상 클래스와 인터페이스"></a>추상 클래스와 인터페이스</h2><ol>
+<li>추상 클래스와 인터페이스는 객체지향 개념을 실제 프로그램 개발에 쉽게 적용하고 유연한 설계를 지원하는 요소이다.</li>
+<li>일반 클래스보다 추상적인 관점에서 접근한다. 구체적인 내용보다는 기본적인 속성과 필요한 메서드의 형태(프로토 타입)만 기술하고 세부적인 구현은 구현하는 클래스에서 담당하도록 하는 형태이다.</li>
+</ol>
+<h3 id="추상-클래스"><a href="#추상-클래스" class="headerlink" title="추상 클래스"></a>추상 클래스</h3><p>추상 메서드(구현되지 않고 정의만 한 메서드)를 하나 이상 포함한다. 추상 메서드가 포함된 클래스는 반드시 추상 클래스로 정의해야 한다.<br>추상 클래스는 일반 클래스와 같이 멤버 변수 및 메서드를 포함할 수 있다.<br>추상 클래스는 그 자체를 인스턴스화, 즉 객체 생성에 사용할 수 없으며, 반드시 추상 클래스를 상속받는 클래스를 만든 후 추상 클래스에 선언된 모든 추상 메서드를 오버라이딩해서 구현해야 한다.</p>
+<h3 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h3><p>인터페이스는 일반 메서드를 포함할 수 없으며, 모두 추상 메서드(public abstract)로만 구성해야 한다.<br>일반 멤버 필드는 없고, public, static, final로 선언한 상수만 있다.<br>추상 클래스와 마찬가지로 직접 객체를 생성하는 것은 불가능하고(Anonymous Inner Class 생성 형태로는 가능), 다른 클래스로 구현할 때는 implements 키워드로 구현을 선언해야 한다.<br>클래스 상속과는 별도로 동작하므로 문법상 다중 상속을 지원하지 않는 자바에서 다중 상속의 개념을 지원하는 형태로 사용하는 것이 가능하다.</p>
+<h2 id="메서드-오버로딩과-메서드-오버라이딩"><a href="#메서드-오버로딩과-메서드-오버라이딩" class="headerlink" title="메서드 오버로딩과 메서드 오버라이딩"></a>메서드 오버로딩과 메서드 오버라이딩</h2><ol>
+<li>메서드 오버로딩과 메서드 오버라이딩은 자바에서 다형성을 지원하는 구현 형태 중 하나이다.</li>
+<li>메서드 오버로딩은 메서드 이름은 동일하지만 파라미터가 다른 여러 메서드를 만드는 것을 말한다.</li>
+<li>메서드 오버로딩의 조건은 다음과 같다.<br>메서드 이름이 같아야 한다.<br>파라미터의 개수 또는 타입이 달라야 한다.<br>파라미터는 같고 리턴 타입이 다르면 오버로딩이 성립되지 않는다.</li>
+<li>메서드 오버라이딩은 슈퍼 클래스에서 정의한 메서드를 서브 클래스에서 재정의하는 것을 말한다.</li>
+<li>메서드 오버라이딩의 조건은 다음과 같다.<br>오버라이딩하는 메서드는 슈퍼 클래스의 메서드와 메서드 구성 요소 모두가 동일해야 한다.<br>이때 이름, 파라미터, 리턴 타입이 모두 같아야 한다.</li>
+</ol>
+<h2 id="JAVA의-특징"><a href="#JAVA의-특징" class="headerlink" title="JAVA의 특징"></a>JAVA의 특징</h2><ol>
+<li>자바가상머신(JVM)만 설치하면 컴퓨터의 운영체제에 상관없이 작동한다.(즉, 운영체제에 독립적)</li>
+<li>기본 자료형을 제외한 모든 요소들이 객체로 표현</li>
+<li>객체 지향 개념의 특징인 캡슐화, 상속, 다형성이 잘 적용된 언어</li>
+<li>Garbage Collector를 통한 자동적인 메모리 관리</li>
+<li>멀티쓰레드(Multi-thread)를 지원</li>
+</ol>
+<h2 id="OOP-객체지향-프로그래밍"><a href="#OOP-객체지향-프로그래밍" class="headerlink" title="OOP(객체지향 프로그래밍)"></a>OOP(객체지향 프로그래밍)</h2><p>OOP란 Object-Oriented Programming의 약어로써 객체지향 프로그래밍을 의미<br>데이터를 객체로 취급하여 프로그램에 반영한 것이며, 순차적으로 프로그램이 동작하는 기존의 것들과는 다르게 객체와 객체의 상호작용을 통해 프로그램이 동작하는 것을 말한다.<br>OOP 특징</p>
+<ol>
+<li>객체지향 프로그래밍은 코드의 재사용성이 높다.</li>
+<li>코드의 변경이 용이</li>
+<li>직관적인 코드분석</li>
+<li>개발속도 향상</li>
+<li>상속을 통한 장점 극대화</li>
+</ol>
+<h2 id="Servlet-JSP"><a href="#Servlet-JSP" class="headerlink" title="Servlet, JSP"></a>Servlet, JSP</h2><ol>
+<li>Servlet - Container가 이해할 수 있게 구성된 순수 자바 코드로만 이루어진 것(Html in JAVA)</li>
+<li>JSP(Java Server Page) - html기반에 JAVA코드를 블록화하여 삽입한 것(JAVA in Html)</li>
+</ol>
+<h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><p>Java Data Base Connection의 약자로 JAVA 언어를 통해 데이터 베이스에 접근 할 수 있는 프로그래밍을 의미</p>
+<h2 id="Interface-vs-Abstract"><a href="#Interface-vs-Abstract" class="headerlink" title="Interface vs Abstract"></a>Interface vs Abstract</h2><h3 id="공통점"><a href="#공통점" class="headerlink" title="공통점"></a>공통점</h3><ul>
+<li>new 연산자로 인스턴스 생성 불가능.</li>
+<li>프로토타입만 있는 메서드를 갖는다.</li>
+<li>사용하기 위해서는 하위클래스에서 확장/구현 해야 한다.</li>
+</ul>
+<h3 id="차이점"><a href="#차이점" class="headerlink" title="차이점"></a>차이점</h3><ul>
+<li>사용하는 키워드가 다르다.</li>
+<li>Abstract는 일반 메서드를 사용할 수 있지만, Interface는 메서드 선언만 가능하다.</li>
+</ul>
+<h2 id="Call-by-Reference-Call-by-Value"><a href="#Call-by-Reference-Call-by-Value" class="headerlink" title="Call by Reference, Call by Value"></a>Call by Reference, Call by Value</h2><ol>
+<li><p>Call by Reference<br>매개 변수의 원래 주소에 값을 저장하는 방식. 클래스 객체를 인수로 전달한 경우</p>
+</li>
+<li><p>Call by Value<br>인수로 기본 데이터형을 사용. 주어진 값을 복사하여 처리하는 방식. 메서드 내의 처리 결과는 메서드 밖의 변수에 영향을 미치지 않는다.</p>
+</li>
+</ol>
+<h2 id="Static의-의미"><a href="#Static의-의미" class="headerlink" title="Static의 의미"></a>Static의 의미</h2><ul>
+<li>클래스가 로딩될 때, 메모리 공간을 할당하는데 처음 설정된 메모리 공간이 변하지 않음을 의미</li>
+<li>객체를 아무리 많이 만들어도 해당 변수는 하나만 존재(객체와 무관한 키워드)</li>
+</ul>
+<h2 id="Primitive-type과-Reference-type"><a href="#Primitive-type과-Reference-type" class="headerlink" title="Primitive type과 Reference type"></a>Primitive type과 Reference type</h2><p>Primitive type - 변수에 값 자체를 저장<br>정수형 byte, short, int, long<br>실수형 float, double<br>문자형 char<br>논리형 boolean</p>
+<p>Primitive type은 Wrapper Class를 통해 객체로 변형할 수 있다.<br>예) int→Integer, char→Character(int와 char를 제외한 Primitive type의 다른 자료형들은 맨 앞 알파벳을 대문자로 바꿔주면 된다. float→Float)<br>Reference type - 메모리상에 객체가 있는 위치를 저장<br>종류 - Class, Interface, Array 등</p>
+<h3 id="Wrapper-Class"><a href="#Wrapper-Class" class="headerlink" title="Wrapper Class"></a>Wrapper Class</h3><p>Primitive type으로 표현할 수 있는 간단한 데이터를 객체로 만들어야 할 경우가 있는데 그러한 기능을 지원하는 클래스</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2019/09/20/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84%20copy/">https://newtype94.github.io/2019/09/20/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84%20copy/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%EB%A9%B4%EC%A0%91/">면접    </a></div><div class="post_share"><div class="social-share" data-image="/img/grey.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2019/09/15/%EB%A9%B4%EC%A0%91_%EC%A0%84%EC%82%B0%ED%95%99/"><img class="next_cover lazyload" data-src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>넓고 얕은 개념 정리 - 전산학 편</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2019/09/10/면접_서버/" title="넓고 얕은 개념 정리 - 서버 편"><img class="relatedPosts_cover lazyload"data-src="/img/grey.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-09-10</div><div class="relatedPosts_title">넓고 얕은 개념 정리 - 서버 편</div></div></a></div><div class="relatedPosts_item"><a href="/2019/09/15/면접_전산학/" title="넓고 얕은 개념 정리 - 전산학 편"><img class="relatedPosts_cover lazyload"data-src="/img/grey.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2019-09-15</div><div class="relatedPosts_title">넓고 얕은 개념 정리 - 전산학 편</div></div></a></div></div><div class="clear_both"></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Kim YongHoon</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
