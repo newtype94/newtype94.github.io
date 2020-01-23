@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>voiceChain(1) - 아이디어 조사 | 코딩곳간</title><meta name="description" content="voiceChain(1) - 아이디어 조사"><meta name="keywords" content="개발노트"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="voiceChain(1) - 아이디어 조사"><meta name="twitter:description" content="voiceChain(1) - 아이디어 조사"><meta name="twitter:image" content="https://newtype94.github.io/img/grey.jpg"><meta property="og:type" content="article"><meta property="og:title" content="voiceChain(1) - 아이디어 조사"><meta property="og:url" content="https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_1/"><meta property="og:site_name" content="코딩곳간"><meta property="og:description" content="voiceChain(1) - 아이디어 조사"><meta property="og:image" content="https://newtype94.github.io/img/grey.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_1/"><link rel="prev" title="voiceChain(2) - 초기 setup" href="https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_2/"><link rel="next" title="포트폴리오 - tracker" href="https://newtype94.github.io/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="코딩곳간" type="application/atom+xml">
+</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">코딩곳간</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">20</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">16</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#아이디어-착안"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">아이디어 착안</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#장애물"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">장애물</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#장애물-극복"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text">장애물 극복</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#서버-구조"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text">서버 구조</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#클라이언트-React-Native"><span class="toc_mobile_items-number">4.1.</span> <span class="toc_mobile_items-text">클라이언트 - React Native</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#중앙-서버-KoaJS-SocketIO"><span class="toc_mobile_items-number">4.2.</span> <span class="toc_mobile_items-text">중앙 서버 - KoaJS, SocketIO</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#데이터베이스-redis-vs-mariadb-caching"><span class="toc_mobile_items-number">4.3.</span> <span class="toc_mobile_items-text">데이터베이스 - redis vs mariadb caching</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#아이디어-착안"><span class="toc-number">1.</span> <span class="toc-text">아이디어 착안</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#장애물"><span class="toc-number">2.</span> <span class="toc-text">장애물</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#장애물-극복"><span class="toc-number">3.</span> <span class="toc-text">장애물 극복</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#서버-구조"><span class="toc-number">4.</span> <span class="toc-text">서버 구조</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#클라이언트-React-Native"><span class="toc-number">4.1.</span> <span class="toc-text">클라이언트 - React Native</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#중앙-서버-KoaJS-SocketIO"><span class="toc-number">4.2.</span> <span class="toc-text">중앙 서버 - KoaJS, SocketIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#데이터베이스-redis-vs-mariadb-caching"><span class="toc-number">4.3.</span> <span class="toc-text">데이터베이스 - redis vs mariadb caching</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(/img/grey.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">voiceChain(1) - 아이디어 조사</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2020-01-21<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2020-01-22</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EA%B0%9C%EB%B0%9C%EB%85%B8%ED%8A%B8/">개발노트</a><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EA%B0%9C%EB%B0%9C%EB%85%B8%ED%8A%B8/voiceChain/">voiceChain</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="아이디어-착안"><a href="#아이디어-착안" class="headerlink" title="아이디어 착안"></a>아이디어 착안</h1><p>아이디어는 “녹음본의 무결성을 어떻게 증명할 수 있을까?”에서 시작한다.</p>
+<p>처음 생각한 방법은 사용자의 어플리케이션에서 녹음이 완료된 순간<br>해시값을 따서 운영자의 서버에 저장하는 것이었다.</p>
+<p>그러나 개인이 운영하는 서버는 기업에 비해 보안이 약할 수 밖에 없다.<br>그래서 블록체인을 활용하기로 계획을 세웠다.</p>
+<h1 id="장애물"><a href="#장애물" class="headerlink" title="장애물"></a>장애물</h1><p>생각보다 장애물이 많았다.</p>
+<ol>
+<li>이더리움으로 dappp 개발시 트랜잭션마다 “가스”라는 것을 지불해야 한다.<br>=&gt; 가스는 코인의 작은 단위로, 사용자 입장에서는 유료로 사용하는 셈이다.</li>
+<li>이더리움 네트워크를 사용하든, 하지 않든<br>전체 블록을 저장하는 풀노드가 많아야 검증의 효과가 있다.<br>=&gt; 유저들이 풀노드를 유지하려면 적절한 보상이 발생해야 한다.</li>
+</ol>
+<h1 id="장애물-극복"><a href="#장애물-극복" class="headerlink" title="장애물 극복"></a>장애물 극복</h1><ol>
+<li>이더리움 플랫폼을 사용하지 않는다.<br>=&gt; 토렌트와 비슷하게 중앙노드(서버)를 거쳐 최소한의 정보를 획득한 후, 트랜잭션을 한다. (프라이빗 블록체인)</li>
+<li>풀노드를 유지하는 사용자에게 캐시슬라이드와 같이 현금화 가능한 포인트를 지급한다.</li>
+</ol>
+<h1 id="서버-구조"><a href="#서버-구조" class="headerlink" title="서버 구조"></a>서버 구조</h1><h2 id="클라이언트-React-Native"><a href="#클라이언트-React-Native" class="headerlink" title="클라이언트 - React Native"></a>클라이언트 - React Native</h2><ol>
+<li>전 세계의 똑똑한 개발자들이 공급하는 npm 모듈을 무료로 사용할 수 있다!<br>(녹음 component, hash 계산 모듈, 소켓 모듈.. 등)</li>
+<li>mobile은 pc보다 풀노드를 유지하는 것에 유리하다.<br>대부분의 스마트폰은 24시간 전원이 유지되고 있고, 망에 연결되어 있다.<br>또한 mobile phone의 용량도 많이 커지고 있으므로..</li>
+</ol>
+<h2 id="중앙-서버-KoaJS-SocketIO"><a href="#중앙-서버-KoaJS-SocketIO" class="headerlink" title="중앙 서버 - KoaJS, SocketIO"></a>중앙 서버 - KoaJS, SocketIO</h2><ol>
+<li>토렌트와 비슷하게 각 노드의 위치 정보를 담아두고, 빠른 속도로 응답해야 한다.</li>
+<li>pm2와 nginx로 필요하다면 얼마든지 로드밸런싱을 할 수 있다.</li>
+</ol>
+<h2 id="데이터베이스-redis-vs-mariadb-caching"><a href="#데이터베이스-redis-vs-mariadb-caching" class="headerlink" title="데이터베이스 - redis vs mariadb caching"></a>데이터베이스 - redis vs mariadb caching</h2><ol>
+<li>이건 도입하기전에 성능 테스트를 해볼 계획이다.</li>
+</ol>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_1/">https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%EA%B0%9C%EB%B0%9C%EB%85%B8%ED%8A%B8/">개발노트    </a></div><div class="post_share"><div class="social-share" data-image="/img/grey.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_2/"><img class="prev_cover lazyload" data-src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>voiceChain(2) - 초기 setup</span></div></a></div><div class="next-post pull_right"><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/"><img class="next_cover lazyload" data-src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>포트폴리오 - tracker</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/01/21/개발기_voiceChain_2/" title="voiceChain(2) - 초기 setup"><img class="relatedPosts_cover lazyload"data-src="/img/grey.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-01-21</div><div class="relatedPosts_title">voiceChain(2) - 초기 setup</div></div></a></div></div><div class="clear_both"></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Kim YongHoon</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
