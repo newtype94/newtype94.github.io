@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-01-22T11:04:20.032Z</updated>
+  <updated>2020-01-29T14:52:50.745Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_2/"/>
     <id>https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EA%B8%B0_voiceChain_2/</id>
     <published>2020-01-21T08:57:11.000Z</published>
-    <updated>2020-01-22T11:04:20.032Z</updated>
+    <updated>2020-01-29T14:52:50.745Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Front-setup"><a href="#Front-setup" class="headerlink" title="Front setup"></a>Front setup</h1><p>expo!</p><h1 id="Backend-setup"><a href="#Backend-setup" class="headerlink" title="Backend setup"></a>Backend setup</h1><p>socket.io는 단독으로 사용할 수 없다.<br>express 서버에 붙이는 방식으로 사용한다.<br>보통 express-generator 모듈로 setup하는데<br>나는 typescript로 개발할 것이기 때문에 아래 모듈을 사용!</p><p><a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank" rel="noopener">https://www.npmjs.com/package/express-generator-typescript</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Front-setup"><a href="#Front-setup" class="headerlink" title="Front setup"></a>Front setup</h1><p>expo!</p><h1 id="Backend-setup"><a href="#Backend-setup" class="headerlink" title="Backend setup"></a>Backend setup</h1><p>socket.io는 단독으로 사용할 수 없다.<br>express 서버에 붙이는 방식으로 사용한다.<br>보통 express-generator 모듈로 setup하는데<br>나는 typescript로 개발할 것이기 때문에 아래 모듈을 사용!</p><p><a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank" rel="noopener">https://www.npmjs.com/package/express-generator-typescript</a></p><h1 id="개발-참고-사항"><a href="#개발-참고-사항" class="headerlink" title="개발 참고 사항"></a>개발 참고 사항</h1><p><a href="https://lhartikk.github.io/" target="_blank" rel="noopener">https://lhartikk.github.io/</a></p><p>로컬에서 여러 노드를 올려 테스트해보는 프로젝트이다.<br>개발하면서 공부하는데 많은 도움이 되었다.</p>]]></content>
     
     <summary type="html">
     
