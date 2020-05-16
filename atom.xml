@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-04-26T17:19:23.431Z</updated>
+  <updated>2020-05-08T16:42:09.332Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2019 인턴 불량 사용자</title>
+    <link href="https://newtype94.github.io/2020/05/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90/"/>
+    <id>https://newtype94.github.io/2020/05/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90/</id>
+    <published>2020-05-08T05:12:21.000Z</published>
+    <updated>2020-05-08T16:42:09.332Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/64064" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>user_id가 banned_id에서 여러 개에 걸릴 수 있다. 그래서 NxN의 완전탐색으로 풀면 경우의 수를 놓칠 수 있다.</p><p>재귀(DFS)로 user_id와 banned_id가 매칭된 상태를 다음 재귀로 넘겨주며<br>가능한 상황을 다 count해야 한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> checkWord = <span class="function">(<span class="params">a, b</span>) =&gt;</span></span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"^"</span> + b.split(<span class="string">"*"</span>).join(<span class="string">"."</span>) + <span class="string">"$"</span>).test(a);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">user_id, banned_id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> temp = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> compare = <span class="function">(<span class="params">users, ban, depth</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (depth &lt; banned_id.length)</span><br><span class="line">      users.forEach(<span class="function">(<span class="params">user, i</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (checkWord(user, ban[<span class="number">0</span>])) &#123;</span><br><span class="line">          <span class="keyword">const</span> userCopy = users.slice();</span><br><span class="line">          <span class="keyword">const</span> banCopy = ban.slice();</span><br><span class="line">          userCopy.splice(i, <span class="number">1</span>);</span><br><span class="line">          banCopy.splice(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">          compare(userCopy, banCopy, depth + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    <span class="keyword">else</span> temp[users] = <span class="literal">true</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  compare(user_id, banned_id, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Object</span>.keys(temp).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/64064&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2019 인턴" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2019-%EC%9D%B8%ED%84%B4/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2018 다트게임</title>
@@ -597,37 +628,6 @@
       <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
     
       <category term="동적계획법(Dynamic Programming)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 구명보트</title>
-    <link href="https://newtype94.github.io/2020/02/15/programmers/Greedy/programmers_%EA%B5%AC%EB%AA%85%EB%B3%B4%ED%8A%B8/"/>
-    <id>https://newtype94.github.io/2020/02/15/programmers/Greedy/programmers_%EA%B5%AC%EB%AA%85%EB%B3%B4%ED%8A%B8/</id>
-    <published>2020-02-15T06:53:28.000Z</published>
-    <updated>2020-04-04T16:03:09.587Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42885" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>탐욕법(Greedy) / LV.2 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>그리디 알고리즘에서 우선순위로 둘 만한것 = 처리하기 쉬운 요소, 놔두면 피곤해지는 요소<br>이 문제에서는 비교적 무거운 사람을 우선순위로 둘 만하다.</p><p>오름차순으로 정렬하여,<br>pop()한 사람을 먼저 태우고, 그 위에 가벼운 사람을 가능한 실어서 출발시킬 것이다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">people, limit</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> boat = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  people.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (people.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (sum === <span class="number">0</span>) &#123;</span><br><span class="line">      boat++;</span><br><span class="line">      sum += people.pop();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">while</span> (sum &lt; limit) &#123;</span><br><span class="line">        <span class="keyword">if</span> (people[<span class="number">0</span>] &amp;&amp; sum + people[<span class="number">0</span>] &lt;= limit) sum += people.shift();</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      sum = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> boat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42885&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="탐욕법(Greedy)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%ED%83%90%EC%9A%95%EB%B2%95-Greedy/"/>
     
     
       <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
