@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-05-08T16:42:09.332Z</updated>
+  <updated>2020-05-27T17:02:09.293Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,180 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>programmers sql STRING, DATE</title>
+    <link href="https://newtype94.github.io/2020/05/27/programmers_sql/programmers_STRING_DATE/"/>
+    <id>https://newtype94.github.io/2020/05/27/programmers_sql/programmers_STRING_DATE/</id>
+    <published>2020-05-27T12:33:14.000Z</published>
+    <updated>2020-05-27T17:02:09.293Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17047" target="_blank" rel="noopener">문제 링크</a></p><h1 id="루시와-엘라-찾기"><a href="#루시와-엘라-찾기" class="headerlink" title="루시와 엘라 찾기"></a>루시와 엘라 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span>, SEX_UPON_INTAKE</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NAME</span> <span class="keyword">IN</span> (<span class="string">"Lucy"</span>, <span class="string">"Ella"</span>, <span class="string">"Pickle"</span>, <span class="string">"Rogan"</span>, <span class="string">"Sabrina"</span>, <span class="string">"Mitty"</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="이름에-el이-들어가는-동물-찾기"><a href="#이름에-el이-들어가는-동물-찾기" class="headerlink" title="이름에 el이 들어가는 동물 찾기"></a>이름에 el이 들어가는 동물 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> ANIMAL_TYPE = <span class="string">"Dog"</span> <span class="keyword">AND</span> <span class="keyword">NAME</span> <span class="keyword">LIKE</span> <span class="string">"%el%"</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">NAME</span></span><br></pre></td></tr></table></figure></div><h1 id="중성화-여부-파악하기"><a href="#중성화-여부-파악하기" class="headerlink" title="중성화 여부 파악하기"></a>중성화 여부 파악하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span>,</span><br><span class="line">  <span class="keyword">CASE</span></span><br><span class="line">    <span class="keyword">WHEN</span> SEX_UPON_INTAKE <span class="keyword">LIKE</span> <span class="string">"Neutered%"</span></span><br><span class="line">      <span class="keyword">OR</span> SEX_UPON_INTAKE <span class="keyword">LIKE</span> <span class="string">"Spayed%"</span></span><br><span class="line">    <span class="keyword">THEN</span> <span class="string">"O"</span></span><br><span class="line">    <span class="keyword">ELSE</span> <span class="string">"X"</span></span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">AS</span> 중성화</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="오랜-기간-보호한-동물-2"><a href="#오랜-기간-보호한-동물-2" class="headerlink" title="오랜 기간 보호한 동물(2)"></a>오랜 기간 보호한 동물(2)</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.ANIMAL_ID, A.NAME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS A <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> ANIMAL_OUTS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> B.DATETIME - A.DATETIME <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></div><h1 id="DATETIME에서-DATE로-형-변환"><a href="#DATETIME에서-DATE로-형-변환" class="headerlink" title="DATETIME에서 DATE로 형 변환"></a>DATETIME에서 DATE로 형 변환</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span>, <span class="keyword">DATE_FORMAT</span>(DATETIME, <span class="string">"%Y-%m-%d"</span>) <span class="keyword">AS</span> 날짜</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17047&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;루시와-엘라-찾기&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>programmers sql JOIN</title>
+    <link href="https://newtype94.github.io/2020/05/23/programmers_sql/programmers_JOIN/"/>
+    <id>https://newtype94.github.io/2020/05/23/programmers_sql/programmers_JOIN/</id>
+    <published>2020-05-23T08:15:22.000Z</published>
+    <updated>2020-05-27T16:51:52.842Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17046" target="_blank" rel="noopener">문제 링크</a></p><h1 id="없어진-기록-찾기"><a href="#없어진-기록-찾기" class="headerlink" title="없어진 기록 찾기"></a>없어진 기록 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.ANIMAL_ID, A.NAME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS A <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> ANIMAL_INS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">WHERE</span> B.ANIMAL_ID <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> A.ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="있었는데요-없었습니다"><a href="#있었는데요-없었습니다" class="headerlink" title="있었는데요 없었습니다"></a>있었는데요 없었습니다</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.ANIMAL_ID, A.NAME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS A <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> ANIMAL_INS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">WHERE</span> A.DATETIME &lt; B.DATETIME</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> B.DATETIME</span><br></pre></td></tr></table></figure></div><h1 id="오랜-기간-보호한-동물-1"><a href="#오랜-기간-보호한-동물-1" class="headerlink" title="오랜 기간 보호한 동물(1)"></a>오랜 기간 보호한 동물(1)</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.NAME, A.DATETIME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS A <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> ANIMAL_OUTS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">WHERE</span> B.ANIMAL_ID <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> A.DATETIME</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></div><h1 id="보호소에서-중성화한-동물"><a href="#보호소에서-중성화한-동물" class="headerlink" title="보호소에서 중성화한 동물"></a>보호소에서 중성화한 동물</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> B.ANIMAL_ID, B.ANIMAL_TYPE, B.NAME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS A <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> ANIMAL_OUTS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">   (A.SEX_UPON_INTAKE = <span class="string">"Intact Male"</span> <span class="keyword">OR</span> A.SEX_UPON_INTAKE = <span class="string">"Intact Female"</span>) <span class="keyword">And</span></span><br><span class="line">   (B.SEX_UPON_OUTCOME != <span class="string">"Intact Male"</span> <span class="keyword">AND</span> B.SEX_UPON_OUTCOME != <span class="string">"Intact Female"</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> B.ANIMAL_ID</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17046&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;없어진-기록-찾기&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>programmers sql IS NULL</title>
+    <link href="https://newtype94.github.io/2020/05/20/programmers_sql/programmers_IS_NULL/"/>
+    <id>https://newtype94.github.io/2020/05/20/programmers_sql/programmers_IS_NULL/</id>
+    <published>2020-05-20T00:28:31.000Z</published>
+    <updated>2020-05-27T15:53:36.308Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17045" target="_blank" rel="noopener">문제 링크</a></p><h1 id="이름이-없는-동물의-아이디"><a href="#이름이-없는-동물의-아이디" class="headerlink" title="이름이 없는 동물의 아이디"></a>이름이 없는 동물의 아이디</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> A.ANIMAL_ID, A.NAME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS A <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> ANIMAL_INS B <span class="keyword">ON</span> A.ANIMAL_ID = B.ANIMAL_ID</span><br><span class="line"><span class="keyword">WHERE</span> B.ANIMAL_ID <span class="keyword">IS</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> A.ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="이름이-있는-동물의-아이디"><a href="#이름이-있는-동물의-아이디" class="headerlink" title="이름이 있는 동물의 아이디"></a>이름이 있는 동물의 아이디</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NAME</span> <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="NULL-처리하기"><a href="#NULL-처리하기" class="headerlink" title="NULL 처리하기"></a>NULL 처리하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_TYPE, <span class="keyword">IFNULL</span>(<span class="keyword">NAME</span>, <span class="string">"No name"</span>) <span class="keyword">AS</span> <span class="keyword">NAME</span>, SEX_UPON_INTAKE</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17045&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;이름이-없는-동물의-아이디&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>programmers sql GROUP BY</title>
+    <link href="https://newtype94.github.io/2020/05/19/programmers_sql/programmers_GROUP_BY/"/>
+    <id>https://newtype94.github.io/2020/05/19/programmers_sql/programmers_GROUP_BY/</id>
+    <published>2020-05-19T06:31:33.000Z</published>
+    <updated>2020-05-27T15:40:26.201Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17044" target="_blank" rel="noopener">문제 링크</a></p><h1 id="고양이와-개는-몇-마리-있을까"><a href="#고양이와-개는-몇-마리-있을까" class="headerlink" title="고양이와 개는 몇 마리 있을까"></a>고양이와 개는 몇 마리 있을까</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_TYPE, <span class="keyword">COUNT</span> (*) <span class="keyword">AS</span> <span class="keyword">count</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> ANIMAL_TYPE = <span class="string">"Cat"</span> <span class="keyword">OR</span> ANIMAL_TYPE = <span class="string">"Dog"</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ANIMAL_TYPE</span><br></pre></td></tr></table></figure></div><h1 id="동명-동물-수-찾기"><a href="#동명-동물-수-찾기" class="headerlink" title="동명 동물 수 찾기"></a>동명 동물 수 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span>, <span class="keyword">COUNT</span> (*) <span class="keyword">AS</span> <span class="keyword">count</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NAME</span> <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">null</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">HAVING</span> <span class="keyword">count</span> &gt;= <span class="number">2</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">NAME</span></span><br></pre></td></tr></table></figure></div><h1 id="입양-시각-구하기-1"><a href="#입양-시각-구하기-1" class="headerlink" title="입양 시각 구하기(1)"></a>입양 시각 구하기(1)</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">HOUR</span>(DATETIME) <span class="keyword">AS</span> <span class="keyword">HOUR</span>, <span class="keyword">COUNT</span>(DATETIME) <span class="keyword">AS</span> <span class="keyword">COUNT</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">HOUR</span>(DATETIME) &gt;= <span class="number">9</span> <span class="keyword">AND</span> <span class="keyword">HOUR</span>(DATETIME) &lt;= <span class="number">19</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">HOUR</span></span><br></pre></td></tr></table></figure></div><h1 id="입양-시각-구하기-2"><a href="#입양-시각-구하기-2" class="headerlink" title="입양 시각 구하기(2)"></a>입양 시각 구하기(2)</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> @<span class="keyword">hour</span> = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">SELECT</span> (@<span class="keyword">hour</span> := @<span class="keyword">hour</span> + <span class="number">1</span>) <span class="keyword">AS</span> <span class="keyword">HOUR</span>,</span><br><span class="line">  (</span><br><span class="line">      <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> <span class="keyword">COUNT</span></span><br><span class="line">      <span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line">      <span class="keyword">WHERE</span> <span class="keyword">HOUR</span>(DATETIME) = @<span class="keyword">hour</span></span><br><span class="line">  )</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_OUTS</span><br><span class="line"><span class="keyword">WHERE</span> @<span class="keyword">hour</span> &lt; <span class="number">23</span></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17044&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;고양이와-개는-몇-마리-있을까&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>programmers sql SUM, MAX, MIN</title>
+    <link href="https://newtype94.github.io/2020/05/17/programmers_sql/programmers_SUM_MAX_MIN/"/>
+    <id>https://newtype94.github.io/2020/05/17/programmers_sql/programmers_SUM_MAX_MIN/</id>
+    <published>2020-05-17T02:12:51.000Z</published>
+    <updated>2020-05-27T09:49:06.040Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17043" target="_blank" rel="noopener">문제 링크</a></p><h1 id="최댓값-구하기"><a href="#최댓값-구하기" class="headerlink" title="최댓값 구하기"></a>최댓값 구하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(DATETIME) <span class="keyword">AS</span> 시간</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br></pre></td></tr></table></figure></div><h1 id="최솟값-구하기"><a href="#최솟값-구하기" class="headerlink" title="최솟값 구하기"></a>최솟값 구하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MIN</span>(DATETIME) <span class="keyword">AS</span> 시간</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br></pre></td></tr></table></figure></div><h1 id="동물-수-구하기"><a href="#동물-수-구하기" class="headerlink" title="동물 수 구하기"></a>동물 수 구하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(ANIMAL_ID) <span class="keyword">AS</span> <span class="keyword">count</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br></pre></td></tr></table></figure></div><h1 id="중복-제거하기"><a href="#중복-제거하기" class="headerlink" title="중복 제거하기"></a>중복 제거하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> <span class="keyword">NAME</span>) <span class="keyword">AS</span> <span class="keyword">count</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">NAME</span> <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17043&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;최댓값-구하기&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>programmers sql SELECT</title>
+    <link href="https://newtype94.github.io/2020/05/16/programmers_sql/programmers_SELECT/"/>
+    <id>https://newtype94.github.io/2020/05/16/programmers_sql/programmers_SELECT/</id>
+    <published>2020-05-16T01:32:31.000Z</published>
+    <updated>2020-05-27T09:38:53.951Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/parts/17042" target="_blank" rel="noopener">문제 링크</a></p><h1 id="모든-레코드-조회하기"><a href="#모든-레코드-조회하기" class="headerlink" title="모든 레코드 조회하기"></a>모든 레코드 조회하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="역순-정렬하기"><a href="#역순-정렬하기" class="headerlink" title="역순 정렬하기"></a>역순 정렬하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span>, DATETIME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS </span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure></div><h1 id="아픈-동물-찾기"><a href="#아픈-동물-찾기" class="headerlink" title="아픈 동물 찾기"></a>아픈 동물 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> INTAKE_CONDITION = <span class="string">"SICK"</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="어린-동물-찾기"><a href="#어린-동물-찾기" class="headerlink" title="어린 동물 찾기"></a>어린 동물 찾기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">WHERE</span> INTAKE_CONDITION != <span class="string">"AGED"</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="동물의-아이디와-이름"><a href="#동물의-아이디와-이름" class="headerlink" title="동물의 아이디와 이름"></a>동물의 아이디와 이름</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ANIMAL_ID</span><br></pre></td></tr></table></figure></div><h1 id="여러-기준으로-정렬하기"><a href="#여러-기준으로-정렬하기" class="headerlink" title="여러 기준으로 정렬하기"></a>여러 기준으로 정렬하기</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ANIMAL_ID, <span class="keyword">NAME</span>, DATETIME</span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">NAME</span>, DATETIME <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure></div><h1 id="상위-n개-레코드"><a href="#상위-n개-레코드" class="headerlink" title="상위 n개 레코드"></a>상위 n개 레코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">sql</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">NAME</span></span><br><span class="line"><span class="keyword">FROM</span> ANIMAL_INS</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> DATETIME</span><br><span class="line"><span class="keyword">LIMIT</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/parts/17042&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;모든-레코드-조회하기&quot;&gt;&lt;a hre
+      
+    
+    </summary>
+    
+    
+      <category term="프로그래머스 sql Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-sql-Kit/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2019 인턴 불량 사용자</title>
@@ -433,192 +607,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42896&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="동적계획법(Dynamic Programming)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 정수 삼각형</title>
-    <link href="https://newtype94.github.io/2020/02/24/programmers/DP/programmers_%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95/"/>
-    <id>https://newtype94.github.io/2020/02/24/programmers/DP/programmers_%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95/</id>
-    <published>2020-02-24T05:21:08.000Z</published>
-    <updated>2020-04-04T14:36:39.018Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/43105" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>동적계획법(Dynamic Programming) / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>마찬가지로 메모이제이션을 할 건데,<br>이 문제는 삼각형의 각 노드에 메모이제이션을 해줄 수 있어 편하다.</p><p>각 loop가 의미하는 것은 삼각형의 row들을 점검하는 것이고<br>row 점검을 마무리한 후, 최댓값(최적의 값)으로 덮어씌운다.</p><p>그리고 이 과정을 보다 짧게 코딩하기 위해 reduce를 사용했다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">triangle</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.max(</span><br><span class="line">    ...triangle</span><br><span class="line">      .reduce(<span class="function">(<span class="params">acc, cur, idx</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur.length === <span class="number">1</span>) acc.push(cur);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">          acc.push(</span><br><span class="line">            cur.map(<span class="function">(<span class="params">v, i</span>) =&gt;</span> &#123;</span><br><span class="line">              <span class="keyword">if</span> (i === <span class="number">0</span>) <span class="keyword">return</span> v + acc[idx - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">              <span class="keyword">else</span> <span class="keyword">if</span> (i === cur.length - <span class="number">1</span>) <span class="keyword">return</span> v + acc[idx - <span class="number">1</span>][i - <span class="number">1</span>];</span><br><span class="line">              <span class="keyword">else</span> <span class="keyword">return</span> v + <span class="built_in">Math</span>.max(acc[idx - <span class="number">1</span>][i - <span class="number">1</span>], acc[idx - <span class="number">1</span>][i]);</span><br><span class="line">            &#125;)</span><br><span class="line">          );</span><br><span class="line">        <span class="keyword">return</span> acc;</span><br><span class="line">      &#125;, [])</span><br><span class="line">      .pop()</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43105&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="동적계획법(Dynamic Programming)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 카펫</title>
-    <link href="https://newtype94.github.io/2020/02/21/programmers/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/programmers_%EC%B9%B4%ED%8E%AB/"/>
-    <id>https://newtype94.github.io/2020/02/21/programmers/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/programmers_%EC%B9%B4%ED%8E%AB/</id>
-    <published>2020-02-21T02:54:17.000Z</published>
-    <updated>2020-04-04T12:56:49.482Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42842" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>완전탐색 / LV.2 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>대기업 인적성에 규칙 찾기 part로 나오는 유형과 비슷하다.<br>이 문제에서는 brown 블록과 red 블록의 규칙을 찾는게 우선이다.</p><ol><li>전체 블록은 “가로 &gt;= 세로”</li><li>red 블록은 내키는대로 존재하고 brown은 그것을 1겹으로 둘러싸고 있음.</li></ol><p>for문, while문, 재귀 중 아무거나 사용하여 완전탐색을 하면 되고,<br>나는 for문을 사용하는 대신, 전체 블록의 루트를 for문의 끝으로 지정했다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">brown, red</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> big = brown + red;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.sqrt(big));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">3</span>; i &lt; max + <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (big % i === <span class="number">0</span> &amp;&amp; (big / i - <span class="number">2</span>) * (i - <span class="number">2</span>) === red) <span class="keyword">return</span> [big / i, i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42842&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="완전탐색" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 징검다리</title>
-    <link href="https://newtype94.github.io/2020/02/19/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC/"/>
-    <id>https://newtype94.github.io/2020/02/19/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC/</id>
-    <published>2020-02-19T05:08:11.000Z</published>
-    <updated>2020-04-04T12:56:49.484Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/43236" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>이분탐색 / LV.4 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="풀이-방법"><a href="#풀이-방법" class="headerlink" title="풀이 방법"></a>풀이 방법</h2><p>이 문제는 제거할 돌의 수 n이 input이고,<br>output은 다음과 같다.</p><ol><li>제거할 돌을 어떻게 pick하는지에 따라 여러 경우의 수 존재</li><li>각 경우에서, 돌 사이의 거리들 중 최솟값을 저장</li><li>&lt;최솟값&gt;, &lt;최솟값&gt;, &lt;최솟값&gt;, … 중 최댓값 반환</li></ol><p>요약하자면 돌 사이가 서로서로 최대한 멀게끔 빼내라는 말이다.</p><h2 id="새로운-함수-정의"><a href="#새로운-함수-정의" class="headerlink" title="새로운 함수 정의"></a>새로운 함수 정의</h2><p>우리는 역으로 대입할 것이기 때문에<br>output으로 가능한 “거리”들이 input이 될 것이다.<br>그래서 이것을 받을 함수도 하나 더 정의해야 한다.</p><p>거리 =&gt; { 모든 돌 사이의 거리가 input보다 크거나 같아야 한다. 그만큼 돌을 빼내자(with count++) } =&gt; count</p><p>그리고 output == n 인 input 중 가장 큰 값을 택하면 된다.</p><h2 id="애매한-점"><a href="#애매한-점" class="headerlink" title="애매한 점"></a>애매한 점</h2><p>이 함수는 실제 돌 사이 거리가 될 수 없는 input을 받아도 output을 return한다.<br>결론적으로 다대1함수이다.<br>답이 될 수 있는 input들 중 가장 큰 값을 선택하면 될 것 같은 느낌은 들지만<br>이 느낌을 말로 설명하기가 은근히 애매하다.<br>이럴 때는 로그를 찍어보는 것이 확실하다.</p><p>다음 코드를 임시로 추가하여 로그를 확인했다.</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getN = <span class="function"><span class="params">dist</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//...생략</span></span><br><span class="line">  <span class="keyword">let</span> exact = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; rocksTmp.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (rocksTmp[i + <span class="number">1</span>] - rocksTmp[i] === dist) &#123;</span><br><span class="line">      exact = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(dist, rocksTmp, <span class="string">"remove_"</span> + cnt, exact);</span><br><span class="line">  <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; distance + <span class="number">1</span>; i++) &#123;</span><br><span class="line">  getN(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h2 id="로그"><a href="#로그" class="headerlink" title="로그"></a>로그</h2><p>1 [ 0, 5, 19, 28, 34 ] remove_0 false<br>2 [ 0, 5, 19, 28, 34 ] remove_0 false<br>3 [ 0, 5, 19, 28, 34 ] remove_0 false<br>4 [ 0, 5, 19, 28, 34 ] remove_0 false<br>5 [ 0, 5, 19, 28, 34 ] remove_0 true<br>6 [ 0, 19, 28, 34 ] remove_1 true<br>7 [ 0, 19, 28 ] remove_2 false<br>8 [ 0, 19, 28 ] remove_2 false<br>9 [ 0, 19, 28 ] remove_2 true<br>10 [ 0, 19, 34 ] remove_2 false<br>11 [ 0, 19, 34 ] remove_2 false<br>12 [ 0, 19, 34 ] remove_2 false<br>13 [ 0, 19, 34 ] remove_2 false<br>14 [ 0, 19, 34 ] remove_2 false<br>15 [ 0, 19, 34 ] remove_2 true<br>16 [ 0, 19 ] remove_3 false<br>17 [ 0, 19 ] remove_3 false<br>18 [ 0, 19 ] remove_3 false<br>19 [ 0, 19 ] remove_3 true<br>20 [ 0, 28 ] remove_3 false<br>21 [ 0, 28 ] remove_3 false<br>22 [ 0, 28 ] remove_3 false<br>23 [ 0, 28 ] remove_3 false<br>24 [ 0, 28 ] remove_3 false<br>25 [ 0, 28 ] remove_3 false<br>26 [ 0, 28 ] remove_3 false<br>27 [ 0, 28 ] remove_3 false<br>28 [ 0, 28 ] remove_3 true<br>29 [ 0, 34 ] remove_3 false<br>30 [ 0, 34 ] remove_3 false<br>31 [ 0, 34 ] remove_3 false<br>32 [ 0, 34 ] remove_3 false<br>33 [ 0, 34 ] remove_3 false<br>34 [ 0, 34 ] remove_3 true</p><h1 id="전체코드"><a href="#전체코드" class="headerlink" title="전체코드"></a>전체코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">distance, rocks, n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n === rocks.length) <span class="keyword">return</span> distance;</span><br><span class="line"></span><br><span class="line">  rocks.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b);</span><br><span class="line">  rocks.unshift(<span class="number">0</span>);</span><br><span class="line">  rocks.push(distance);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> right = distance;</span><br><span class="line">  <span class="keyword">let</span> left = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> mid;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getN = <span class="function"><span class="params">dist</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> rocksTmp = rocks.slice();</span><br><span class="line">    <span class="keyword">let</span> cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> idx = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (idx &lt; rocksTmp.length - <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (rocksTmp[idx + <span class="number">1</span>] - rocksTmp[idx] &lt; dist) &#123;</span><br><span class="line">        rocksTmp.splice(idx + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">        cnt++;</span><br><span class="line">      &#125; <span class="keyword">else</span> idx++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    mid = <span class="built_in">Math</span>.floor((right + left) / <span class="number">2</span>);</span><br><span class="line">    getN(mid) &gt; n ? (right = mid) : (left = mid);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/43236&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="이분탐색" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 쇠막대기</title>
-    <link href="https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/"/>
-    <id>https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%EC%87%A0%EB%A7%89%EB%8C%80%EA%B8%B0/</id>
-    <published>2020-02-16T05:40:53.000Z</published>
-    <updated>2020-04-04T12:56:49.478Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42585" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>스택,큐 / LV.2 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="아이디어"><a href="#아이디어" class="headerlink" title="아이디어"></a>아이디어</h2><p>문제에서도 가이드하듯, <code>()</code>를 빔으로 치환하는 것이 최우선이다.<br>단 치환이라고해서 <code>()</code>를 굳이 다른 값으로 replace하기 보다는<br>배열에서 <code>,</code> 정도로 생각하는 편이 낫다. = string.split(“()”)</p><h2 id="풀이-방법"><a href="#풀이-방법" class="headerlink" title="풀이 방법"></a>풀이 방법</h2><ol><li>배열의 요소를 하나씩 돌면서 <code>(</code>에는 stack push, <code>)</code>에는 stack pop한다.</li><li>각 차례가 끝날 때 = <code>,</code>에 도달할 때 = 빔<br>stack의 개수만큼 더한다.</li><li>단 stack을 참고할 때는 pop이 된 후라 막대가 한개가 빠지는 셈이다.<br>그래서 pop이벤트마다 미리 answer++ 해준다.</li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">arrangement</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arr = arrangement.split(<span class="string">"()"</span>);</span><br><span class="line">  <span class="keyword">let</span> answer = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> stack = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (arr.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    arr</span><br><span class="line">      .shift()</span><br><span class="line">      .split(<span class="string">""</span>)</span><br><span class="line">      .forEach(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (v === <span class="string">"("</span>) stack++;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">          stack--;</span><br><span class="line">          answer++;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    answer += stack;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42585&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="스택, 큐" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EC%8A%A4%ED%83%9D-%ED%81%90/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 프린터</title>
-    <link href="https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%94%84%EB%A6%B0%ED%84%B0/"/>
-    <id>https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%94%84%EB%A6%B0%ED%84%B0/</id>
-    <published>2020-02-16T03:32:10.000Z</published>
-    <updated>2020-04-04T12:56:49.479Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42587" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>스택,큐 / LV.2 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>2개의 자료구조를 사용했다.</p><ol><li>처음 input으로 받은 priorities</li><li>priorities의 index만 따로 뽑은 배열</li></ol><p>이 문제에서는 priorities에서 하나를 추출할 때 마다<br>추출 지점의 앞 요소들이, 추출 지점 뒤쪽으로 옮겨진다.<br>그리고 이 과정에서 index가 바뀌므로 기존의 index는 알 수 없게 된다.</p><p>단, 이 문제는 end point 여부를 검증할 때 원래 index를 알아야 하므로<br>priorities가 바뀌더라도 원래 index는 꾸준히 들고 있어야 한다.</p><p>priorities가 뒤섞일 때, index 배열도 똑같이 뒤섞어주면 원래 index를 계속 알 수 있다!</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">priorities, location</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> answer = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> index = priorities.map(<span class="function">(<span class="params">v, i</span>) =&gt;</span> i);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (priorities.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    answer++;</span><br><span class="line">    <span class="keyword">let</span> maxIdx = priorities.indexOf(<span class="built_in">Math</span>.max(...priorities));</span><br><span class="line">    <span class="keyword">if</span> (index[maxIdx] === location) <span class="keyword">return</span> answer;</span><br><span class="line">    priorities.splice(maxIdx, <span class="number">1</span>);</span><br><span class="line">    priorities = priorities.concat(...priorities.splice(<span class="number">0</span>, maxIdx));</span><br><span class="line">    index.splice(maxIdx, <span class="number">1</span>);</span><br><span class="line">    index = index.concat(...index.splice(<span class="number">0</span>, maxIdx));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42587&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="스택, 큐" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EC%8A%A4%ED%83%9D-%ED%81%90/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers N으로 표현</title>
-    <link href="https://newtype94.github.io/2020/02/16/programmers/DP/programmers_N%EC%9C%BC%EB%A1%9C%ED%91%9C%ED%98%84/"/>
-    <id>https://newtype94.github.io/2020/02/16/programmers/DP/programmers_N%EC%9C%BC%EB%A1%9C%ED%91%9C%ED%98%84/</id>
-    <published>2020-02-16T03:06:08.000Z</published>
-    <updated>2020-04-04T14:11:15.776Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42895" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>동적계획법(Dynamic Programming) / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>N을 몇 번 썼는지를 메모이제이션 해둔다.<br>메모이제이션은 다음과 같다.<br><a href="https://ko.wikipedia.org/wiki/메모이제이션" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/메모이제이션</a></p><p>메모이제이션을 사용하는 패턴은 대개 비슷하다.<br>loop(i)에서 계산한 내용이 loop(i+1)로 넘어가면 증발하므로,<br>증발하기 전에 loop(i) 단에서 계산 결과만 전역 변수에 따로 저장하는 방식이다.</p><p>단, 이번 문제에서는 loop의 수가 8까지로 정해져있고,<br>각 메모이제이션마다 계산으로는 도달하는 것이 아닌 초기요소들 N, NN, NNN, NNNN, … 이 있으므로<br>이를 초반에 정적으로 정의한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">N, number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (N === number) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> memo = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">11</span>, <span class="number">111</span>, <span class="number">1111</span>, <span class="number">11111</span>, <span class="number">111111</span>, <span class="number">1111111</span>, <span class="number">11111111</span>].map(</span><br><span class="line">    v =&gt; <span class="keyword">new</span> <span class="built_in">Set</span>([v * N])</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> check = <span class="function">(<span class="params">x, y, i</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> isNumber = <span class="function"><span class="params">cal</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (cal === number) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">else</span> memo[i].add(cal);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">if</span> (</span><br><span class="line">      isNumber(x + y) ||</span><br><span class="line">      isNumber(x * y) ||</span><br><span class="line">      isNumber(x - y) ||</span><br><span class="line">      isNumber(y - x) ||</span><br><span class="line">      (x !== <span class="number">0</span> &amp;&amp; isNumber(<span class="built_in">parseInt</span>(y / x))) ||</span><br><span class="line">      (y !== <span class="number">0</span> &amp;&amp; isNumber(<span class="built_in">parseInt</span>(x / y)))</span><br><span class="line">    )</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> nUsing = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (nUsing &lt; <span class="number">9</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (memo[nUsing].has(number)) <span class="keyword">return</span> nUsing;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> a = <span class="number">1</span>; a &lt;= nUsing / <span class="number">2</span>; a++) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> x <span class="keyword">of</span> memo[a]) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> y <span class="keyword">of</span> memo[nUsing - a]) &#123;</span><br><span class="line">          <span class="keyword">if</span> (check(x, y, nUsing)) <span class="keyword">return</span> nUsing;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    nUsing++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42895&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
       
     
