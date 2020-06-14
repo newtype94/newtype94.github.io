@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>용어 정리 - 4차 산업 | 코딩곳간</title><meta name="description" content="용어 정리 - 4차 산업"><meta name="keywords" content="4차 산업"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="용어 정리 - 4차 산업"><meta name="twitter:description" content="용어 정리 - 4차 산업"><meta name="twitter:image" content="https://newtype94.github.io/img/grey.jpg"><meta property="og:type" content="article"><meta property="og:title" content="용어 정리 - 4차 산업"><meta property="og:url" content="https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/"><meta property="og:site_name" content="코딩곳간"><meta property="og:description" content="용어 정리 - 4차 산업"><meta property="og:image" content="https://newtype94.github.io/img/grey.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/"><link rel="prev" title="Database - Index" href="https://newtype94.github.io/2019/11/30/Database/Database_index/"><link rel="next" title="용어 정리 - 자바" href="https://newtype94.github.io/2019/09/20/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="코딩곳간" type="application/atom+xml">
+</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">코딩곳간</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">70</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">27</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">34</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">Catalog</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#머신러닝-vs-딥러닝"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">머신러닝 vs 딥러닝</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#머신-러닝"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">머신 러닝</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#인공-신경망-artificial-neural-network"><span class="toc_mobile_items-number">1.2.</span> <span class="toc_mobile_items-text">인공 신경망(artificial neural network)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#딥러닝"><span class="toc_mobile_items-number">1.3.</span> <span class="toc_mobile_items-text">딥러닝</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#VR-vs-AR"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text">VR vs AR</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#VR"><span class="toc_mobile_items-number">2.1.</span> <span class="toc_mobile_items-text">VR</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#AR"><span class="toc_mobile_items-number">2.2.</span> <span class="toc_mobile_items-text">AR</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#MR"><span class="toc_mobile_items-number">2.3.</span> <span class="toc_mobile_items-text">MR</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#XR"><span class="toc_mobile_items-number">2.4.</span> <span class="toc_mobile_items-text">XR</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#머신러닝-vs-딥러닝"><span class="toc-number">1.</span> <span class="toc-text">머신러닝 vs 딥러닝</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#머신-러닝"><span class="toc-number">1.1.</span> <span class="toc-text">머신 러닝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#인공-신경망-artificial-neural-network"><span class="toc-number">1.2.</span> <span class="toc-text">인공 신경망(artificial neural network)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#딥러닝"><span class="toc-number">1.3.</span> <span class="toc-text">딥러닝</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VR-vs-AR"><span class="toc-number">2.</span> <span class="toc-text">VR vs AR</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#VR"><span class="toc-number">2.1.</span> <span class="toc-text">VR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AR"><span class="toc-number">2.2.</span> <span class="toc-text">AR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MR"><span class="toc-number">2.3.</span> <span class="toc-text">MR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XR"><span class="toc-number">2.4.</span> <span class="toc-text">XR</span></a></li></ol></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(/img/grey.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">용어 정리 - 4차 산업</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Created 2019-09-29<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> Updated 2020-06-14</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC/">용어 정리</a><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC/4%EC%B0%A8-%EC%82%B0%EC%97%85/">4차 산업</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>Post View:</span><span id="busuanzi_value_page_pv"></span></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>본 페이지는 면접 속성 준비를 위하여 다양한 블로그를 참고했습니다.</p>
+</blockquote>
+<h1 id="머신러닝-vs-딥러닝"><a href="#머신러닝-vs-딥러닝" class="headerlink" title="머신러닝 vs 딥러닝"></a>머신러닝 vs 딥러닝</h1><h2 id="머신-러닝"><a href="#머신-러닝" class="headerlink" title="머신 러닝"></a>머신 러닝</h2><ul>
+<li>초기 인공 지능 연구를 말하며 다음과 같은 알고리즘 사용<ol>
+<li>의사 결정 트리 학습</li>
+<li>귀납 논리 프로그래밍</li>
+<li>클러스터링</li>
+<li>강화 학습</li>
+<li>베이지안(Bayesian) 네트워크</li>
+</ol>
+</li>
+</ul>
+<h2 id="인공-신경망-artificial-neural-network"><a href="#인공-신경망-artificial-neural-network" class="headerlink" title="인공 신경망(artificial neural network)"></a>인공 신경망(artificial neural network)</h2><ul>
+<li>초기 머신 러닝 연구 중 뉴런의 연결 구조 착안하여 개발</li>
+<li>단점 : 상호 연결이 가능한 뇌와는 달리 레이어 연결 및 데이터 전파 방향이 일정함</li>
+</ul>
+<h2 id="딥러닝"><a href="#딥러닝" class="headerlink" title="딥러닝"></a>딥러닝</h2><ul>
+<li>뇌의 뉴런에 착안하여 정보 입출력 계층을 활용해 데이터 학습</li>
+<li>단점 : 인공 신경망보다 훨씬 더 많은 양의 연산이 필요함</li>
+<li>극복 : 슈퍼컴퓨터를 기반으로 딥 러닝 개념을 증명하는 알고리즘을 병렬화하는데 성공</li>
+<li>발전 : 병렬 연산에 최적화된 GPU의 등장</li>
+<li>RTX 2080 TI(사고싶다ㅜ) : 초당 RTX-OPS 78조(초당 78조 연산), 초당 해시 계산 1천억 번</li>
+</ul>
+<h1 id="VR-vs-AR"><a href="#VR-vs-AR" class="headerlink" title="VR vs AR"></a>VR vs AR</h1><h2 id="VR"><a href="#VR" class="headerlink" title="VR"></a>VR</h2><ul>
+<li>Virtual Reality = 가상 현실</li>
+<li>VR기기 : 시야를 다 가림</li>
+<li>플레이스테이션vr, vr체험카페 케익</li>
+</ul>
+<h2 id="AR"><a href="#AR" class="headerlink" title="AR"></a>AR</h2><ul>
+<li>Augmented Reality = 증강 현실</li>
+<li>AR 기기 : 안경이나 스마트폰 렌즈 등으로 나의 시야에 덧씌움</li>
+<li>GPS, 자이로스코프로 지리, 위치정보를 받아와 실제 배경, 환경 등에 가상 이미지를 겹쳐 보이게 함</li>
+<li>포켓몬gO, 유희왕zexal</li>
+</ul>
+<h2 id="MR"><a href="#MR" class="headerlink" title="MR"></a>MR</h2><ul>
+<li>Mixed Reality = 혼합 현실 = VR 장점 + AR 단점<br>VR 장점 : 가상을 전체 구현하여 몰입감이 높음<br>VR 단점 : 그래도 가상이므로 현실감이 떨어짐<br>AR 장점 : 현실 배경이므로 현실감이 높음<br>AR 단점 : GPS와 기존 배경에 제약을 받으므로 컨텐츠에 한계가 있음</li>
+<li>마이크로소프트의 홀로렌즈</li>
+</ul>
+<h2 id="XR"><a href="#XR" class="headerlink" title="XR"></a>XR</h2><ul>
+<li>Extended Reality = 확장 현실</li>
+<li>VR, AR, MR을 아우르는 표현</li>
+</ul>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/">https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/4%EC%B0%A8-%EC%82%B0%EC%97%85/">4차 산업    </a></div><div class="post_share"><div class="social-share" data-image="/img/grey.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2019/11/30/Database/Database_index/"><img class="prev_cover lazyload" data-src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Previous Post</div><div class="prev_info"><span>Database - Index</span></div></a></div><div class="next-post pull_right"><a href="/2019/09/20/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94/"><img class="next_cover lazyload" data-src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">Next Post</div><div class="next_info"><span>용어 정리 - 자바</span></div></a></div></nav></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Kim YongHoon</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>

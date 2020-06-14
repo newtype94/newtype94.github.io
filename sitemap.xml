@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newtype94.github.io/2019/11/30/Database/Database_index/</loc>
+    
+    <lastmod>2020-06-14T14:09:09.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2019/09/15/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%A0%84%EC%82%B0%ED%95%99/</loc>
+    
+    <lastmod>2020-06-14T13:57:31.949Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/</loc>
+    
+    <lastmod>2020-06-14T12:55:37.903Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2019/09/10/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84/</loc>
+    
+    <lastmod>2020-06-14T12:55:26.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2019/09/20/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%9E%90%EB%B0%94/</loc>
+    
+    <lastmod>2020-06-14T12:54:54.420Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://newtype94.github.io/2020/05/27/programmers_sql/programmers_STRING_DATE/</loc>
     
     <lastmod>2020-05-27T17:02:09.293Z</lastmod>
@@ -226,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/01/29/programmers/%EC%A0%95%EB%A0%AC/programmers_%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%88%98/</loc>
+    <loc>https://newtype94.github.io/2020/02/02/programmers/%ED%95%B4%EC%8B%9C/programmers_%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%95%A8%EB%B2%94/</loc>
     
     <lastmod>2020-04-04T12:56:49.486Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/02/programmers/%ED%95%B4%EC%8B%9C/programmers_%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%95%A8%EB%B2%94/</loc>
+    <loc>https://newtype94.github.io/2020/01/29/programmers/%EC%A0%95%EB%A0%AC/programmers_%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%88%98/</loc>
     
     <lastmod>2020-04-04T12:56:49.486Z</lastmod>
     
@@ -247,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/19/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC/</loc>
+    <loc>https://newtype94.github.io/2020/02/09/programmers/%EC%A0%95%EB%A0%AC/programmers_H-Index/</loc>
     
     <lastmod>2020-04-04T12:56:49.484Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/09/programmers/%EC%A0%95%EB%A0%AC/programmers_H-Index/</loc>
+    <loc>https://newtype94.github.io/2020/02/19/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC/</loc>
     
     <lastmod>2020-04-04T12:56:49.484Z</lastmod>
     
@@ -268,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/05/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%98%88%EC%82%B0/</loc>
+    <loc>https://newtype94.github.io/2020/02/21/programmers/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/programmers_%EC%B9%B4%ED%8E%AB/</loc>
     
     <lastmod>2020-04-04T12:56:49.482Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/21/programmers/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/programmers_%EC%B9%B4%ED%8E%AB/</loc>
+    <loc>https://newtype94.github.io/2020/02/05/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%98%88%EC%82%B0/</loc>
     
     <lastmod>2020-04-04T12:56:49.482Z</lastmod>
     
@@ -303,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%94%84%EB%A6%B0%ED%84%B0/</loc>
+    <loc>https://newtype94.github.io/2020/02/03/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%83%91/</loc>
     
     <lastmod>2020-04-04T12:56:49.479Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/03/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%83%91/</loc>
+    <loc>https://newtype94.github.io/2020/02/16/programmers/%EC%8A%A4%ED%83%9D,%ED%81%90/programmers_%ED%94%84%EB%A6%B0%ED%84%B0/</loc>
     
     <lastmod>2020-04-04T12:56:49.479Z</lastmod>
     
@@ -359,14 +394,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/04/programmers/DFS,BFS/programmers_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</loc>
+    <loc>https://newtype94.github.io/2020/02/07/programmers/DFS,BFS/programmers_%EB%8B%A8%EC%96%B4%EB%B3%80%ED%99%98/</loc>
     
     <lastmod>2020-04-04T12:56:49.471Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/07/programmers/DFS,BFS/programmers_%EB%8B%A8%EC%96%B4%EB%B3%80%ED%99%98/</loc>
+    <loc>https://newtype94.github.io/2020/02/04/programmers/DFS,BFS/programmers_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</loc>
     
     <lastmod>2020-04-04T12:56:49.471Z</lastmod>
     
@@ -380,14 +415,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/03/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_n%EC%A7%84%EC%88%98%EA%B2%8C%EC%9E%84/</loc>
+    <loc>https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/</loc>
     
     <lastmod>2020-03-27T04:07:13.805Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/</loc>
+    <loc>https://newtype94.github.io/2020/03/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_n%EC%A7%84%EC%88%98%EA%B2%8C%EC%9E%84/</loc>
     
     <lastmod>2020-03-27T04:07:13.805Z</lastmod>
     
@@ -411,34 +446,6 @@
     <loc>https://newtype94.github.io/2020/01/21/%EA%B0%9C%EB%B0%9C%EB%85%B8%ED%8A%B8/%EA%B0%9C%EB%B0%9C%EB%85%B8%ED%8A%B8_voiceChain_1/</loc>
     
     <lastmod>2020-03-15T15:08:34.482Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2019/09/15/%EB%A9%B4%EC%A0%91/%EB%A9%B4%EC%A0%91_%EC%A0%84%EC%82%B0%ED%95%99/</loc>
-    
-    <lastmod>2020-03-08T06:44:14.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2019/09/20/%EB%A9%B4%EC%A0%91/%EB%A9%B4%EC%A0%91_%EC%9E%90%EB%B0%94/</loc>
-    
-    <lastmod>2020-03-08T06:44:14.563Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2019/09/10/%EB%A9%B4%EC%A0%91/%EB%A9%B4%EC%A0%91_%EC%84%9C%EB%B2%84/</loc>
-    
-    <lastmod>2020-03-08T06:44:14.563Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2019/09/29/%EB%A9%B4%EC%A0%91/%EB%A9%B4%EC%A0%91_4%EC%B0%A8%EC%82%B0%EC%97%85/</loc>
-    
-    <lastmod>2020-03-08T06:44:14.562Z</lastmod>
     
   </url>
   
