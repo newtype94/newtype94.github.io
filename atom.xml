@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-05-27T17:02:09.293Z</updated>
+  <updated>2020-07-03T09:16:53.650Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>포트폴리오 - voice chain</title>
+    <link href="https://newtype94.github.io/2020/07/01/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_voiceChain/"/>
+    <id>https://newtype94.github.io/2020/07/01/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_voiceChain/</id>
+    <published>2020-07-01T06:11:32.000Z</published>
+    <updated>2020-07-03T09:16:53.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Voice-Chain"><a href="#Voice-Chain" class="headerlink" title="Voice Chain"></a>Voice Chain</h1><p><a href="https://www.youtube.com/watch?v=eQBibb1iZX0" target="_blank" rel="noopener"><img alt="Video Label" data-src="http://img.youtube.com/vi/eQBibb1iZX0/0.jpg" class="lazyload"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Voice-Chain&quot;&gt;&lt;a href=&quot;#Voice-Chain&quot; class=&quot;headerlink&quot; title=&quot;Voice Chain&quot;&gt;&lt;/a&gt;Voice Chain&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/w
+      
+    
+    </summary>
+    
+    
+      <category term="포트폴리오" scheme="https://newtype94.github.io/categories/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/"/>
+    
+      <category term="졸업프로젝트" scheme="https://newtype94.github.io/categories/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/"/>
+    
+    
+      <category term="React Native" scheme="https://newtype94.github.io/tags/React-Native/"/>
+    
+      <category term="AWS" scheme="https://newtype94.github.io/tags/AWS/"/>
+    
+      <category term="lambda" scheme="https://newtype94.github.io/tags/lambda/"/>
+    
+      <category term="dynamodb" scheme="https://newtype94.github.io/tags/dynamodb/"/>
+    
+  </entry>
   
   <entry>
     <title>programmers sql STRING, DATE</title>
@@ -585,37 +619,6 @@
       <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
     
       <category term="탐욕법(Greedy)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%ED%83%90%EC%9A%95%EB%B2%95-Greedy/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 카드 게임</title>
-    <link href="https://newtype94.github.io/2020/02/26/programmers/DP/programmers_%EC%B9%B4%EB%93%9C%EA%B2%8C%EC%9E%84/"/>
-    <id>https://newtype94.github.io/2020/02/26/programmers/DP/programmers_%EC%B9%B4%EB%93%9C%EA%B2%8C%EC%9E%84/</id>
-    <published>2020-02-26T03:50:12.000Z</published>
-    <updated>2020-04-04T14:49:34.072Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42896" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>동적계획법(Dynamic Programming) / LV.4 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="처음-풀이"><a href="#처음-풀이" class="headerlink" title="처음 풀이"></a>처음 풀이</h2><p>빠르게 구현할 수 있고 동시에 모든 요소를 검증할 수 있는<br>재귀를 사용해 먼저 풀어보았다.<br>그러나 left와 right의 최대 길이가 각 1000개씩이고,<br>left[0] &gt;= right[0] 일 경우 최대 2개씩 갈라지므로<br>최대 2의 1000제곱 만큼의 loop 발생한다.<br>돌려보니 역시나 시간 초과가 발생했다.</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> next = <span class="function">(<span class="params">l, r, sum</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (l.length * r.length === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (sum &gt; max) max = sum;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> lShift = l.slice(<span class="number">1</span>, l.length);</span><br><span class="line">    <span class="keyword">let</span> rShift = r.slice(<span class="number">1</span>, r.length);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (l[<span class="number">0</span>] &gt; r[<span class="number">0</span>]) next(l, rShift, sum + r[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      next(lShift, r, sum);</span><br><span class="line">      next(lShift, rShift, sum);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  next(left, right, <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h2 id="DP로-풀어야-하는-이유"><a href="#DP로-풀어야-하는-이유" class="headerlink" title="DP로 풀어야 하는 이유"></a>DP로 풀어야 하는 이유</h2><p>input의 최대 길이가 각 1000이므로 1000을 기준으로 생각해봐야 한다.<br>2의 1000제곱은 어마어마하게 큰 수지만,<br>2차원 배열의 크기 1000 x 1000은 백만으로 비교적 다룰만한 수이다.<br>그리고 2차원 배열의 각 칸에 저장되는 값들도<br>1~2000 사이 정수들의 합으로 구성되므로<br>공간복잡도 역시 비교적 작은 편이다.</p><h2 id="Top-down-vs-Bottom-up"><a href="#Top-down-vs-Bottom-up" class="headerlink" title="Top-down vs Bottom-up"></a>Top-down vs Bottom-up</h2><p>6면 모두 단일 숫자로 구성된 주사위가 여러 개 있다.<br>주사위는 다음과 같은 규칙으로 합쳐버릴 수 있다.</p><p>1 주사위 + 1 주사위 =&gt; 2 주사위<br>2 주사위 + 2 주사위 =&gt; 3 주사위<br>…<br>5 주사위 + 5 주사위 =&gt; 6 주사위</p><p>Top-down은 6 주사위 시점부터 접근하는 것이고,<br>Bottom-up은 1 주사위 시점부터 접근하는 것이다.</p><h2 id="함수형-프로그래밍"><a href="#함수형-프로그래밍" class="headerlink" title="함수형 프로그래밍"></a>함수형 프로그래밍</h2><p>특정 위치(index, index)의 값을 반환하는 getMemo 함수를 정의했다.<br>memo(캐시)에 접근하여 값이 있으면 바로 반환, 없으면 set한 후에 값을 반환한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><p>이 문제에서 Top-down과 Bottom-up의 유의미한 속도 차이는 없었다.</p><h2 id="Top-down"><a href="#Top-down" class="headerlink" title="Top-down"></a>Top-down</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> length = left.length;</span><br><span class="line">  <span class="keyword">const</span> memo = right.concat(<span class="number">0</span>).map(<span class="function"><span class="params">v</span> =&gt;</span> left.map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="number">-1</span>).concat(<span class="number">-1</span>));</span><br><span class="line">  memo[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getMemo = <span class="function">(<span class="params">l, r</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (l &lt; <span class="number">0</span> || r &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (memo[l][r] &gt; <span class="number">-1</span>) <span class="keyword">return</span> memo[l][r];</span><br><span class="line">    memo[l][r] =</span><br><span class="line">      left[l] &gt; right[r - <span class="number">1</span>]</span><br><span class="line">        ? getMemo(l, r - <span class="number">1</span>) + right[r - <span class="number">1</span>]</span><br><span class="line">        : <span class="built_in">Math</span>.max(getMemo(l - <span class="number">1</span>, r - <span class="number">1</span>), getMemo(l - <span class="number">1</span>, r));</span><br><span class="line">    <span class="keyword">return</span> memo[l][r];</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> a = <span class="number">0</span>; a &lt; length + <span class="number">1</span>; a++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (max &lt; getMemo(a, length)) max = getMemo(a, length);</span><br><span class="line">    <span class="keyword">if</span> (max &lt; getMemo(length, a)) max = getMemo(length, a);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h2 id="Bottom-up"><a href="#Bottom-up" class="headerlink" title="Bottom-up"></a>Bottom-up</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">left, right</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> length = left.length;</span><br><span class="line">  <span class="keyword">const</span> memo = right.concat(<span class="number">0</span>).map(<span class="function"><span class="params">v</span> =&gt;</span> left.map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="number">-1</span>).concat(<span class="number">-1</span>));</span><br><span class="line">  memo[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getMemo = <span class="function">(<span class="params">l, r</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (l &lt; <span class="number">0</span> || r &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (memo[l][r] &gt; <span class="number">-1</span>) <span class="keyword">return</span> memo[l][r];</span><br><span class="line">    memo[l][r] =</span><br><span class="line">      left[l] &gt; right[r - <span class="number">1</span>]</span><br><span class="line">        ? getMemo(l, r - <span class="number">1</span>) + right[r - <span class="number">1</span>]</span><br><span class="line">        : <span class="built_in">Math</span>.max(getMemo(l - <span class="number">1</span>, r - <span class="number">1</span>), getMemo(l - <span class="number">1</span>, r));</span><br><span class="line">    <span class="keyword">return</span> memo[l][r];</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> a = <span class="number">0</span>; a &lt; length + <span class="number">1</span>; a++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> b = <span class="number">0</span>; b &lt; length + <span class="number">1</span>; b++) &#123;</span><br><span class="line">      <span class="keyword">if</span> ((a === length || b === length) &amp;&amp; max &lt; getMemo(a, b))</span><br><span class="line">        max = getMemo(a, b);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42896&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="동적계획법(Dynamic Programming)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming/"/>
     
     
       <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
