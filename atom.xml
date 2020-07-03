@@ -51,6 +51,68 @@
   </entry>
   
   <entry>
+    <title>카카오 blind 2019 호텔 방 배정</title>
+    <link href="https://newtype94.github.io/2020/06/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%98%B8%ED%85%94%20%EB%B0%A9%20%EB%B0%B0%EC%A0%95/"/>
+    <id>https://newtype94.github.io/2020/06/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%98%B8%ED%85%94%20%EB%B0%A9%20%EB%B0%B0%EC%A0%95/</id>
+    <published>2020-06-20T10:31:22.000Z</published>
+    <updated>2020-07-03T17:45:06.185Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/64063" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>문제 풀이 방향을 세 번이나 바꿔서 진행했다.</p><ol><li><p>완전 탐색 풀이<br>테스트 케이스는 다 통과하나<br>효율성 테스트에서 통과하지 못함</p></li><li><p>DP 풀이<br>완전 탐색보다 좋아졌으나 그래도 효율성에서 걸리는 문제가 있음<br>DP특성상 정적 배열을 선언해두므로<br>방 수는 많고 손님이 극히 적을 때 비효율성 때문에 문제가 되었나 싶기도 함</p></li><li><p>Map을 사용한 풀이<br>Object를 사용해도 되지만 Map에는 Set과 마찬가지로 has 메서드가 있어 편리함<br>이 방법으로 풀어 해결했다</p></li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">k, room_number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> rooms = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> showMeRoom = <span class="function">(<span class="params">pos</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (rooms.has(pos)) &#123;</span><br><span class="line">      <span class="keyword">let</span> temp = pos;</span><br><span class="line">      pos = rooms.get(pos) || pos + <span class="number">1</span>;</span><br><span class="line">      rooms.set(temp, rooms.get(pos) || temp + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    rooms.set(pos, pos + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> pos;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> room_number.map(<span class="function">(<span class="params">v</span>) =&gt;</span> showMeRoom(v));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/64063&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2019 인턴" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2019-%EC%9D%B8%ED%84%B4/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>카카오 blind 2019 크레인 인형뽑기 게임</title>
+    <link href="https://newtype94.github.io/2020/06/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%81%AC%EB%A0%88%EC%9D%B8%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%EA%B2%8C%EC%9E%84/"/>
+    <id>https://newtype94.github.io/2020/06/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%81%AC%EB%A0%88%EC%9D%B8%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%EA%B2%8C%EC%9E%84/</id>
+    <published>2020-06-11T02:01:33.000Z</published>
+    <updated>2020-07-03T16:13:28.033Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/64061" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>두 가지를 할 수 있어야 한다.</p><ol><li>input으로 주어진 board 변수를 N x N 격자 판 전용 2차원 배열에 새로 배치하기.</li><li>바구니를 stack으로써 사용하고, 빼내는 조건을 구현하기</li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">board, moves</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> answer = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> pan = <span class="keyword">new</span> <span class="built_in">Array</span>(board[<span class="number">0</span>].length).fill([]).map(<span class="function">(<span class="params">v</span>) =&gt;</span> []);</span><br><span class="line">  <span class="keyword">const</span> outBox = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (board.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> row = board.pop();</span><br><span class="line">    row.forEach(<span class="function">(<span class="params">v, i</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (v !== <span class="number">0</span>) pan[i].push(v);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (moves.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> out = pan[moves.shift() - <span class="number">1</span>].pop();</span><br><span class="line">    <span class="keyword">if</span> (!out) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="keyword">if</span> (outBox.length &lt; <span class="number">1</span> || out !== outBox[outBox.length - <span class="number">1</span>])</span><br><span class="line">      outBox.push(out);</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      outBox.pop();</span><br><span class="line">      answer += <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/64061&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2019 인턴" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2019-%EC%9D%B8%ED%84%B4/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>programmers sql STRING, DATE</title>
     <link href="https://newtype94.github.io/2020/05/27/programmers_sql/programmers_STRING_DATE/"/>
     <id>https://newtype94.github.io/2020/05/27/programmers_sql/programmers_STRING_DATE/</id>
@@ -548,68 +610,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42886&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="탐욕법(Greedy)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%ED%83%90%EC%9A%95%EB%B2%95-Greedy/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 단속카메라</title>
-    <link href="https://newtype94.github.io/2020/03/04/programmers/Greedy/programmers_%EB%8B%A8%EC%86%8D%EC%B9%B4%EB%A9%94%EB%9D%BC/"/>
-    <id>https://newtype94.github.io/2020/03/04/programmers/Greedy/programmers_%EB%8B%A8%EC%86%8D%EC%B9%B4%EB%A9%94%EB%9D%BC/</id>
-    <published>2020-03-04T05:01:13.000Z</published>
-    <updated>2020-04-04T16:07:26.065Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42884" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>탐욕법(Greedy) / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="이분탐색-시도"><a href="#이분탐색-시도" class="headerlink" title="이분탐색 시도"></a>이분탐색 시도</h2><p>차량의 대수가 1대 ~ 10000대 이다.<br>차량이 10000대 있을 때<br>운이 좋으면 카메라 1대로 끝나고, 운이 없으면 카메라를 10000대 두어야 한다.<br>return의 range가 넓기에 역으로 대입하고자 이분탐색의 틀을 먼저 짜보았다.</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">routes</span>) </span>&#123;</span><br><span class="line">  routes.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">1</span>] - b[<span class="number">1</span>]).sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> setCam = <span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> left = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">let</span> right = routes.length;</span><br><span class="line">  <span class="keyword">let</span> mid;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (right - left &gt; <span class="number">1</span>) &#123;</span><br><span class="line">    mid = <span class="built_in">Math</span>.floor((left + right) / <span class="number">2</span>);</span><br><span class="line">    setCam(mid) ? (right = mid) : (left = mid);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><p>setCam 함수를 greedy한 방법으로 구현하던 중,<br>그냥 setCam함수 자체가 바로 최솟값을 return할 수도 있겠다 싶었다.<br>그래서 이분탐색없이 푸는 것으로 방향을 바꿨다.</p><h2 id="그리디-풀이"><a href="#그리디-풀이" class="headerlink" title="그리디 풀이"></a>그리디 풀이</h2><p>그리디 풀이는 부분의 답을 모아 최종 답이 도출하는 것이 원칙인데<br>이 때 “부분”을 어떤 것으로 잡는지가 중요하다.<br>사람의 직관으로는 먼저 출발하는 차를 우선적으로 고려하고 전체의 답을 향해 더해나갈 것이지만<br>이 문제는 역발상으로 차가 도착하는 지점을 각 “부분”으로 해석해야 한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">routes</span>) </span>&#123;</span><br><span class="line">  routes.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">1</span>] - b[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> cam = routes.shift()[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">let</span> cnt = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (routes.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> [start, end] = routes.shift();</span><br><span class="line">    <span class="keyword">if</span> (start &lt;= cam) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      cam = end;</span><br><span class="line">      cnt++;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42884&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="탐욕법(Greedy)" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%ED%83%90%EC%9A%95%EB%B2%95-Greedy/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 섬 연결하기</title>
-    <link href="https://newtype94.github.io/2020/03/03/programmers/Greedy/programmers_%EC%84%AC%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/"/>
-    <id>https://newtype94.github.io/2020/03/03/programmers/Greedy/programmers_%EC%84%AC%EC%97%B0%EA%B2%B0%ED%95%98%EA%B8%B0/</id>
-    <published>2020-03-03T08:20:31.000Z</published>
-    <updated>2020-04-04T16:06:41.721Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/42861" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>탐욕법(Greedy) / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><p>이 문제에서 기준이 되는 것은<br>각 노드가 아니라<br>노드을 연결하는 간선이 되어야 한다.</p><p>이것을 시행착오를 겪고 알았다.</p><h2 id="노드를-기준으로"><a href="#노드를-기준으로" class="headerlink" title="노드를 기준으로"></a>노드를 기준으로</h2><p>처음엔 노드를 기준으로 그리디를 적용해보았다.</p><ol><li>각 노드에서 가장 짧은 간선을 찾아 건너간다.</li><li>건너간 노드에서 또 최소 간선을 찾아 건너간다.</li><li>건너간 노드에서 갈 수 있는 간선이 없다면 index=0부터 index++하여 다음 노드로 기준을 옮긴다.</li></ol><p>이렇게 풀면 백프로 연결하는 것은 보장되지만 최소가 아닐 수 있다.</p><p>(사이클)<br>0-1 : 2<br>1-2 : 4<br>2-3 : 5<br>3-4 : 6<br>4-1 : 3</p><p>이 경우 0부터 시작하면 2 4 5 6 간선을 건너갈 것이다.<br>그러나 3-4 대신 4-1을 연결하는 것이 더 최적의 경로이므로<br>이 방법으로는 정답을 도출할 수 없다.</p><h2 id="간선을-기준으로"><a href="#간선을-기준으로" class="headerlink" title="간선을 기준으로"></a>간선을 기준으로</h2><ol><li>간선을 기준으로 costs 배열을 오름차순 정렬한다.</li><li>costs 앞요소부터 꺼내서 sum에 더 해나간다.</li><li>모든 노드가 연결되었을 때 종료한다.</li></ol><p>간단해보이지만 3번이 어렵다.</p><p>[노드] – 1 – [노드] – 9 – [노드] – 1 – []</p><p>위 그래프에서 1 두 개를 먼저 잇고 9를 이어야 종료될 것이다.<br>그런데 1 두 개를 이었을 때 이미 모든 노드를 방문한 시점이 되는데,<br>이것은 종료 타이밍과 별개로 생각해야 한다.<br>일단 연결된 노드 집단을 각각 별도의 섬으로 봐야하고,<br>모든 섬들이 이어져 하나의 섬이 되었을 때(섬에 모든 노드가 들어왔을때) 종료해야 한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, costs</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n === <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  costs.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">2</span>] - b[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> tmp = costs.shift();</span><br><span class="line">  <span class="keyword">let</span> con = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="keyword">new</span> <span class="built_in">Set</span>([tmp[<span class="number">0</span>], tmp[<span class="number">1</span>]])]);</span><br><span class="line">  <span class="keyword">let</span> sum = tmp[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> ([...con][<span class="number">0</span>].size === n) <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">const</span> [a, b, val] = costs.shift();</span><br><span class="line">    <span class="keyword">if</span> ([...con].some(<span class="function"><span class="params">v</span> =&gt;</span> v.has(a) &amp;&amp; v.has(b))) <span class="keyword">continue</span>;</span><br><span class="line">    sum += val;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> conA = [...con].find(<span class="function"><span class="params">v</span> =&gt;</span> v.has(a));</span><br><span class="line">    <span class="keyword">if</span> (conA) con.delete(conA);</span><br><span class="line">    <span class="keyword">const</span> conB = [...con].find(<span class="function"><span class="params">v</span> =&gt;</span> v.has(b));</span><br><span class="line">    <span class="keyword">if</span> (conB) con.delete(conB);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (conA &amp;&amp; conB) con.add(<span class="keyword">new</span> <span class="built_in">Set</span>([...conA, ...conB]));</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (conA) con.add(<span class="keyword">new</span> <span class="built_in">Set</span>([...conA, b]));</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (conB) con.add(<span class="keyword">new</span> <span class="built_in">Set</span>([...conB, a]));</span><br><span class="line">    <span class="keyword">else</span> con.add(<span class="keyword">new</span> <span class="built_in">Set</span>([a, b]));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/42861&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
       
     
