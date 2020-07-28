@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-07-11T08:50:07.206Z</updated>
+  <updated>2020-07-28T16:09:56.858Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2019 튜플</title>
+    <link href="https://newtype94.github.io/2020/07/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%8A%9C%ED%94%8C/"/>
+    <id>https://newtype94.github.io/2020/07/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%8A%9C%ED%94%8C/</id>
+    <published>2020-07-23T08:15:46.000Z</published>
+    <updated>2020-07-28T16:09:56.858Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/64065" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><ol><li>input : string =&gt; array =&gt; sort</li><li>answer : set =&gt; array</li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sets = s</span><br><span class="line">    .split(<span class="string">"&#125;"</span>)</span><br><span class="line">    .reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">      b = b.replace(<span class="string">"&#123;&#123;"</span>, <span class="string">""</span>).replace(<span class="string">",&#123;"</span>, <span class="string">""</span>);</span><br><span class="line">      <span class="keyword">if</span> (b.length &gt; <span class="number">0</span>) a.push(b.split(<span class="string">","</span>));</span><br><span class="line">      <span class="keyword">return</span> a;</span><br><span class="line">    &#125;, [])</span><br><span class="line">    .sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a.length - b.length);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> answer = <span class="keyword">new</span> <span class="built_in">Set</span>([]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (sets.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> temp = sets.shift();</span><br><span class="line">    <span class="keyword">while</span> (temp.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      answer.add(<span class="built_in">parseInt</span>(temp.shift()));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [...answer];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/64065&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2019 인턴" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2019-%EC%9D%B8%ED%84%B4/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>개발 - Markdown</title>
@@ -571,37 +602,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49191&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="그래프" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EA%B7%B8%EB%9E%98%ED%94%84/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 가장 먼 노드</title>
-    <link href="https://newtype94.github.io/2020/03/15/programmers/%EA%B7%B8%EB%9E%98%ED%94%84/programmers_%EA%B0%80%EC%9E%A5%EB%A8%BC%EB%85%B8%EB%93%9C/"/>
-    <id>https://newtype94.github.io/2020/03/15/programmers/%EA%B7%B8%EB%9E%98%ED%94%84/programmers_%EA%B0%80%EC%9E%A5%EB%A8%BC%EB%85%B8%EB%93%9C/</id>
-    <published>2020-03-15T01:34:40.000Z</published>
-    <updated>2020-04-04T12:56:49.474Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/49189" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>그래프 / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="그래프-용어"><a href="#그래프-용어" class="headerlink" title="그래프 용어"></a>그래프 용어</h2><p>정점 vertex<br>간선 edge<br>방향성 directed, undirected<br>사이클 cyclic, acyclic<br>가중치 weighted<br>완전(정점,간선 full) complete</p><h2 id="그래프를-표현하는-자료구조"><a href="#그래프를-표현하는-자료구조" class="headerlink" title="그래프를 표현하는 자료구조"></a>그래프를 표현하는 자료구조</h2><p>인접행렬과 인접리스트 방식이 있다.<br>모든 노드를 탐색할 경우는 두 방식 모두 시간복잡도가 똑같다.</p><h3 id="인접행렬"><a href="#인접행렬" class="headerlink" title="인접행렬"></a>인접행렬</h3><p>방향성 있을 때 시간복잡도 : O(V^2)<br>방향성 없을 때 시간복잡도 : O(V^2 / 2)</p><p>간선밀도가 높은 밀집그래프에 유리</p><p>let a: boolean[][] = [[true, false],[false, true]]<br>let b: int[][] = [[1, 2],[-1, 5]]</p><ol><li>i에서 j로 방향성 표현 가능</li><li>가중치(int) 표현 가능</li><li>단 가중치 표현할 때 연결되지 않은 정점간 간선은 -1일지 0일지 상황마다 다름<br>(JS는 그냥 숫자 사이에 null 넣어도 될 듯)</li></ol><h3 id="인접리스트"><a href="#인접리스트" class="headerlink" title="인접리스트"></a>인접리스트</h3><p>시간복잡도 : O(V+E)<br>간선밀도가 낮은 희소그래프에 유리</p><p>let a: int[][] = [[2,3],[1], [1,2]]</p><ol><li>i에서 가지는 값에 대해 방향성 표현 가능</li><li>가중치(int) 표현 불가능(값 자리에 tuple을 넣는다면 굳이 가능은 함)</li></ol><h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>가장 큰 depth를 가지는 노드들을 카운트하는 문제이므로<br>같은 depth끼리의 이벤트가 중요하다.<br>그래서 DFS보다는 BFS로 탐색해야 한다.</p><p>먼저 BFS의 원칙대로 큐를 사용해 풀어보았다.</p><ol><li>최초 노드 insert</li><li>맨 앞 노드 out</li><li>그 노드의 자손들 insert</li><li>큐 empty &amp;&amp; 노드 empty =&gt; stop</li></ol><p>그러나 시간 초과가 발생했다.</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, edge</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> node = <span class="keyword">new</span> <span class="built_in">Array</span>(n + <span class="number">1</span>).fill(<span class="number">20000</span>);</span><br><span class="line">  <span class="keyword">let</span> queue = [<span class="number">1</span>];</span><br><span class="line">  node[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">  node[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (queue.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> out = queue.shift();</span><br><span class="line"></span><br><span class="line">    edge = edge.reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (out === cur[<span class="number">0</span>]) &#123;</span><br><span class="line">        queue.push(cur[<span class="number">1</span>]);</span><br><span class="line">        node[cur[<span class="number">1</span>]] = <span class="built_in">Math</span>.min(node[cur[<span class="number">1</span>]], node[out] + <span class="number">1</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (out === cur[<span class="number">1</span>]) &#123;</span><br><span class="line">        queue.push(cur[<span class="number">0</span>]);</span><br><span class="line">        node[cur[<span class="number">0</span>]] = <span class="built_in">Math</span>.min(node[cur[<span class="number">0</span>]], node[out] + <span class="number">1</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> acc.push(cur);</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125;, []);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> node.filter(<span class="function"><span class="params">v</span> =&gt;</span> v === <span class="built_in">Math</span>.max(...node)).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><p>현재 가장 깊은 노드 집합를 set으로 둔다.<br>그보다 아래로 뻗어나갈 수 있으면 임시 set을 만들어 채워넣는다.<br>임시 set이 꽉 차면 원래 set에 바꿔 넣는다.</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, edge</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> deep = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (edge.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> temp = <span class="keyword">new</span> <span class="built_in">Set</span>([]);</span><br><span class="line"></span><br><span class="line">    edge = edge.reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (deep.has(cur[<span class="number">0</span>]) &amp;&amp; deep.has(cur[<span class="number">1</span>])) <span class="keyword">return</span> acc;</span><br><span class="line">      <span class="keyword">if</span> (deep.has(cur[<span class="number">0</span>])) temp.add(cur[<span class="number">1</span>]);</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (deep.has(cur[<span class="number">1</span>])) temp.add(cur[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">else</span> acc.push(cur);</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125;, []);</span><br><span class="line">    <span class="keyword">if</span> (temp.size &gt; <span class="number">0</span>) deep = temp;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> deep.size;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49189&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
       
     
