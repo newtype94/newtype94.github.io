@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-07-28T16:09:56.858Z</updated>
+  <updated>2020-07-30T16:42:33.193Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2019 징검다리 건너기</title>
+    <link href="https://newtype94.github.io/2020/07/30/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC%EA%B1%B4%EB%84%88%EA%B8%B0/"/>
+    <id>https://newtype94.github.io/2020/07/30/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC%EA%B1%B4%EB%84%88%EA%B8%B0/</id>
+    <published>2020-07-30T02:23:14.000Z</published>
+    <updated>2020-07-30T16:42:33.193Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/64062" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>완전 탐색으로 풀면 시간초과가 발생한다.<br>최악의 경우<br>stones의 최대 length(200,000) x stones 원소의 최댓값(200,000,000)<br>만큼의 탐색이 필요하기 때문에..</p><p>이 때 stones의 최대 length는 건너뛰지 못해도<br>stones의 각 값에는 이분탐색을 적용할 수 있다.</p><p>내 차례가 다가왔다. (앞에 n명이 건넜다)<br>내가 마주보든 stones는 초기 stones의 모든 값에 n을 뺀것과 같다.<br>stones에는 0 이하의 수, 0 초과의 수가 존재할 것이다.<br>0이하의 수가 연속되는 길이가 k를 넘지 않으면<br>나도 건널 수 있다.</p><p>이 n은 앞서 말한 stones 원소의 최댓값(200,000,000)까지 가능하므로<br>이분탐색을 도입!</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">k, room_number</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> rooms = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> showMeRoom = <span class="function">(<span class="params">pos</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (rooms.has(pos)) &#123;</span><br><span class="line">      <span class="keyword">let</span> temp = pos;</span><br><span class="line">      pos = rooms.get(pos) || pos + <span class="number">1</span>;</span><br><span class="line">      rooms.set(temp, rooms.get(pos) || temp + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    rooms.set(pos, pos + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> pos;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> room_number.map(<span class="function">(<span class="params">v</span>) =&gt;</span> showMeRoom(v));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/64062&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2019 인턴" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2019-%EC%9D%B8%ED%84%B4/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2019 튜플</title>
@@ -585,37 +616,6 @@
       <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
     
       <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>programmers 순위</title>
-    <link href="https://newtype94.github.io/2020/03/17/programmers/%EA%B7%B8%EB%9E%98%ED%94%84/programmers_%EC%88%9C%EC%9C%84/"/>
-    <id>https://newtype94.github.io/2020/03/17/programmers/%EA%B7%B8%EB%9E%98%ED%94%84/programmers_%EC%88%9C%EC%9C%84/</id>
-    <published>2020-03-17T02:31:34.000Z</published>
-    <updated>2020-04-04T12:56:49.475Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/49191" target="_blank" rel="noopener">문제 링크</a></p><h1 id="분류-레벨-언어"><a href="#분류-레벨-언어" class="headerlink" title="분류 / 레벨 / 언어"></a>분류 / 레벨 / 언어</h1><p>그래프 / LV.3 / Javscript</p><h1 id="설명"><a href="#설명" class="headerlink" title="설명"></a>설명</h1><h2 id="인접-행렬"><a href="#인접-행렬" class="headerlink" title="인접 행렬"></a>인접 행렬</h2><p>인접 행렬 adjacent matrix를 사용한다.</p><p><a href="https://newtype94.github.io/2020/03/15/programmers/%EA%B7%B8%EB%9E%98%ED%94%84/programmers_%EA%B0%80%EC%9E%A5%EB%A8%BC%EB%85%B8%EB%93%9C/#%EC%9D%B8%EC%A0%91%ED%96%89%EB%A0%AC">인접 행렬</a></p><p>(행,열)을 (a,b)라고 할 때 a가 b를 이기면 1, a가 b에게 지면 -1을 저장한다.<br>비기는 경우는 없으므로 생각하지 않는다.<br>a와 b의 승패를 도저히 알 수 없을 경우 0(default)을 저장한다.</p><p>그리고 배열의 index에 편하게 접근하기 위해 (n+1)x(n+1) 규모의 인접 행렬을 사용한다.</p><h2 id="풀이-과정"><a href="#풀이-과정" class="headerlink" title="풀이 과정"></a>풀이 과정</h2><ol><li>input만으로도 알 수 있는 승패 결과는 인접 행렬에 저장한다.</li><li>3중첩 반복문으로 (a,b) 위치에서 다른 행에 접근해 승패 정보를 전파한다.<br>(like <a href="https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%9B%8C%EC%85%9C_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" target="_blank" rel="noopener">플로이드와샬</a>)</li><li>3중첩이나 했기 때문에 전파 과정에 빈틈이 생길 수 없다.<br>(input을 하나씩 추출하면서 정보를 전파했을 때는 빈틈이 생겼다.)</li><li>최종 카운트할 때는 index = 0, index_x === index_y 인 경우를 봐줘야 하므로<br>0이 2개인 행을 카운트한다.</li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, results</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> adj = <span class="keyword">new</span> <span class="built_in">Array</span>(n + <span class="number">1</span>).fill(<span class="number">0</span>).map(<span class="function"><span class="params">v</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Array</span>(n + <span class="number">1</span>).fill(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (results.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> [a, b] = results.shift();</span><br><span class="line">    adj[a][b] = <span class="number">1</span>;</span><br><span class="line">    adj[b][a] = <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> a <span class="keyword">in</span> adj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (a === <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> b <span class="keyword">in</span> adj[a]) &#123;</span><br><span class="line">      <span class="keyword">if</span> (b === <span class="number">0</span> || a === b || adj[a][b] &lt; <span class="number">1</span>) <span class="keyword">continue</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (adj[i][a] === <span class="number">1</span>) &#123;</span><br><span class="line">          adj[i][b] = <span class="number">1</span>;</span><br><span class="line">          adj[b][i] = <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> adj.filter(<span class="function"><span class="params">x</span> =&gt;</span> x.filter(<span class="function"><span class="params">y</span> =&gt;</span> y === <span class="number">0</span>).length === <span class="number">2</span>).length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/49191&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;분류-레벨-언어&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-      <category term="프로그래머스 고득점 Kit" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/"/>
-    
-      <category term="그래프" scheme="https://newtype94.github.io/categories/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EA%B3%A0%EB%93%9D%EC%A0%90-Kit/%EA%B7%B8%EB%9E%98%ED%94%84/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="프로그래머스" scheme="https://newtype94.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/"/>
     
   </entry>
   

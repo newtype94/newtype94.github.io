@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newtype94.github.io/2020/07/30/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%EC%A7%95%EA%B2%80%EB%8B%A4%EB%A6%AC%EA%B1%B4%EB%84%88%EA%B8%B0/</loc>
+    
+    <lastmod>2020-07-30T16:42:33.193Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2020/02/05/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%98%88%EC%82%B0/</loc>
+    
+    <lastmod>2020-07-30T16:10:18.485Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://newtype94.github.io/2020/07/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2019%20%EC%9D%B8%ED%84%B4/2019_kakao_%ED%8A%9C%ED%94%8C/</loc>
     
     <lastmod>2020-07-28T16:09:56.858Z</lastmod>
@@ -324,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/01/programmers/%ED%95%B4%EC%8B%9C/programmers_%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%EB%AA%BB%ED%95%9C%EC%84%A0%EC%88%98/</loc>
+    <loc>https://newtype94.github.io/2020/02/01/programmers/%ED%95%B4%EC%8B%9C/programmers_%EC%9C%84%EC%9E%A5/</loc>
     
     <lastmod>2020-04-04T12:56:49.487Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/01/programmers/%ED%95%B4%EC%8B%9C/programmers_%EC%9C%84%EC%9E%A5/</loc>
+    <loc>https://newtype94.github.io/2020/02/01/programmers/%ED%95%B4%EC%8B%9C/programmers_%EC%99%84%EC%A3%BC%ED%95%98%EC%A7%80%EB%AA%BB%ED%95%9C%EC%84%A0%EC%88%98/</loc>
     
     <lastmod>2020-04-04T12:56:49.487Z</lastmod>
     
@@ -376,13 +390,6 @@
     <loc>https://newtype94.github.io/2020/02/05/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%9E%85%EA%B5%AD%EC%8B%AC%EC%82%AC/</loc>
     
     <lastmod>2020-04-04T12:56:49.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2020/02/05/programmers/%EC%9D%B4%EB%B6%84%ED%83%90%EC%83%89/programmers_%EC%98%88%EC%82%B0/</loc>
-    
-    <lastmod>2020-04-04T12:56:49.482Z</lastmod>
     
   </url>
   
@@ -471,13 +478,6 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/02/07/programmers/DFS,BFS/programmers_%EB%8B%A8%EC%96%B4%EB%B3%80%ED%99%98/</loc>
-    
-    <lastmod>2020-04-04T12:56:49.471Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://newtype94.github.io/2020/02/04/programmers/DFS,BFS/programmers_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</loc>
     
     <lastmod>2020-04-04T12:56:49.471Z</lastmod>
@@ -485,7 +485,14 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/</loc>
+    <loc>https://newtype94.github.io/2020/02/07/programmers/DFS,BFS/programmers_%EB%8B%A8%EC%96%B4%EB%B3%80%ED%99%98/</loc>
+    
+    <lastmod>2020-04-04T12:56:49.471Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2020/03/24/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1/</loc>
     
     <lastmod>2020-03-27T04:07:13.805Z</lastmod>
     
@@ -499,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/2020/03/24/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1/</loc>
+    <loc>https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/</loc>
     
     <lastmod>2020-03-27T04:07:13.805Z</lastmod>
     
