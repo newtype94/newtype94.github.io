@@ -79,6 +79,32 @@
   </entry>
   
   <entry>
+    <title>정규표현식</title>
+    <link href="https://newtype94.github.io/2020/07/19/ES6/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D/"/>
+    <id>https://newtype94.github.io/2020/07/19/ES6/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D/</id>
+    <published>2020-07-19T05:31:46.000Z</published>
+    <updated>2020-07-31T17:40:22.278Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="기본-사용법"><a href="#기본-사용법" class="headerlink" title="기본 사용법"></a>기본 사용법</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">"My name is Kim"</span>;</span><br><span class="line"><span class="keyword">const</span> pattern = <span class="regexp">/Kim/</span>;</span><br><span class="line"></span><br><span class="line">pattern.test(name); <span class="comment">// true</span></span><br><span class="line">pattern.exec(name); <span class="comment">// ["Kim"]</span></span><br><span class="line"></span><br><span class="line">name.match(pattern); <span class="comment">// ["Kim"]</span></span><br></pre></td></tr></table></figure></div><h1 id="반복"><a href="#반복" class="headerlink" title="반복"></a>반복</h1><h2 id><a href="#" class="headerlink" title="?"></a>?</h2><p>1개 or 0개</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">"Kim YongHoon Kim"</span>;</span><br><span class="line"><span class="keyword">const</span> name2 = <span class="string">"Kim YongHoon"</span>;</span><br><span class="line"><span class="keyword">const</span> pattern = <span class="regexp">/Kim?/</span>;</span><br><span class="line"></span><br><span class="line">pattern.test(name); <span class="comment">// true</span></span><br><span class="line">pattern.test(name2); <span class="comment">// true</span></span><br></pre></td></tr></table></figure></div><h2 id="-1"><a href="#-1" class="headerlink" title="+"></a>+</h2><p>1개 이상</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text = <span class="string">"catz"</span>;</span><br><span class="line"><span class="keyword">const</span> text2 = <span class="string">"catcatz"</span>;</span><br><span class="line"><span class="keyword">const</span> pattern = <span class="regexp">/cat+w/</span>;</span><br><span class="line">pattern.test(text); <span class="comment">// true</span></span><br><span class="line">pattern.test(text2); <span class="comment">// true</span></span><br></pre></td></tr></table></figure></div><h2 id="-2"><a href="#-2" class="headerlink" title="*"></a>*</h2><p>0개 이상</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text = <span class="string">"catz"</span>;</span><br><span class="line"><span class="keyword">const</span> pattern = <span class="regexp">/cab*tz/</span>;</span><br><span class="line"><span class="comment">//만약 *를 문자로써 취급하고 싶다면 \*로 사용</span></span><br><span class="line"></span><br><span class="line">pattern.test(text); <span class="comment">// true</span></span><br><span class="line">pattern.exec(text); <span class="comment">// ["catz"]</span></span><br></pre></td></tr></table></figure></div><h1 id="길이-지정"><a href="#길이-지정" class="headerlink" title="길이 지정"></a>길이 지정</h1><p>{n} : n번 연속<br>{n,} : 최소 n번 연속<br>{m, n} : 최소 m번, 최대 n번</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text = <span class="string">"appppppppppppppppple"</span>;</span><br><span class="line">text.match(<span class="regexp">/ap&#123;4&#125;/</span>); <span class="comment">// ["apppp"]</span></span><br><span class="line">text.match(<span class="regexp">/ma&#123;4,&#125;/</span>); <span class="comment">// ["appppppppppppppppp"]</span></span><br><span class="line">text.match(<span class="regexp">/ma&#123;4,6&#125;/</span>); <span class="comment">// ["apppppp"]</span></span><br></pre></td></tr></table></figure></div><h1 id="-3"><a href="#-3" class="headerlink" title="[]"></a>[]</h1><p>범위 지정 + 편의성</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> text =<span class="string">'YongHoon'</span>;</span><br><span class="line">text.match(<span class="regexp">/[abcdefghifklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]\*/</span>);</span><br><span class="line"><span class="comment">// ["YongHoon"]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text =<span class="string">'YongHoon94'</span>;</span><br><span class="line"><span class="keyword">const</span>.match(<span class="regexp">/[a-zA-Z0-9]\*/</span>);</span><br><span class="line"><span class="comment">// ["YongHoon94"]</span></span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;기본-사용법&quot;&gt;&lt;a href=&quot;#기본-사용법&quot; class=&quot;headerlink&quot; title=&quot;기본 사용법&quot;&gt;&lt;/a&gt;기본 사용법&lt;/h1&gt;&lt;div class=&quot;code-area-wrap&quot;&gt;&lt;div class=&quot;highlight-tools&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="ES6" scheme="https://newtype94.github.io/categories/ES6/"/>
+    
+    
+      <category term="Javascript" scheme="https://newtype94.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>개발 - Markdown</title>
     <link href="https://newtype94.github.io/2020/07/05/%EA%B0%9C%EB%B0%9C/Markdown/"/>
     <id>https://newtype94.github.io/2020/07/05/%EA%B0%9C%EB%B0%9C/Markdown/</id>
@@ -571,37 +597,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17684&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
-      
-    
-    </summary>
-    
-    
-      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
-    
-      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>카카오 blind 2018 n진수 게임</title>
-    <link href="https://newtype94.github.io/2020/03/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_n%EC%A7%84%EC%88%98%EA%B2%8C%EC%9E%84/"/>
-    <id>https://newtype94.github.io/2020/03/20/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_n%EC%A7%84%EC%88%98%EA%B2%8C%EC%9E%84/</id>
-    <published>2020-03-20T08:27:10.000Z</published>
-    <updated>2020-03-27T04:07:13.805Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17687" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>구현의 성격이 강한 문제이다.<br>진수 변환하는 방법을 알고 있어야 빠르고 정확하게 풀 수 있다.<br><a href="https://newtype94.github.io/2020/02/12/ES6/%EC%A7%84%EC%88%98%20%EA%B3%84%EC%82%B0/">진수 계산</a></p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, t, m, p</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> fullString = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (fullString.length &lt; t * m) &#123;</span><br><span class="line">    fullString += num.toString(n).toUpperCase();</span><br><span class="line">    num++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> fullString</span><br><span class="line">    .split(<span class="string">""</span>)</span><br><span class="line">    .filter(<span class="function">(<span class="params">v, i</span>) =&gt;</span> (i + <span class="number">1</span> - p) % m === <span class="number">0</span>)</span><br><span class="line">    .slice(<span class="number">0</span>, t)</span><br><span class="line">    .join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17687&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
       
     
