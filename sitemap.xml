@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://newtype94.github.io/about/index.html</loc>
+    
+    <lastmod>2020-08-28T16:38:18.232Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://newtype94.github.io/2019/09/15/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%A0%84%EC%82%B0%ED%95%99/</loc>
+    
+    <lastmod>2020-08-21T12:28:51.027Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://newtype94.github.io/2020/07/19/ES6/%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D/</loc>
     
     <lastmod>2020-07-31T17:40:22.278Z</lastmod>
@@ -51,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://newtype94.github.io/about/index.html</loc>
-    
-    <lastmod>2020-07-10T17:10:00.787Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://newtype94.github.io/2019/04/12/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/ubuntu/</loc>
     
     <lastmod>2020-07-09T07:37:59.055Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>https://newtype94.github.io/2019/09/29/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/4%EC%B0%A8%EC%82%B0%EC%97%85/</loc>
     
     <lastmod>2020-06-14T16:59:27.438Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://newtype94.github.io/2019/09/15/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC/%EC%A0%84%EC%82%B0%ED%95%99/</loc>
-    
-    <lastmod>2020-06-14T16:58:43.326Z</lastmod>
     
   </url>
   
