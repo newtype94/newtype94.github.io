@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-07-30T16:47:52.591Z</updated>
+  <updated>2020-09-09T16:49:51.941Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2018 뉴스 클러스터링(푸는중)</title>
+    <link href="https://newtype94.github.io/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/"/>
+    <id>https://newtype94.github.io/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/</id>
+    <published>2020-09-09T00:25:35.000Z</published>
+    <updated>2020-09-09T16:49:51.941Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17677" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>배열과 문자열을 활용한 구현 문제이다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">str1, str2</span>) </span>&#123;</span><br><span class="line">  str1 = str1.split(<span class="string">""</span>);</span><br><span class="line">  str2 = str2.split(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str1.length - <span class="number">1</span>; i++) &#123;&#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; str2.length - <span class="number">1</span>; i++) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17677&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>카카오 blind 2018 추석 트래픽</title>
+    <link href="https://newtype94.github.io/2020/09/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%B6%94%EC%84%9D%ED%8A%B8%EB%9E%98%ED%94%BD/"/>
+    <id>https://newtype94.github.io/2020/09/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%B6%94%EC%84%9D%ED%8A%B8%EB%9E%98%ED%94%BD/</id>
+    <published>2020-09-08T02:12:45.000Z</published>
+    <updated>2020-09-09T16:00:09.798Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17676" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><ol><li>트래픽 시작 시간 순으로 오름차순 정렬한다</li><li>트래픽이 빠질 때는 고려하지 않는다. 최댓값을 구하는 것이므로 1이라도 더 큰 순간(트래픽이 들어오는 시점)을 기준으로 잡는다.</li></ol><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toSecond</span>(<span class="params">times</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [hour, minute, second] = times.split(<span class="string">":"</span>);</span><br><span class="line">  <span class="keyword">return</span> hour * <span class="number">3600000</span> + minute * <span class="number">60000</span> + second * <span class="number">1000</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">lines</span>) </span>&#123;</span><br><span class="line">  lines = lines.map(<span class="function">(<span class="params">v</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> temp = v.split(<span class="string">" "</span>);</span><br><span class="line">    <span class="keyword">const</span> end = toSecond(temp[<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">const</span> start = end - temp[<span class="number">2</span>].slice(<span class="number">0</span>, <span class="number">-1</span>) * <span class="number">1000</span> + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> [start, end];</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  lines.sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a[<span class="number">0</span>] - b[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> a <span class="keyword">of</span> lines) &#123;</span><br><span class="line">    <span class="keyword">let</span> temp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> b <span class="keyword">of</span> lines) &#123;</span><br><span class="line">      <span class="keyword">if</span> (b[<span class="number">1</span>] &gt;= a[<span class="number">0</span>] - <span class="number">999</span> &amp;&amp; b[<span class="number">1</span>] &lt;= a[<span class="number">0</span>]) temp++;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (b[<span class="number">0</span>] &lt;= a[<span class="number">0</span>] &amp;&amp; b[<span class="number">1</span>] &gt; a[<span class="number">0</span>]) temp++;</span><br><span class="line">    &#125;</span><br><span class="line">    max = <span class="built_in">Math</span>.max(temp, max);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17676&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2019 징검다리 건너기</title>
@@ -535,68 +597,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17683&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
-      
-    
-    </summary>
-    
-    
-      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
-    
-      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>카카오 blind 2018 자동완성</title>
-    <link href="https://newtype94.github.io/2020/03/24/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1/"/>
-    <id>https://newtype94.github.io/2020/03/24/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1/</id>
-    <published>2020-03-24T03:09:18.000Z</published>
-    <updated>2020-03-27T04:07:13.805Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17685" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><h2 id="재귀-조건-검증"><a href="#재귀-조건-검증" class="headerlink" title="재귀, 조건 검증"></a>재귀, 조건 검증</h2><p>재귀안에 재귀를 걸어주는데,<br>중간에 조건을 검증하여 필터링해야한다.</p><ol><li>node 요소가 없으면 return</li><li>idx가 node 요소의 길이보다도 긴 경우 필터링</li><li>idx의 위치에서 서로 다른 node 필터링 + recur()</li><li>남은 node가 하나라면 return, 아니라면 recur()</li></ol><h2 id="로그-확인"><a href="#로그-확인" class="headerlink" title="로그 확인"></a>로그 확인</h2><p>문제에서 요구하는 답은<br>각 search 입력 수의 합이다.<br>그런데 각 search 수가 실제랑 다르면서<br>우연스레 누적 값이 같은 경우도 생길 수 있다.</p><p>그래서 첫 줄의 cnt를 0 대신 []로 두고<br>“cnt+=값”대신 “cnt.push(값)”으로 충분히 확인해본 후<br>마지막에 “cnt+=값”으로 바꿔서 제출하는 것이 확실하다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">words</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> cnt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> recur = <span class="function">(<span class="params">node, idx</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!node[<span class="number">0</span>]) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    node = node.reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!cur[idx]) cnt += idx;</span><br><span class="line">      <span class="keyword">else</span> acc.push(cur);</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125;, []);</span><br><span class="line"></span><br><span class="line">    recur(</span><br><span class="line">      node.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[idx] !== node[<span class="number">0</span>][idx]),</span><br><span class="line">      idx</span><br><span class="line">    );</span><br><span class="line">    node = node.filter(<span class="function"><span class="params">v</span> =&gt;</span> v[idx] === node[<span class="number">0</span>][idx]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (node.length &gt; <span class="number">1</span>) recur(node, idx + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">else</span> cnt += idx + <span class="number">1</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  recur(words, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17685&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
-      
-    
-    </summary>
-    
-    
-      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
-    
-      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>카카오 blind 2018 압축</title>
-    <link href="https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/"/>
-    <id>https://newtype94.github.io/2020/03/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%95%95%EC%B6%95/</id>
-    <published>2020-03-23T06:51:31.000Z</published>
-    <updated>2020-03-27T04:07:13.805Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17684" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>두 개의 배열을 사용해야 한다. dic, answer<br>for문을 돌면서 조건을 검증하고 두 개의 배열 중 한 곳에 넣어준다.<br>최종적으로 answer를 return한다.</p><p>이 문제도 그렇지만,<br>어떤 한 턴만의 요소를 필요로 하지 않고<br>앞 뒤 요소를 끌어와 함께 사용해야 하는 경우가 있다.<br>이럴 때 reduce를 사용하면 조금 더 깔끔해진다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">msg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> dic = <span class="string">"~ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>.split(<span class="string">""</span>);</span><br><span class="line">  <span class="keyword">const</span> answer = [];</span><br><span class="line"></span><br><span class="line">  answer.push(</span><br><span class="line">    dic.indexOf(</span><br><span class="line">      msg.split(<span class="string">""</span>).reduce(<span class="function">(<span class="params">acc, cur</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (dic.indexOf(acc + cur) &gt; <span class="number">-1</span>) <span class="keyword">return</span> acc + cur;</span><br><span class="line">        answer.push(dic.indexOf(acc));</span><br><span class="line">        dic.push(acc + cur);</span><br><span class="line">        <span class="keyword">return</span> cur;</span><br><span class="line">      &#125;, <span class="string">""</span>)</span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17684&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
       
     
