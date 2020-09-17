@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-09-10T17:00:11.434Z</updated>
+  <updated>2020-09-17T17:24:50.669Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2018 셔틀버스</title>
+    <link href="https://newtype94.github.io/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/"/>
+    <id>https://newtype94.github.io/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/</id>
+    <published>2020-09-11T06:18:42.000Z</published>
+    <updated>2020-09-17T17:24:50.669Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17678" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>배열과 루프를 활용한 구현 문제이다.</p><p>단, 주의할 점이 있다.</p><p>보통 이런 류의 문제는 버스를 기다리는 사원들(timetable)이 전부 다 탈 수 있도록 설계해서 내지만 이 문제는 그렇지 않았다.<br>즉 timetable 안에서 버스를 못타는 사람이 충분히 생길 수 있다.</p><p>이것을 해결하기 위해 timetable을 sort하고 n*m으로 slice하고 푼다고 해도,<br>아래와 같은 경우라면 버스를 못타는 사람이 또 생길 수 있다.</p><ul><li>2인승 버스 3대가 준비되어있고, 9시 이전에 1명만 대기한다.</li><li>사람이 10명 대기하고 있어서 앞에서 6명을 잘랐다.</li><li>첫 버스에 1명만 탈 수 있다. 두 번째 버스에는 2명이 탄다. 마지막 버스 차례에 3명이 대기중인데 2인승이므로 1명은 낙오된다.</li></ul><p>그래서 이 문제는 if로 분기를 잘 나누어야 한다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> toTime = <span class="function">(<span class="params">str</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> hour = <span class="built_in">Math</span>.floor(str / <span class="number">60</span>);</span><br><span class="line">  <span class="keyword">let</span> minute = str % <span class="number">60</span>;</span><br><span class="line">  <span class="keyword">if</span> (hour &lt; <span class="number">10</span>) hour = <span class="string">"0"</span> + hour;</span><br><span class="line">  <span class="keyword">if</span> (minute &lt; <span class="number">10</span>) minute = <span class="string">"0"</span> + minute;</span><br><span class="line">  <span class="keyword">return</span> hour + <span class="string">":"</span> + minute;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, t, m, timetable</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> remain = n * m; <span class="comment">//이용 가능한 좌석 수</span></span><br><span class="line"></span><br><span class="line">  timetable = timetable</span><br><span class="line">    .map(<span class="function">(<span class="params">v</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> [hour, minute] = v.split(<span class="string">":"</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">60</span> * hour + <span class="number">1</span> * minute;</span><br><span class="line">    &#125;)</span><br><span class="line">    .sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a - b)</span><br><span class="line">    .slice(<span class="number">0</span>, remain);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> now = <span class="number">540</span>;</span><br><span class="line">  <span class="keyword">let</span> lastBus = <span class="number">540</span> + (n - <span class="number">1</span>) * t;</span><br><span class="line">  <span class="keyword">let</span> thisBus = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (now &lt;= lastBus) &#123;</span><br><span class="line">    thisBus = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (timetable.length &gt; <span class="number">0</span> &amp;&amp; timetable[<span class="number">0</span>] &lt;= now &amp;&amp; thisBus.length &lt; m) &#123;</span><br><span class="line">      thisBus.push(timetable.shift());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (timetable.length === <span class="number">0</span>)</span><br><span class="line">      <span class="keyword">return</span> thisBus.length === m ? toTime(thisBus.pop() - <span class="number">1</span>) : toTime(lastBus);</span><br><span class="line">    <span class="keyword">if</span> (timetable[<span class="number">0</span>] &gt; lastBus) <span class="keyword">return</span> toTime(lastBus);</span><br><span class="line"></span><br><span class="line">    now += t;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> timetable.length &gt; <span class="number">0</span> ? toTime(thisBus.pop() - <span class="number">1</span>) : toTime(lastBus);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17678&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2018 뉴스 클러스터링</title>
@@ -566,37 +597,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17686&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
-      
-    
-    </summary>
-    
-    
-      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
-    
-      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>카카오 blind 2018 방금그곡</title>
-    <link href="https://newtype94.github.io/2020/04/10/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B0%A9%EA%B8%88%EA%B7%B8%EA%B3%A1/"/>
-    <id>https://newtype94.github.io/2020/04/10/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B0%A9%EA%B8%88%EA%B7%B8%EA%B3%A1/</id>
-    <published>2020-04-10T05:01:14.000Z</published>
-    <updated>2020-04-17T12:15:30.918Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17683" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>구현의 성격이 강하다.<br>단 문제의 조건을 놓치지 않고 필요한 함수를 정의해야한다.</p><p>문제의 C#, D# 같이 #이 붙는 경우 문자열은 2개이지만 1개로 계산해야하므로<br>소문자 c, 소문자 d등으로 대체했다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> converter = <span class="function">(<span class="params">input</span>) =&gt;</span></span><br><span class="line">  input</span><br><span class="line">    .split(<span class="string">""</span>)</span><br><span class="line">    .reduce(</span><br><span class="line">      (acc, cur) =&gt;</span><br><span class="line">        cur === <span class="string">"#"</span> ? acc.concat(acc.pop().toLowerCase()) : acc.concat(cur),</span><br><span class="line">      []</span><br><span class="line">    )</span><br><span class="line">    .join(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> timer = <span class="function">(<span class="params">start, end</span>) =&gt;</span></span><br><span class="line">  <span class="built_in">parseInt</span>(end.slice(<span class="number">0</span>, <span class="number">2</span>)) * <span class="number">60</span> -</span><br><span class="line">  <span class="built_in">parseInt</span>(start.slice(<span class="number">0</span>, <span class="number">2</span>)) * <span class="number">60</span> +</span><br><span class="line">  <span class="built_in">parseInt</span>(end.slice(<span class="number">3</span>, <span class="number">5</span>)) -</span><br><span class="line">  <span class="built_in">parseInt</span>(start.slice(<span class="number">3</span>, <span class="number">5</span>));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">m, musicinfos</span>) </span>&#123;</span><br><span class="line">  m = converter(m);</span><br><span class="line"></span><br><span class="line">  musicinfos = musicinfos</span><br><span class="line">    .map(<span class="function">(<span class="params">v</span>) =&gt;</span> (v = v.split(<span class="string">","</span>)))</span><br><span class="line">    .map(<span class="function">(<span class="params">v</span>) =&gt;</span> [timer(v[<span class="number">0</span>], v[<span class="number">1</span>]), v[<span class="number">2</span>], converter(v[<span class="number">3</span>])])</span><br><span class="line">    .sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> b[<span class="number">0</span>] - a[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> v <span class="keyword">of</span> musicinfos) &#123;</span><br><span class="line">    <span class="keyword">let</span> temp = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= v[<span class="number">0</span>] / v[<span class="number">2</span>].length; i++) &#123;</span><br><span class="line">      temp += v[<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    temp += v[<span class="number">2</span>].slice(<span class="number">0</span>, v[<span class="number">0</span>] % v[<span class="number">2</span>].length);</span><br><span class="line">    <span class="keyword">if</span> (temp.indexOf(m) &gt; <span class="number">-1</span>) <span class="keyword">return</span> v[<span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"(None)"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17683&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
       
     
