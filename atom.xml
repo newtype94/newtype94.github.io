@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://newtype94.github.io/"/>
-  <updated>2020-09-17T17:24:50.669Z</updated>
+  <updated>2020-10-08T16:01:52.597Z</updated>
   <id>https://newtype94.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>카카오 blind 2018 비밀지도</title>
+    <link href="https://newtype94.github.io/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/"/>
+    <id>https://newtype94.github.io/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/</id>
+    <published>2020-10-07T03:11:46.000Z</published>
+    <updated>2020-10-08T16:01:52.597Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17681" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><p>각 언어 별 숫자-문자열 변환 방식을 알고 있어야한다.<br>진수 변환까지 알고 있으면 좋다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">n, arr1, arr2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> numToString = <span class="function">(<span class="params">num</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> a1 = num.toString(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">while</span> (a1.length &lt; n) &#123;</span><br><span class="line">      a1 = <span class="string">"0"</span> + a1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a1;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  arr1 = arr1.map(numToString);</span><br><span class="line">  arr2 = arr2.map(numToString);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> answer = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> a = <span class="number">0</span>; a &lt; n; a++) &#123;</span><br><span class="line">    <span class="keyword">const</span> temp = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> b = <span class="number">0</span>; b &lt; n; b++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr1[a][b] === <span class="string">"0"</span> &amp;&amp; arr2[a][b] === <span class="string">"0"</span>) temp.push(<span class="string">" "</span>);</span><br><span class="line">      <span class="keyword">else</span> temp.push(<span class="string">"#"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    answer.push(temp.join(<span class="string">""</span>));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17681&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
+    
+      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
+    
+    
+      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
+    
+      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>카카오 blind 2018 셔틀버스</title>
@@ -566,37 +597,6 @@
       
       
         &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17682&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
-      
-    
-    </summary>
-    
-    
-      <category term="카카오 blind test" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/"/>
-    
-      <category term="2018" scheme="https://newtype94.github.io/categories/%EC%B9%B4%EC%B9%B4%EC%98%A4-blind-test/2018/"/>
-    
-    
-      <category term="알고리즘" scheme="https://newtype94.github.io/tags/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/"/>
-    
-      <category term="카카오" scheme="https://newtype94.github.io/tags/%EC%B9%B4%EC%B9%B4%EC%98%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>카카오 blind 2018 파일명 정렬</title>
-    <link href="https://newtype94.github.io/2020/04/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%A0%95%EB%A0%AC/"/>
-    <id>https://newtype94.github.io/2020/04/23/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%A0%95%EB%A0%AC/</id>
-    <published>2020-04-23T03:14:51.000Z</published>
-    <updated>2020-04-23T16:37:06.377Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://programmers.co.kr/learn/courses/30/lessons/17686" target="_blank" rel="noopener">문제 링크</a></p><h1 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h1><h2 id="mapping"><a href="#mapping" class="headerlink" title="mapping"></a>mapping</h2><p>files 원본의 정렬본을 반환해야 하므로<br>files의 각 file을 직접 HEAD, NUMBER, TAIL로 분리하지 않고<br>각 file과 필요한 요소로 추가하여 만든 객체를 새로 mapping했다.</p><h2 id="stable-sort"><a href="#stable-sort" class="headerlink" title="stable sort"></a>stable sort</h2><p>[1,1,2,3]을 내림차순으로 정렬하면 [3,2,1,1]이다.<br>&lt;1,1&gt;은 “내림차순”이라는 조건에 해당되지 않아<br>[3,2,1,1] 마지막에 &lt;1,1&gt;이 그대로 있다.<br>그리고 이 &lt;1,1&gt;이 원래의 &lt;1,1&gt;과 같은 순서인지 구별할 수 없다.</p><p>하지만 [[1,”ㄱ”], [1,”ㄴ”], [2,”ㄷ”], [3,”ㄹ”]]를<br>value[0]을 기준으로 내림차순 정렬한다면 (<code>sort((a,b)=&gt;(b[0]-a[0]))</code>)<br>정렬 후 마지막 1이 어디에 있던 1인지 알 수 있다.</p><p>이처럼 나머지 요소를 확인 가능한 정렬을 할 때,<br>서로 정렬될 필요가 없는 요소들은 처음 순서대로 있도록 만드는 것이<br>stable sort다.</p><h2 id="JS의-stable-sort"><a href="#JS의-stable-sort" class="headerlink" title="JS의 stable sort"></a>JS의 stable sort</h2><p>JS의 내장함수 sort()는 stable sort가 아니다.<br>운 좋게 stable sort처럼 결과가 나올 수는 있지만<br>시스템상 이를 보장하지는 않는다.</p><p>그래서 처음 Array의 각 index를 mapping해두고<br>sort의 콜백에서 활용하여<br>stable sort를 흉내내야 한다.</p><h2 id="이-문제도-stable-sort가-필요한지"><a href="#이-문제도-stable-sort가-필요한지" class="headerlink" title="이 문제도 stable sort가 필요한지"></a>이 문제도 stable sort가 필요한지</h2><p>TAIL이 정렬의 조건에 아예 들어가지 않고<br>또 sorted files은 가능한 원래 파일들의 순서를 보존하라고 했다.<br>즉 채점할 때 TAIL을 통해 원래의 순서가 보존되었는지 판단할 것이다.<br>sort()의 콜백에 원본 index를 활용하지 않으면<br>운좋게 stable sort되어 몇 개의 답은 맞을 수 있으나<br>100% 답이 될 수는 없다.</p><h1 id="전체-코드"><a href="#전체-코드" class="headerlink" title="전체 코드"></a>전체 코드</h1><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">solution</span>(<span class="params">files</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> files</span><br><span class="line">    .map(<span class="function">(<span class="params">file, index</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        file,</span><br><span class="line">        index,</span><br><span class="line">        head: <span class="regexp">/[^0-9]+/i</span>.exec(file)[<span class="number">0</span>].toLowerCase(),</span><br><span class="line">        num: <span class="built_in">parseInt</span>(<span class="regexp">/[0-9]+/i</span>.exec(file)[<span class="number">0</span>].slice(<span class="number">0</span>, <span class="number">5</span>)),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)</span><br><span class="line">    .sort(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (a.head &gt; b.head) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (a.head &lt; b.head) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">return</span> a.num - b.num === <span class="number">0</span> ? a.index - b.index : a.num - b.num;</span><br><span class="line">    &#125;)</span><br><span class="line">    .map(<span class="function">(<span class="params">v</span>) =&gt;</span> v.file);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://programmers.co.kr/learn/courses/30/lessons/17686&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;문제 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;문제-풀이&quot;&gt;&lt;a href=&quot;#
       
     
