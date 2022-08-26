@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>포트폴리오 - Tracker | 코딩곳간</title><meta name="keywords" content="react.js,android,express.js"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Tracker개인정보활용 플랫폼이다.유저들의 동선을 취합하여 계약한 기업 측에 시각적으로 제공한다.2019년 2학기에 진행한 졸업프로젝트로, 정식 서비스로 출시하지는 않았다.대신 경진대회에서 발표하여 장려상과 상금 100만원을 받았다! Git : Github  기간 제작기간2019.09 ~ 2019.11 발표2019.12.06  사용기술    사용 기술">
+<meta property="og:type" content="article">
+<meta property="og:title" content="포트폴리오 - Tracker">
+<meta property="og:url" content="https://newtype94.github.io/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/index.html">
+<meta property="og:site_name" content="코딩곳간">
+<meta property="og:description" content="Tracker개인정보활용 플랫폼이다.유저들의 동선을 취합하여 계약한 기업 측에 시각적으로 제공한다.2019년 2학기에 진행한 졸업프로젝트로, 정식 서비스로 출시하지는 않았다.대신 경진대회에서 발표하여 장려상과 상금 100만원을 받았다! Git : Github  기간 제작기간2019.09 ~ 2019.11 발표2019.12.06  사용기술    사용 기술">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://newtype94.github.io/img/grey.jpg">
+<meta property="article:published_time" content="2020-01-13T04:50:10.000Z">
+<meta property="article:modified_time" content="2022-08-25T15:06:25.999Z">
+<meta property="article:author" content="Kim YongHoon">
+<meta property="article:tag" content="react.js">
+<meta property="article:tag" content="android">
+<meta property="article:tag" content="express.js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://newtype94.github.io/img/grey.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://newtype94.github.io/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '포트폴리오 - Tracker',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-08-26 00:06:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">36</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/grey.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">코딩곳간</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">포트폴리오 - Tracker</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-01-13T04:50:10.000Z" title="Created 2020-01-13 13:50:10">2020-01-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-08-25T15:06:25.999Z" title="Updated 2022-08-26 00:06:25">2022-08-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/">포트폴리오</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%EC%A1%B8%EC%97%85%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/">졸업프로젝트</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="포트폴리오 - Tracker"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Tracker"><a href="#Tracker" class="headerlink" title="Tracker"></a>Tracker</h1><p>개인정보활용 플랫폼이다.<br>유저들의 동선을 취합하여 계약한 기업 측에 시각적으로 제공한다.<br>2019년 2학기에 진행한 졸업프로젝트로, 정식 서비스로 출시하지는 않았다.<br><strong>대신 경진대회에서 발표하여 장려상과 상금 100만원을 받았다!</strong></p>
+<p>Git : <a target="_blank" rel="noopener" href="https://github.com/newtype94/Tracker">Github</a></p>
+<p><img src="/image/tracker/구조도.jpg" width="90%" title="30px" alt="구조도"></img></p>
+<h2 id="기간"><a href="#기간" class="headerlink" title="기간"></a>기간</h2><ul>
+<li>제작기간<br>2019.09 ~ 2019.11</li>
+<li>발표<br>2019.12.06</li>
+</ul>
+<h2 id="사용기술"><a href="#사용기술" class="headerlink" title="사용기술"></a>사용기술</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>사용 기술</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>호스팅</td>
+<td>개인 서버</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Ubuntu</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>React.js, Android</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>express.js(docker)</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>Postgresql</td>
+</tr>
+</tbody></table>
+<h2 id="협업-내용"><a href="#협업-내용" class="headerlink" title="협업 내용"></a>협업 내용</h2><ul>
+<li><p>개발자 3인</p>
+<ol>
+<li>안드로이드</li>
+<li>웹프론트(나)</li>
+<li>백엔드</li>
+</ol>
+</li>
+<li><p>기획과 디자인은 팀원 3명이 회의를 통해 결정</p>
+</li>
+</ul>
+<h1 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개</h1><h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><ol>
+<li><p>빅데이터: IoT, 머신러닝 등 다양한 분야에서 활용</p>
+<ul>
+<li>빅데이터 기술이 높은 성과를 내면서 사회적인 관심도 증가</li>
+</ul>
+</li>
+<li><p>많은 산업에 있어서 개인 정보에 대한 요구 증가</p>
+<ul>
+<li>타인의 개인정보를 비밀리에 사고파는 암시장마저 형성</li>
+</ul>
+</li>
+<li><p>기존의 비효율적인 데이터 수급 문제</p>
+<ul>
+<li>인터넷에 파편화된 데이터 셋을 찾거나 때로는 직접 수집</li>
+<li>불필요한 시간 허비</li>
+<li>기술의 발전 및 성과 저해</li>
+</ul>
+</li>
+</ol>
+<h2 id="배경"><a href="#배경" class="headerlink" title="배경"></a>배경</h2><ol>
+<li><p>개인 정보를 활용할 수 있는 플랫폼의 부재</p>
+<ul>
+<li>합법적인 선 안에서 개인정보를 활용할 수 있는 플랫폼의 필요성 증가</li>
+</ul>
+</li>
+<li><p>관련 법안: 데이터 3법</p>
+<ul>
+<li>개인정보 보호법, 정보통신망법, 신용정보법</li>
+</ul>
+</li>
+<li><p>목표: 개인위치정보를 수집하여 활용할 수 있는 플랫폼 제작</p>
+<ul>
+<li>데이터 3법과 상충하지 않고 양립하며 개인 정보를 활용할 수 있어야함</li>
+<li>어플리케이션 + 웹사이트 플랫폼을 제작하여 비효율적인 데이터 수급 문제를 해결</li>
+<li>학계와 산업계 모두의 발전을 촉진</li>
+</ul>
+</li>
+</ol>
+<h2 id="관련-법안-분석"><a href="#관련-법안-분석" class="headerlink" title="관련 법안 분석"></a>관련 법안 분석</h2><ol>
+<li><p>개인정보 보호법 제 17조(개인정보의 제공)</p>
+<ul>
+<li>개인에게 직접 동의를 받고 서비스한다면 법적으로 문제되지 않음</li>
+</ul>
+</li>
+<li><p>개인정보자기결정권[5]</p>
+<ul>
+<li>자신에 관한 정보를 보호받기 위하여 자신에 관한 정보를<br>자율적으로 결정하고 관리할 수 있는 권리</li>
+</ul>
+</li>
+<li><p>데이터 3법</p>
+<ul>
+<li>“비동의 개인정보”가 낳는 사생활 침해 논란에서 자유로움</li>
+<li>비식별 처리를 반드시 필요한 부분만 엄격하게 처리하여<br>데이터 선명성을 높일 수 있음</li>
+<li>개인의 활용 동의를 전제하므로 영리적 활동에도 자유로움</li>
+</ul>
+</li>
+</ol>
+<h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h2><ol>
+<li><p>결론</p>
+<ul>
+<li>합법적인 선 안에서 개인위치정보를 활용할 수 있는 플랫폼을 제공</li>
+</ul>
+</li>
+<li><p>기대효과</p>
+<ul>
+<li>개인정보 제공자에게는 일정 금액을 제공하고<br>기업에게는 지역 맞춤 광고와 자사 서비스 방문객의 패턴 파악 등 다양한 활용을 가능케 함</li>
+<li>효율적으로 개인 정보를 활용할 수 있게 하여 빅데이터 관련 산업에 기여</li>
+</ul>
+</li>
+<li><p>향후 방향</p>
+<ul>
+<li>현실적인 플랫폼 출시를 위해서 수익모델과 개인정보 관련 법적 문제를 면밀히 검토</li>
+<li>개인위치정보 이외에도 다양한 개인정보를 활용할 수 있는 플랫폼으로 확장</li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://newtype94.github.io">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/">https://newtype94.github.io/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_tracker/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/react-js/">react.js</a><a class="post-meta__tags" href="/tags/android/">android</a><a class="post-meta__tags" href="/tags/express-js/">express.js</a></div><div class="post_share"><div class="social-share" data-image="/img/grey.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/01/25/programmers/%EC%A0%95%EB%A0%AC/programmers_K%EB%B2%88%EC%A7%B8%EC%88%98/"><img class="prev-cover" src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">programmers K번째 수</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_typesound/"><img class="next-cover" src="/img/grey.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">포트폴리오 - Typesound</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_typesound/" title="포트폴리오 - Typesound"><img class="cover" src="/img/grey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">포트폴리오 - Typesound</div></div></a></div><div><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EB%93%9C%EB%A6%AC%EB%A8%B8%EB%A6%AC/" title="포트폴리오 - 드리머리"><img class="cover" src="/img/grey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">포트폴리오 - 드리머리</div></div></a></div><div><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%98%A4%EB%8A%98%EB%B6%80%ED%84%B0%ED%88%AC%EA%B2%8C%EB%8D%94/" title="포트폴리오 - 오늘부터투게더"><img class="cover" src="/img/grey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">포트폴리오 - 오늘부터투게더</div></div></a></div><div><a href="/2020/01/13/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%ED%86%A0%EB%A1%A0%ED%8C%90/" title="포트폴리오 - 토론판"><img class="cover" src="/img/grey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-01-13</div><div class="title">포트폴리오 - 토론판</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kim YongHoon</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">36</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/newtype94"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/newtype94" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:nhkwxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Mail me, anything!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tracker"><span class="toc-number">1.</span> <span class="toc-text">Tracker</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B8%B0%EA%B0%84"><span class="toc-number">1.1.</span> <span class="toc-text">기간</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%82%AC%EC%9A%A9%EA%B8%B0%EC%88%A0"><span class="toc-number">1.2.</span> <span class="toc-text">사용기술</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%98%91%EC%97%85-%EB%82%B4%EC%9A%A9"><span class="toc-number">1.3.</span> <span class="toc-text">협업 내용</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%86%8C%EA%B0%9C"><span class="toc-number">2.</span> <span class="toc-text">소개</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B0%9C%EC%9A%94"><span class="toc-number">2.1.</span> <span class="toc-text">개요</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%B0%B0%EA%B2%BD"><span class="toc-number">2.2.</span> <span class="toc-text">배경</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B4%80%EB%A0%A8-%EB%B2%95%EC%95%88-%EB%B6%84%EC%84%9D"><span class="toc-number">2.3.</span> <span class="toc-text">관련 법안 분석</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B2%B0%EB%A1%A0"><span class="toc-number">2.4.</span> <span class="toc-text">결론</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/08/24/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_design_pattern_%EC%8B%B1%EA%B8%80%ED%86%A4/" title="메이플스토리 JS 디자인패턴 (1) - Creational Design Pattern"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="메이플스토리 JS 디자인패턴 (1) - Creational Design Pattern"/></a><div class="content"><a class="title" href="/2022/08/24/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_design_pattern_%EC%8B%B1%EA%B8%80%ED%86%A4/" title="메이플스토리 JS 디자인패턴 (1) - Creational Design Pattern">메이플스토리 JS 디자인패턴 (1) - Creational Design Pattern</a><time datetime="2022-08-24T11:13:33.000Z" title="Created 2022-08-24 20:13:33">2022-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 비밀지도"/></a><div class="content"><a class="title" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도">카카오 blind 2018 비밀지도</a><time datetime="2020-10-07T03:11:46.000Z" title="Created 2020-10-07 12:11:46">2020-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 셔틀버스"/></a><div class="content"><a class="title" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스">카카오 blind 2018 셔틀버스</a><time datetime="2020-09-11T06:18:42.000Z" title="Created 2020-09-11 15:18:42">2020-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 뉴스 클러스터링"/></a><div class="content"><a class="title" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링">카카오 blind 2018 뉴스 클러스터링</a><time datetime="2020-09-09T00:25:35.000Z" title="Created 2020-09-09 09:25:35">2020-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%B6%94%EC%84%9D%ED%8A%B8%EB%9E%98%ED%94%BD/" title="카카오 blind 2018 추석 트래픽"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 추석 트래픽"/></a><div class="content"><a class="title" href="/2020/09/08/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%B6%94%EC%84%9D%ED%8A%B8%EB%9E%98%ED%94%BD/" title="카카오 blind 2018 추석 트래픽">카카오 blind 2018 추석 트래픽</a><time datetime="2020-09-08T02:12:45.000Z" title="Created 2020-09-08 11:12:45">2020-09-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Kim YongHoon</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
