@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>전공 기초 - 서버 | 코딩곳간</title><meta name="keywords" content="서버"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="전산 용어 정리 - 서버CI&#x2F;CD Continuous Integration (CI): 개발자를 위한 자동화 프로세스. 코드 변경 사항을 자주 병합하여 문제를 조기에 발견하고 해결. Continuous Delivery (CD): 코드 변경 사항이 자동으로 테스트되고 릴리스 파이프라인을 통해 프로덕션 환경으로 배포되는 프로세스. Continuous D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="전공 기초 - 서버">
+<meta property="og:url" content="https://newtype94.github.io/2019/09/10/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%84%9C%EB%B2%84/index.html">
+<meta property="og:site_name" content="코딩곳간">
+<meta property="og:description" content="전산 용어 정리 - 서버CI&#x2F;CD Continuous Integration (CI): 개발자를 위한 자동화 프로세스. 코드 변경 사항을 자주 병합하여 문제를 조기에 발견하고 해결. Continuous Delivery (CD): 코드 변경 사항이 자동으로 테스트되고 릴리스 파이프라인을 통해 프로덕션 환경으로 배포되는 프로세스. Continuous D">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://newtype94.github.io/img/home.jpg">
+<meta property="article:published_time" content="2019-09-10T04:11:11.000Z">
+<meta property="article:modified_time" content="2024-07-12T17:38:13.036Z">
+<meta property="article:author" content="Kim YongHoon">
+<meta property="article:tag" content="서버">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://newtype94.github.io/img/home.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://newtype94.github.io/2019/09/10/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%84%9C%EB%B2%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '전공 기초 - 서버',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-13 02:38:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">25</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/home.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">코딩곳간</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">전공 기초 - 서버</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2019-09-10T04:11:11.000Z" title="Created 2019-09-10 13:11:11">2019-09-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-07-12T17:38:13.036Z" title="Updated 2024-07-13 02:38:13">2024-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%EC%A0%84%EA%B3%B5-%EA%B8%B0%EC%B4%88/">전공 기초</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="전공 기초 - 서버"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="전산-용어-정리-서버"><a href="#전산-용어-정리-서버" class="headerlink" title="전산 용어 정리 - 서버"></a>전산 용어 정리 - 서버</h1><h2 id="CI-x2F-CD"><a href="#CI-x2F-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h2><ul>
+<li><strong>Continuous Integration (CI)</strong>: 개발자를 위한 자동화 프로세스. 코드 변경 사항을 자주 병합하여 문제를 조기에 발견하고 해결.</li>
+<li><strong>Continuous Delivery (CD)</strong>: 코드 변경 사항이 자동으로 테스트되고 릴리스 파이프라인을 통해 프로덕션 환경으로 배포되는 프로세스.</li>
+<li><strong>Continuous Deployment</strong>: 코드 변경 사항이 자동으로 프로덕션 환경에 배포되는 단계.</li>
+</ul>
+<h2 id="Redis와-Memcached"><a href="#Redis와-Memcached" class="headerlink" title="Redis와 Memcached"></a>Redis와 Memcached</h2><h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><ol>
+<li>메모리 뿐 아니라 디스크에도 데이터를 기록하여 유사시 데이터를 복구할 수 있다.</li>
+<li>String, List, Set, Sorted sets, Hash 등의 데이터 포맷 지원.</li>
+<li>한 개의 키에 저장할 수 있는 용량이 Redis는 512MB, Memcached는 1MB.</li>
+<li>Redis는 싱글 스레드이다. 스냅샷을 뜰 때 자식 프로세스를 만들어 새로 변경된 메모리 페이지를 복사해서 사용한다.</li>
+</ol>
+<h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3><ol>
+<li>DB&#x2F;API 통신 간 데이터를 캐싱하여 처리 속도 증가.</li>
+<li>데이터 변경이 잦은 경우, 메모리 파편화가 발생하기 쉽다. Memcached는 한 번 입력 후 변경되지 않는 정보를 저장할 때 유용하다.</li>
+<li>Redis처럼 다양한 데이터 타입과 API를 지원하지 않는다.</li>
+</ol>
+<h3 id="상황-별-사용"><a href="#상황-별-사용" class="headerlink" title="상황 별 사용"></a>상황 별 사용</h3><ol>
+<li>메모리가 날아가면 서비스 장애가 발생할 수 있는 상황이라면, Redis 사용.</li>
+<li>메모리가 날라가도 원본 데이터로 즉시 복구할 수 있는 데이터는 Memcached 사용.</li>
+<li>통신 속도를 향상시키기 위한 목적이면 Memcached 사용.</li>
+<li>서비스의 특정 기능을 위한 목적으로 캐시 데이터를 사용한다면, Redis 사용.</li>
+</ol>
+<h2 id="Session과-Cookie"><a href="#Session과-Cookie" class="headerlink" title="Session과 Cookie"></a>Session과 Cookie</h2><h3 id="Session과-Cookie-사용-이유"><a href="#Session과-Cookie-사용-이유" class="headerlink" title="Session과 Cookie 사용 이유"></a>Session과 Cookie 사용 이유</h3><p>HTTP 프로토콜은 연결 지향적인 성격이 아니다. 매번의 페이지 요청마다 구 요청과 신 요청 사이에 연관성이 없다. 따라서 특정 도메인에 사용자가 머무르는 동안 그 사용자의 상태를 유지하기 위해 쿠키와 세션이 필요하다.</p>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><ul>
+<li>서버와 웹 브라우저의 캐시에 저장.</li>
+<li>브라우저가 닫히거나 서버에서 삭제시 세션 종료.</li>
+<li>쿠키에 비해 보안성이 좋다.</li>
+<li>JavaScript의 <code>sessionStorage</code>로써 브라우저에 저장.</li>
+</ul>
+<h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><ul>
+<li>쿠키는 인터넷 사용자가 웹서버에 접속할 때 생성되는 아이디와 비밀번호, 토큰, 방문한 사이트의 정보 등을 클라이언트에 텍스트로 저장.</li>
+<li>다음에 해당 웹서버를 찾을 경우 웹서버에서는 그가 누구인지 어떤 정보를 주로 찾았는지 등을 파악할 때 사용된다.</li>
+<li>변조 가능, 정보 유출 가능(보안성 약함).</li>
+<li>JavaScript의 <code>localStorage</code>로써 브라우저에 저장.</li>
+</ul>
+<h2 id="Get-x2F-Post"><a href="#Get-x2F-Post" class="headerlink" title="Get &#x2F; Post"></a>Get &#x2F; Post</h2><h3 id="Get"><a href="#Get" class="headerlink" title="Get"></a>Get</h3><ul>
+<li>클라이언트에서 서버로 데이터를 전달할 때, 주소 뒤에 “이름”과 “값”이 결합된 스트링 형태로 전달(데이터가 인코딩되어 URL에 붙는다).</li>
+<li>주소창에 쿼리 스트링이 그대로 보여지기 때문에 보안성이 떨어짐.</li>
+<li>길이에 제한이 있다(255자).</li>
+<li>Post 방식보다 전송 속도가 빠르다.</li>
+<li>주로 웹 브라우저가 웹 서버에 데이터를 요청할 때 사용.</li>
+</ul>
+<h3 id="Post"><a href="#Post" class="headerlink" title="Post"></a>Post</h3><ul>
+<li>서버로 보내기 전에 인코딩하고, 전송 후 서버에서는 다시 디코딩 작업을 한다.</li>
+<li>웹 브라우저가 웹 서버에 데이터를 전달할 때 사용.</li>
+<li>스트링 뿐만 아니라, 라디오 버튼, 텍스트 박스 같은 객체(input)들의 값도 전송 가능.</li>
+</ul>
+<h2 id="MVC-패턴"><a href="#MVC-패턴" class="headerlink" title="MVC 패턴"></a>MVC 패턴</h2><ul>
+<li>Model-View-Controller의 약자로, 3가지 역할을 나누어 개발하는 방법론.</li>
+</ul>
+<ol>
+<li><strong>Model</strong> - 데이터베이스 테이블, 알고리즘 등 논리적 데이터 구조를 표현.</li>
+<li><strong>View</strong> - 사용자 인터페이스 내의 구성요소들을 표현(사용자에게 보여지는 화면).</li>
+<li><strong>Controller</strong> - Model과 View를 연결하고, 그 사이에 정보를 교환. 화면 처리 기능. 프레임워크에서 주로 라우터의 역할.</li>
+</ol>
+<h2 id="REST-Representational-State-Transfer"><a href="#REST-Representational-State-Transfer" class="headerlink" title="REST(Representational State Transfer)"></a>REST(Representational State Transfer)</h2><table>
+<thead>
+<tr>
+<th>num</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>요청 성공, Reponse Body에 내용 첨부</td>
+</tr>
+<tr>
+<td>304</td>
+<td>자원을 조회 할 시, 이전과 변동 사항 없음 (클라이언트가 캐싱을 제공하는 경우)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>잘못된 요청, Response Body에 오류 내용 첨부 가능</td>
+</tr>
+<tr>
+<td>401</td>
+<td>인증이 필요함</td>
+</tr>
+<tr>
+<td>403</td>
+<td>(인증이 되었으나) 권한 없음</td>
+</tr>
+<tr>
+<td>404</td>
+<td>자원이 존재하지 않음</td>
+</tr>
+<tr>
+<td>500</td>
+<td>서버 오류</td>
+</tr>
+</tbody></table>
+<p>REST를 지키면 RESTFUL API가 됨.</p>
+<ol>
+<li>자원 - HTTP URI</li>
+<li>명령 - HTTP Method</li>
+<li>표현 - HTTP Message Pay Load</li>
+</ol>
+<h3 id="HTTP-Method"><a href="#HTTP-Method" class="headerlink" title="HTTP Method"></a>HTTP Method</h3><ol>
+<li>GET &#x2F; 조회 &#x2F; payload 없음.</li>
+<li>POST &#x2F; 생성.</li>
+<li>PUT &#x2F; 리소스 전체 교체.</li>
+<li>PATCH &#x2F; 리소스 일부 수정.</li>
+<li>DELETE &#x2F; 삭제 &#x2F; payload 없음.</li>
+</ol>
+<h3 id="Stateless"><a href="#Stateless" class="headerlink" title="Stateless"></a>Stateless</h3><ul>
+<li>요청하는 유저의 상태(인증 등)를 서버에서 세션으로서 관리하지 않는다.</li>
+<li>서버 측에서 URL 혹은 헤더에 포함된 키로 신원을 확인해야 한다.</li>
+</ul>
+<h2 id="JWT-JSON-Web-Token"><a href="#JWT-JSON-Web-Token" class="headerlink" title="JWT (JSON Web Token)"></a>JWT (JSON Web Token)</h2><h3 id="REST-API"><a href="#REST-API" class="headerlink" title="REST API"></a>REST API</h3><p>REST API 서버는 각 요청의 헤더에 포함된 API KEY나 Token을 검증한다. 그 토큰으로 유저의 상태를 DB를 통해 열람한다면 비용과 시간이 발생한다.</p>
+<h3 id="제작-방법"><a href="#제작-방법" class="headerlink" title="제작 방법"></a>제작 방법</h3><ul>
+<li>유저의 상태(user id, 권한, 토큰 만료 시간)로 JSON을 구성.</li>
+<li>Base 64 알고리즘으로 문자열로 반환되게 인코딩.</li>
+</ul>
+<h3 id="위변조-방지"><a href="#위변조-방지" class="headerlink" title="위변조 방지"></a>위변조 방지</h3><ul>
+<li>클라이언트 측에서 보내는 토큰이기에 위변조 위험성이 있다.</li>
+<li>토큰의 뒷 부분에 토큰의 내용과 서버만 아는 secret key를 기반으로 Signature 문자열을 붙여 토큰을 생성한다.</li>
+<li>클라이언트는 받은 토큰이 만료되면 임의로 조작할 수 없고, 새로 발급받아야만 한다.</li>
+</ul>
+<h2 id="OAuth"><a href="#OAuth" class="headerlink" title="OAuth"></a>OAuth</h2><ol>
+<li>Consumer(플랫폼)는 Provider(구글)가 제공하는 User의 특정 정보에 대한 API를 이용하려고 한다.</li>
+<li>Consumer가 Provider에게 User의 위임장(Request Token)을 요청.</li>
+<li>Consumer는 받은 위임장을 User에게 확인 요청(Provider에 로그인).</li>
+<li>User가 위임장을 확인 및 수락하면, Provider는 Consumer에게 위임에 대한 확인서(Access Token)를 발급.</li>
+<li>Consumer는 확인서가 유효한 동안, Provider의 API를 호출.</li>
+</ol>
+<h2 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h2><p>자바로 서버 프로그래밍 할 때 동기(블로킹) 성격을 비동기(논블로킹) 방식으로 사용할 수 있음.</p>
+<h2 id="분산-구조"><a href="#분산-구조" class="headerlink" title="분산 구조"></a>분산 구조</h2><ol>
+<li><strong>개발 차원에서</strong>: Node.js 클러스터.</li>
+<li><strong>시스템 엔지니어링 차원에서</strong>: PM2 scale(포트 하나) 또는 PM2 포트 별로.</li>
+<li>앞 단에 Nginx 도입 - round robin, least_conn, ip_hash(소켓.io에서 필수).</li>
+</ol>
+<h2 id="마이크로소프트-아키텍처"><a href="#마이크로소프트-아키텍처" class="headerlink" title="마이크로소프트 아키텍처"></a>마이크로소프트 아키텍처</h2><ul>
+<li>서버가 여러 대 있음.</li>
+<li>API나 모듈들을 여러 서버에 분산.</li>
+<li>가능한 공유하지 않고 별도로 운영.</li>
+<li>서버 하나에 여러 컨테이너를 둘 수도 있음.</li>
+<li>API가 분산되어 있으므로 서버 다운 시 복구가 쉬움.</li>
+<li>무중단 배포(CI) 가능.</li>
+<li>애자일하며 중앙 집중적이지 않은 팀일수록 유리.</li>
+<li>깃 관리를 별도로 할 수 있음.</li>
+</ul>
+<h2 id="모놀리틱-아키텍처"><a href="#모놀리틱-아키텍처" class="headerlink" title="모놀리틱 아키텍처"></a>모놀리틱 아키텍처</h2><ul>
+<li>학부생 때 자주 하던 토이 프로젝트.</li>
+<li>서버 한 대에 DB + API를 두고 서버 한 대를 배포한다.</li>
+<li>회원 API, 게시판 API 등이 서버 한 대에 존재.</li>
+<li>서버 장애 발생 시 재부팅할 때도 있음.</li>
+<li>소규모 프로젝트, 간단한 프로젝트, 팀원 소수일 경우 좋음.</li>
+</ul>
+<h2 id="Service-Oriented-Architecture-SOA"><a href="#Service-Oriented-Architecture-SOA" class="headerlink" title="Service Oriented Architecture (SOA)"></a>Service Oriented Architecture (SOA)</h2><ul>
+<li>모듈의 의존성은 줄이되 모듈 내에서 공유할 수 있는 것은 최대한 공유.</li>
+<li>서비스의 Flow를 유지(MSA는 Flow의 구별을 요구함).</li>
+<li>SOA는 서비스들의 재사용을 중시(MSA는 서비스들의 독립을 추구).</li>
+</ul>
+<h2 id="젠킨스"><a href="#젠킨스" class="headerlink" title="젠킨스"></a>젠킨스</h2><p>깃 브랜치에 웹 훅을 걸어두어 자동 배포할 수 있게 해주는 툴.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://newtype94.github.io">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2019/09/10/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%84%9C%EB%B2%84/">https://newtype94.github.io/2019/09/10/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%84%9C%EB%B2%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%EC%84%9C%EB%B2%84/">서버</a></div><div class="post_share"><div class="social-share" data-image="/img/home.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/11/29/Database/Database_view/"><img class="prev-cover" src="/img/home.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Database - View</div></div></a></div><div class="next-post pull-right"><a href="/2019/09/02/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%EB%93%9C%EB%A6%AC%EB%A8%B8%EB%A6%AC/"><img class="next-cover" src="/img/home.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">◆협업 프로젝트◆ 드리머리</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kim YongHoon</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">25</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/newtype94"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/newtype94" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:nhkwxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Mail me, anything!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%A0%84%EC%82%B0-%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC-%EC%84%9C%EB%B2%84"><span class="toc-number">1.</span> <span class="toc-text">전산 용어 정리 - 서버</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CI-x2F-CD"><span class="toc-number">1.1.</span> <span class="toc-text">CI&#x2F;CD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%EC%99%80-Memcached"><span class="toc-number">1.2.</span> <span class="toc-text">Redis와 Memcached</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis"><span class="toc-number">1.2.1.</span> <span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Memcached"><span class="toc-number">1.2.2.</span> <span class="toc-text">Memcached</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%83%81%ED%99%A9-%EB%B3%84-%EC%82%AC%EC%9A%A9"><span class="toc-number">1.2.3.</span> <span class="toc-text">상황 별 사용</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Session%EA%B3%BC-Cookie"><span class="toc-number">1.3.</span> <span class="toc-text">Session과 Cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Session%EA%B3%BC-Cookie-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0"><span class="toc-number">1.3.1.</span> <span class="toc-text">Session과 Cookie 사용 이유</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Session"><span class="toc-number">1.3.2.</span> <span class="toc-text">Session</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cookie"><span class="toc-number">1.3.3.</span> <span class="toc-text">Cookie</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Get-x2F-Post"><span class="toc-number">1.4.</span> <span class="toc-text">Get &#x2F; Post</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get"><span class="toc-number">1.4.1.</span> <span class="toc-text">Get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Post"><span class="toc-number">1.4.2.</span> <span class="toc-text">Post</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVC-%ED%8C%A8%ED%84%B4"><span class="toc-number">1.5.</span> <span class="toc-text">MVC 패턴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#REST-Representational-State-Transfer"><span class="toc-number">1.6.</span> <span class="toc-text">REST(Representational State Transfer)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP-Method"><span class="toc-number">1.6.1.</span> <span class="toc-text">HTTP Method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stateless"><span class="toc-number">1.6.2.</span> <span class="toc-text">Stateless</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JWT-JSON-Web-Token"><span class="toc-number">1.7.</span> <span class="toc-text">JWT (JSON Web Token)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#REST-API"><span class="toc-number">1.7.1.</span> <span class="toc-text">REST API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%A0%9C%EC%9E%91-%EB%B0%A9%EB%B2%95"><span class="toc-number">1.7.2.</span> <span class="toc-text">제작 방법</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EC%9C%84%EB%B3%80%EC%A1%B0-%EB%B0%A9%EC%A7%80"><span class="toc-number">1.7.3.</span> <span class="toc-text">위변조 방지</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OAuth"><span class="toc-number">1.8.</span> <span class="toc-text">OAuth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Netty"><span class="toc-number">1.9.</span> <span class="toc-text">Netty</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%B6%84%EC%82%B0-%EA%B5%AC%EC%A1%B0"><span class="toc-number">1.10.</span> <span class="toc-text">분산 구조</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%86%8C%ED%94%84%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98"><span class="toc-number">1.11.</span> <span class="toc-text">마이크로소프트 아키텍처</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EB%86%80%EB%A6%AC%ED%8B%B1-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98"><span class="toc-number">1.12.</span> <span class="toc-text">모놀리틱 아키텍처</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-Oriented-Architecture-SOA"><span class="toc-number">1.13.</span> <span class="toc-text">Service Oriented Architecture (SOA)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%A0%A0%ED%82%A8%EC%8A%A4"><span class="toc-number">1.14.</span> <span class="toc-text">젠킨스</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/21/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_structural_design_pattern/" title="JS 디자인패턴 (2) - Structural Design Pattern"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS 디자인패턴 (2) - Structural Design Pattern"/></a><div class="content"><a class="title" href="/2022/06/21/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_structural_design_pattern/" title="JS 디자인패턴 (2) - Structural Design Pattern">JS 디자인패턴 (2) - Structural Design Pattern</a><time datetime="2022-06-21T12:29:04.000Z" title="Created 2022-06-21 21:29:04">2022-06-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/03/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_creational_design_pattern/" title="JS 디자인패턴 (1) - Creational Design Pattern"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS 디자인패턴 (1) - Creational Design Pattern"/></a><div class="content"><a class="title" href="/2022/04/03/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_creational_design_pattern/" title="JS 디자인패턴 (1) - Creational Design Pattern">JS 디자인패턴 (1) - Creational Design Pattern</a><time datetime="2022-04-03T11:13:33.000Z" title="Created 2022-04-03 20:13:33">2022-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 비밀지도"/></a><div class="content"><a class="title" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도">카카오 blind 2018 비밀지도</a><time datetime="2020-10-07T03:11:46.000Z" title="Created 2020-10-07 12:11:46">2020-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 셔틀버스"/></a><div class="content"><a class="title" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스">카카오 blind 2018 셔틀버스</a><time datetime="2020-09-11T06:18:42.000Z" title="Created 2020-09-11 15:18:42">2020-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 뉴스 클러스터링"/></a><div class="content"><a class="title" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링">카카오 blind 2018 뉴스 클러스터링</a><time datetime="2020-09-09T00:25:35.000Z" title="Created 2020-09-09 09:25:35">2020-09-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Kim YongHoon</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

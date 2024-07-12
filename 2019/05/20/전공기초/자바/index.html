@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>전공 기초 - 자바 | 코딩곳간</title><meta name="keywords" content="java"><meta name="author" content="Kim YongHoon"><meta name="copyright" content="Kim YongHoon"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="본 페이지는 면접 준비를 위해 다양한 블로그를 참고했습니다.  객체지향 프로그래밍 언어객체지향 프로그래밍이란 현실 세계의 개체 모델을 바탕으로 프로그램을 구조화하고 개발하는 기법이다. 함수와 메서드가 비슷하다. 객체 간의 메시지 교환을 이용한 모델이다. 상속, 추상화, 캡슐화 등의 특징을 활용한다. 구조적이고 재활용 가능한 모듈화로 생산성과 유지보수 효율">
+<meta property="og:type" content="article">
+<meta property="og:title" content="전공 기초 - 자바">
+<meta property="og:url" content="https://newtype94.github.io/2019/05/20/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%9E%90%EB%B0%94/index.html">
+<meta property="og:site_name" content="코딩곳간">
+<meta property="og:description" content="본 페이지는 면접 준비를 위해 다양한 블로그를 참고했습니다.  객체지향 프로그래밍 언어객체지향 프로그래밍이란 현실 세계의 개체 모델을 바탕으로 프로그램을 구조화하고 개발하는 기법이다. 함수와 메서드가 비슷하다. 객체 간의 메시지 교환을 이용한 모델이다. 상속, 추상화, 캡슐화 등의 특징을 활용한다. 구조적이고 재활용 가능한 모듈화로 생산성과 유지보수 효율">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://newtype94.github.io/img/home.jpg">
+<meta property="article:published_time" content="2019-05-20T06:15:04.000Z">
+<meta property="article:modified_time" content="2024-07-12T17:44:04.365Z">
+<meta property="article:author" content="Kim YongHoon">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://newtype94.github.io/img/home.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://newtype94.github.io/2019/05/20/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%9E%90%EB%B0%94/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '전공 기초 - 자바',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-13 02:44:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">25</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/home.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">코딩곳간</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 홈</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 전체 글</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 태그</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 카테고리</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 내 정보</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">전공 기초 - 자바</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2019-05-20T06:15:04.000Z" title="Created 2019-05-20 15:15:04">2019-05-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-07-12T17:44:04.365Z" title="Updated 2024-07-13 02:44:04">2024-07-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%EC%A0%84%EA%B3%B5-%EA%B8%B0%EC%B4%88/">전공 기초</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="전공 기초 - 자바"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>본 페이지는 면접 준비를 위해 다양한 블로그를 참고했습니다.</p>
+</blockquote>
+<h1 id="객체지향-프로그래밍-언어"><a href="#객체지향-프로그래밍-언어" class="headerlink" title="객체지향 프로그래밍 언어"></a>객체지향 프로그래밍 언어</h1><p>객체지향 프로그래밍이란 현실 세계의 개체 모델을 바탕으로 프로그램을 구조화하고 개발하는 기법이다. 함수와 메서드가 비슷하다. 객체 간의 메시지 교환을 이용한 모델이다. 상속, 추상화, 캡슐화 등의 특징을 활용한다. 구조적이고 재활용 가능한 모듈화로 생산성과 유지보수 효율성을 높인다. 대표적인 언어로는 SmallTalk, C++, C#, .NET, 자바, 파이썬 등이 있다.</p>
+<h1 id="객체와-클래스"><a href="#객체와-클래스" class="headerlink" title="객체와 클래스"></a>객체와 클래스</h1><h2 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h2><p>객체(Object)는 ‘사물’을 의미한다. 사물은 속성(Attribute)과 행위(Behavior)로 설명할 수 있다.</p>
+<h2 id="클래스와-인스턴스"><a href="#클래스와-인스턴스" class="headerlink" title="클래스와 인스턴스"></a>클래스와 인스턴스</h2><p>클래스(Class)는 속성이 같은 객체들을 대표하는 개념이다. 예를 들어, 소나무는 클래스가 된다. 각각의 소나무들은 소나무 클래스의 인스턴스(객체)이다.</p>
+<ol>
+<li>클래스는 객체를 정의하는 틀이다. 필드(속성)와 메서드(행위)로 구성된다.</li>
+<li>인스턴스는 클래스에서 생성한 객체다. 고유한 상태가 있다. 동일한 클래스에서 생성된 객체라도 필드 값과 메서드는 다를 수 있다.</li>
+</ol>
+<h1 id="상속"><a href="#상속" class="headerlink" title="상속"></a>상속</h1><p>상속은 기존 클래스를 물려받아 새로운 부분만 추가하거나 수정하는 개념이다. 상속을 이용하면 슈퍼 클래스의 구성 요소(필드, 메서드)를 물려받는다. 자신만의 필드나 메서드를 추가하여 구체화할 수 있다. 상속은 <code>extends</code> 키워드를 사용하여 정의한다.</p>
+<h1 id="객체지향-프로그래밍의-주요-특징"><a href="#객체지향-프로그래밍의-주요-특징" class="headerlink" title="객체지향 프로그래밍의 주요 특징"></a>객체지향 프로그래밍의 주요 특징</h1><h2 id="캡슐화"><a href="#캡슐화" class="headerlink" title="캡슐화"></a>캡슐화</h2><p>객체의 메서드와 필드를 외부에 숨기는 특성이다.</p>
+<h2 id="상속-1"><a href="#상속-1" class="headerlink" title="상속"></a>상속</h2><p>클래스는 추상화된 슈퍼 클래스와 구체화된 서브 클래스로 구성된다. 슈퍼 클래스와 서브 클래스의 관계를 상속이라고 한다. 자바에서는 다중 상속을 지원하지 않는다.</p>
+<h2 id="다형성"><a href="#다형성" class="headerlink" title="다형성"></a>다형성</h2><p>슈퍼 클래스가 같은 서브 클래스들이 동일한 요청을 다르게 처리하는 특성이다. 메서드 오버라이딩을 통해 구현한다.</p>
+<h1 id="자바-클래스의-기본-구조"><a href="#자바-클래스의-기본-구조" class="headerlink" title="자바 클래스의 기본 구조"></a>자바 클래스의 기본 구조</h1><ol>
+<li><strong>패키지</strong>: 자바 클래스를 묶어서 관리하는 디렉터리 개념이다. 역 도메인(Reverse Domain) 방식으로 이름을 부여한다.</li>
+<li><strong>클래스</strong>: 자바 프로그램은 클래스를 만드는 것에서 시작한다. 클래스는 자바 프로그램의 기본 단위다. 프로그램 실행을 위한 <code>main()</code> 메서드를 반드시 포함할 필요는 없다.</li>
+<li><strong>인스턴스</strong>: 클래스는 바로 사용할 수 없다. 인스턴스로 사용해야 한다. <code>main()</code> 메서드에서 클래스의 인스턴스를 만들고, 이를 이용해 메서드를 호출한다.</li>
+<li><strong>참조 변수</strong>: 자바 클래스의 인스턴스를 참조하는 변수다. 일반적인 변수와 유사하지만, 참조 변수에는 데이터가 없고 클래스 인스턴스를 가리킨다.</li>
+<li><strong>생성자</strong>: 클래스를 생성할 때 제일 먼저 실행되는 메서드다. 리턴값이 없고, 메서드 이름은 반드시 클래스 이름과 일치해야 한다. 여러 생성자를 정의할 수 있다(메서드 오버로딩). 기본 생성자는 특별한 경우가 없으면 굳이 구현할 필요가 없다. 하지만 생성자를 여러 개 정의할 때는 기본 생성자를 명시해야 한다.</li>
+</ol>
+<h1 id="접근-한정자"><a href="#접근-한정자" class="headerlink" title="접근 한정자"></a>접근 한정자</h1><table>
+<thead>
+<tr>
+<th>한정자</th>
+<th>클래스 내부</th>
+<th>동일 패키지</th>
+<th>하위 클래스</th>
+<th>그 외의 영역</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr>
+<td>default</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td>private</td>
+<td>O</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>public</strong>: 접근 제한이 없다.</li>
+<li><strong>protected</strong>: 같은 패키지 내에서 접근 가능하다. 다른 패키지에서 상속받은 자손 클래스에서도 접근 가능하다.</li>
+<li><strong>default</strong>: 같은 패키지 내에서만 접근 가능하다.</li>
+<li><strong>private</strong>: 같은 클래스 내에서만 접근 가능하다.</li>
+</ul>
+<h1 id="일반-한정자"><a href="#일반-한정자" class="headerlink" title="일반 한정자"></a>일반 한정자</h1><ol>
+<li><strong>static</strong>: 클래스 메서드와 변수를 선언할 때 사용한다. 정적 영역에 할당되는 리소스를 선언하는 데 사용된다. 동일 가상머신에서 실행 중인 모든 클래스에서 공유한다. 인스턴스를 생성하지 않고도 클래스의 메서드나 멤버에 접근할 수 있다.</li>
+<li><strong>final</strong>: 더 이상 변경할 수 없도록 선언하는 한정자다. 클래스에 사용할 때는 서브 클래스를 만들 수 없다. 메서드에 사용할 때는 오버라이딩할 수 없다. 변수에 사용하면 상수의 역할을 한다.</li>
+<li><strong>abstract</strong>: 추상 클래스를 선언하는 한정자다.</li>
+<li><strong>synchronized&#x2F;volatile</strong>: 스레드 프로그래밍에서 데이터 동기화를 처리하는 한정자다.</li>
+</ol>
+<h1 id="인스턴스-변수와-클래스-변수"><a href="#인스턴스-변수와-클래스-변수" class="headerlink" title="인스턴스 변수와 클래스 변수"></a>인스턴스 변수와 클래스 변수</h1><ol>
+<li><strong>인스턴스 변수</strong>: 클래스의 인스턴스로만 접근 가능한 변수다. 일반적인 멤버 변수가 이에 속한다. 클래스 외부에서 접근을 차단하려고 <code>private</code> 키워드를 사용한다.</li>
+<li>동일 클래스의 인스턴스라도 각 인스턴스 변수의 값은 다르고 서로에 영향을 주지 않는다.</li>
+<li><strong>클래스 변수</strong>: 모든 클래스의 인스턴스로 공유되는 변수다. <code>static</code> 키워드를 사용하여 선언한다. 클래스가 인스턴스화되기 전에 접근할 수 없다.</li>
+</ol>
+<p>자바 가상머신의 메모리 구조:</p>
+<ul>
+<li><strong>Method 영역</strong>: 클래스(static) 변수, 메서드 바이트코드.</li>
+<li><strong>Heap 영역</strong>: 자바 객체, 인스턴스 변수.</li>
+<li><strong>Stack 영역</strong>: 메서드 파라미터, 지역 변수.</li>
+</ul>
+<h1 id="추상-클래스와-인터페이스"><a href="#추상-클래스와-인터페이스" class="headerlink" title="추상 클래스와 인터페이스"></a>추상 클래스와 인터페이스</h1><p>추상 클래스와 인터페이스는 객체지향 개념을 쉽게 적용하고 유연한 설계를 지원한다. 일반 클래스보다 추상적인 관점에서 접근한다. 기본적인 속성과 필요한 메서드의 형태만 기술하고, 세부적인 구현은 구현하는 클래스에서 담당한다.</p>
+<h2 id="추상-클래스"><a href="#추상-클래스" class="headerlink" title="추상 클래스"></a>추상 클래스</h2><p>추상 메서드(구현되지 않고 정의만 한 메서드)를 하나 이상 포함한다. 추상 메서드가 포함된 클래스는 추상 클래스로 정의해야 한다. 추상 클래스는 일반 클래스와 같이 멤버 변수 및 메서드를 포함할 수 있다. 추상 클래스는 인스턴스화할 수 없다. 추상 클래스를 상속받는 클래스를 만들어 모든 추상 메서드를 오버라이딩해야 한다.</p>
+<h2 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h2><p>인터페이스는 일반 메서드를 포함할 수 없다. 모든 메서드는 추상 메서드(public abstract)로만 구성한다. 일반 멤버 필드는 없고, public, static, final로 선언한 상수만 있다. 인터페이스는 직접 객체를 생성할 수 없다. 다른 클래스로 구현할 때는 <code>implements</code> 키워드를 사용한다. 자바에서 다중 상속의 개념을 지원하는 형태로 사용할 수 있다.</p>
+<h1 id="메서드-오버로딩과-메서드-오버라이딩"><a href="#메서드-오버로딩과-메서드-오버라이딩" class="headerlink" title="메서드 오버로딩과 메서드 오버라이딩"></a>메서드 오버로딩과 메서드 오버라이딩</h1><ol>
+<li><strong>메서드 오버로딩</strong>: 메서드 이름은 같지만 파라미터가 다른 여러 메서드를 만드는 것을 말한다.<ul>
+<li>메서드 이름이 같아야 한다.</li>
+<li>파라미터의 개수 또는 타입이 달라야 한다.</li>
+<li>파라미터가 같고 리턴 타입이 다르면 오버로딩이 성립되지 않는다.</li>
+</ul>
+</li>
+<li><strong>메서드 오버라이딩</strong>: 슈퍼 클래스에서 정의한 메서드를 서브 클래스에서 재정의하는 것을 말한다.<ul>
+<li>오버라이딩하는 메서드는 슈퍼 클래스의 메서드와 메서드 구성 요소 모두가 동일해야 한다.</li>
+<li>이름, 파라미터, 리턴 타입이 모두 같아야 한다.</li>
+</ul>
+</li>
+</ol>
+<h1 id="JAVA의-특징"><a href="#JAVA의-특징" class="headerlink" title="JAVA의 특징"></a>JAVA의 특징</h1><ol>
+<li>자바가상머신(JVM)만 설치하면 운영체제에 상관없이 작동한다.</li>
+<li>기본 자료형을 제외한 모든 요소들이 객체로 표현된다.</li>
+<li>객체지향 개념의 특징인 캡슐화, 상속, 다형성이 잘 적용된 언어다.</li>
+<li>Garbage Collector를 통한 자동적인 메모리 관리.</li>
+<li>멀티쓰레드(Multi-thread)를 지원한다.</li>
+</ol>
+<h1 id="OOP-객체지향-프로그래밍"><a href="#OOP-객체지향-프로그래밍" class="headerlink" title="OOP(객체지향 프로그래밍)"></a>OOP(객체지향 프로그래밍)</h1><p>OOP(Object-Oriented Programming)는 객체지향 프로그래밍을 의미한다. 데이터를 객체로 취급하여 프로그램에 반영한다. 객체와 객체의 상호작용을 통해 프로그램이 동작한다.</p>
+<p>OOP 특징:</p>
+<ol>
+<li>코드의 재사용성이 높다.</li>
+<li>코드의 변경이 용이하다.</li>
+<li>직관적인 코드 분석이 가능하다.</li>
+<li>개발 속도가 향상된다.</li>
+<li>상속을 통해 장점을 극대화할 수 있다.</li>
+</ol>
+<h1 id="Servlet과-JSP"><a href="#Servlet과-JSP" class="headerlink" title="Servlet과 JSP"></a>Servlet과 JSP</h1><ol>
+<li><strong>Servlet</strong>: Container가 이해할 수 있게 구성된 순수 자바 코드로 이루어진다 (Html in JAVA).</li>
+<li><strong>JSP(Java Server Page)</strong>: HTML 기반에 자바 코드를 블록화하여 삽입한다 (Java in HTML).</li>
+</ol>
+<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><p>JDBC(Java Data Base Connection)는 자바 언어를 통해 데이터베이스에 접근할 수 있는 프로그래밍을 의미한다.</p>
+<h1 id="인터페이스와-추상-클래스의-비교"><a href="#인터페이스와-추상-클래스의-비교" class="headerlink" title="인터페이스와 추상 클래스의 비교"></a>인터페이스와 추상 클래스의 비교</h1><h2 id="공통점"><a href="#공통점" class="headerlink" title="공통점"></a>공통점</h2><ul>
+<li><code>new</code> 연산자로 인스턴스 생성이 불가능하다.</li>
+<li>프로토타입만 있는 메서드를 갖는다.</li>
+<li>하위 클래스에서 확장&#x2F;구현해야 사용 가능하다.</li>
+</ul>
+<h2 id="차이점"><a href="#차이점" class="headerlink" title="차이점"></a>차이점</h2><ul>
+<li>사용하는 키워드가 다르다.</li>
+<li>추상 클래스는 일반 메서드를 가질 수 있다. 인터페이스는 메서드 선언만 가능하다.</li>
+</ul>
+<h1 id="Call-by-Reference와-Call-by-Value"><a href="#Call-by-Reference와-Call-by-Value" class="headerlink" title="Call by Reference와 Call by Value"></a>Call by Reference와 Call by Value</h1><ol>
+<li><strong>Call by Reference</strong>: 매개 변수의 원래 주소에 값을 저장하는 방식. 클래스 객체를 인수로 전달할 경우.</li>
+<li><strong>Call by Value</strong>: 인수로 기본 데이터형을 사용. 주어진 값을 복사하여 처리하는 방식. 메서드 내의 처리 결과는 메서드 밖의 변수에 영향을 미치지 않는다.</li>
+</ol>
+<h1 id="static의-의미"><a href="#static의-의미" class="headerlink" title="static의 의미"></a>static의 의미</h1><ul>
+<li>클래스가 로딩될 때 메모리 공간을 할당한다. 처음 설정된 메모리 공간이 변하지 않음을 의미한다.</li>
+<li>객체를 많이 만들어도 해당 변수는 하나만 존재한다. 객체와 무관한 키워드다.</li>
+</ul>
+<h1 id="Primitive-type과-Reference-type"><a href="#Primitive-type과-Reference-type" class="headerlink" title="Primitive type과 Reference type"></a>Primitive type과 Reference type</h1><p><strong>Primitive type</strong>: 변수에 값 자체를 저장한다.</p>
+<ul>
+<li>정수형: byte, short, int, long.</li>
+<li>실수형: float, double.</li>
+<li>문자형: char.</li>
+<li>논리형: boolean.</li>
+</ul>
+<p>Primitive type은 Wrapper Class를 통해 객체로 변형할 수 있다.</p>
+<ul>
+<li>예: int → Integer, char → Character (int와 char를 제외한 Primitive type의 다른 자료형들은 맨 앞 알파벳을 대문자로 바꾼다. float → Float).</li>
+</ul>
+<p><strong>Reference type</strong>: 메모리상에 객체가 있는 위치를 저장한다.</p>
+<ul>
+<li>종류: Class, Interface, Array 등.</li>
+</ul>
+<h2 id="Wrapper-Class"><a href="#Wrapper-Class" class="headerlink" title="Wrapper Class"></a>Wrapper Class</h2><p>Primitive type으로 표현할 수 있는 간단한 데이터를 객체로 만들어야 할 경우, 이를 지원하는 클래스다.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://newtype94.github.io">Kim YongHoon</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://newtype94.github.io/2019/05/20/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%9E%90%EB%B0%94/">https://newtype94.github.io/2019/05/20/%EC%A0%84%EA%B3%B5%EA%B8%B0%EC%B4%88/%EC%9E%90%EB%B0%94/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a></div><div class="post_share"><div class="social-share" data-image="/img/home.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/06/18/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/%ED%86%A0%EB%A1%A0%ED%8C%90/"><img class="prev-cover" src="/img/home.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">◆개인 프로젝트◆ 토론판</div></div></a></div><div class="next-post pull-right"><a href="/2019/04/12/%EC%84%9C%EB%B2%84%EA%B4%80%EB%A6%AC/ubuntu/"><img class="next-cover" src="/img/home.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">ubuntu</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kim YongHoon</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">85</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">25</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/newtype94"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/newtype94" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:nhkwxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Mail me, anything!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%96%B8%EC%96%B4"><span class="toc-number">1.</span> <span class="toc-text">객체지향 프로그래밍 언어</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%9D%EC%B2%B4%EC%99%80-%ED%81%B4%EB%9E%98%EC%8A%A4"><span class="toc-number">2.</span> <span class="toc-text">객체와 클래스</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B0%9D%EC%B2%B4"><span class="toc-number">2.1.</span> <span class="toc-text">객체</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4"><span class="toc-number">2.2.</span> <span class="toc-text">클래스와 인스턴스</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%83%81%EC%86%8D"><span class="toc-number">3.</span> <span class="toc-text">상속</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EC%A3%BC%EC%9A%94-%ED%8A%B9%EC%A7%95"><span class="toc-number">4.</span> <span class="toc-text">객체지향 프로그래밍의 주요 특징</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%BA%A1%EC%8A%90%ED%99%94"><span class="toc-number">4.1.</span> <span class="toc-text">캡슐화</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%83%81%EC%86%8D-1"><span class="toc-number">4.2.</span> <span class="toc-text">상속</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%8B%A4%ED%98%95%EC%84%B1"><span class="toc-number">4.3.</span> <span class="toc-text">다형성</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9E%90%EB%B0%94-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0"><span class="toc-number">5.</span> <span class="toc-text">자바 클래스의 기본 구조</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%A0%91%EA%B7%BC-%ED%95%9C%EC%A0%95%EC%9E%90"><span class="toc-number">6.</span> <span class="toc-text">접근 한정자</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9D%BC%EB%B0%98-%ED%95%9C%EC%A0%95%EC%9E%90"><span class="toc-number">7.</span> <span class="toc-text">일반 한정자</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%B3%80%EC%88%98%EC%99%80-%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%B3%80%EC%88%98"><span class="toc-number">8.</span> <span class="toc-text">인스턴스 변수와 클래스 변수</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4"><span class="toc-number">9.</span> <span class="toc-text">추상 클래스와 인터페이스</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4"><span class="toc-number">9.1.</span> <span class="toc-text">추상 클래스</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4"><span class="toc-number">9.2.</span> <span class="toc-text">인터페이스</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EB%A9%94%EC%84%9C%EB%93%9C-%EC%98%A4%EB%B2%84%EB%A1%9C%EB%94%A9%EA%B3%BC-%EB%A9%94%EC%84%9C%EB%93%9C-%EC%98%A4%EB%B2%84%EB%9D%BC%EC%9D%B4%EB%94%A9"><span class="toc-number">10.</span> <span class="toc-text">메서드 오버로딩과 메서드 오버라이딩</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%EC%9D%98-%ED%8A%B9%EC%A7%95"><span class="toc-number">11.</span> <span class="toc-text">JAVA의 특징</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OOP-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D"><span class="toc-number">12.</span> <span class="toc-text">OOP(객체지향 프로그래밍)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet%EA%B3%BC-JSP"><span class="toc-number">13.</span> <span class="toc-text">Servlet과 JSP</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JDBC"><span class="toc-number">14.</span> <span class="toc-text">JDBC</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%99%80-%EC%B6%94%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EB%B9%84%EA%B5%90"><span class="toc-number">15.</span> <span class="toc-text">인터페이스와 추상 클래스의 비교</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B3%B5%ED%86%B5%EC%A0%90"><span class="toc-number">15.1.</span> <span class="toc-text">공통점</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EC%B0%A8%EC%9D%B4%EC%A0%90"><span class="toc-number">15.2.</span> <span class="toc-text">차이점</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Call-by-Reference%EC%99%80-Call-by-Value"><span class="toc-number">16.</span> <span class="toc-text">Call by Reference와 Call by Value</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#static%EC%9D%98-%EC%9D%98%EB%AF%B8"><span class="toc-number">17.</span> <span class="toc-text">static의 의미</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Primitive-type%EA%B3%BC-Reference-type"><span class="toc-number">18.</span> <span class="toc-text">Primitive type과 Reference type</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Wrapper-Class"><span class="toc-number">18.1.</span> <span class="toc-text">Wrapper Class</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/21/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_structural_design_pattern/" title="JS 디자인패턴 (2) - Structural Design Pattern"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS 디자인패턴 (2) - Structural Design Pattern"/></a><div class="content"><a class="title" href="/2022/06/21/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_structural_design_pattern/" title="JS 디자인패턴 (2) - Structural Design Pattern">JS 디자인패턴 (2) - Structural Design Pattern</a><time datetime="2022-06-21T12:29:04.000Z" title="Created 2022-06-21 21:29:04">2022-06-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/03/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_creational_design_pattern/" title="JS 디자인패턴 (1) - Creational Design Pattern"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JS 디자인패턴 (1) - Creational Design Pattern"/></a><div class="content"><a class="title" href="/2022/04/03/JS%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4/JS_creational_design_pattern/" title="JS 디자인패턴 (1) - Creational Design Pattern">JS 디자인패턴 (1) - Creational Design Pattern</a><time datetime="2022-04-03T11:13:33.000Z" title="Created 2022-04-03 20:13:33">2022-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 비밀지도"/></a><div class="content"><a class="title" href="/2020/10/07/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84/" title="카카오 blind 2018 비밀지도">카카오 blind 2018 비밀지도</a><time datetime="2020-10-07T03:11:46.000Z" title="Created 2020-10-07 12:11:46">2020-10-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 셔틀버스"/></a><div class="content"><a class="title" href="/2020/09/11/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EC%85%94%ED%8B%80%EB%B2%84%EC%8A%A4/" title="카카오 blind 2018 셔틀버스">카카오 blind 2018 셔틀버스</a><time datetime="2020-09-11T06:18:42.000Z" title="Created 2020-09-11 15:18:42">2020-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링"><img src="/img/home.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="카카오 blind 2018 뉴스 클러스터링"/></a><div class="content"><a class="title" href="/2020/09/09/%EC%B9%B4%EC%B9%B4%EC%98%A4blind/2018/2018_kakao_%EB%89%B4%EC%8A%A4%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81/" title="카카오 blind 2018 뉴스 클러스터링">카카오 blind 2018 뉴스 클러스터링</a><time datetime="2020-09-09T00:25:35.000Z" title="Created 2020-09-09 09:25:35">2020-09-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Kim YongHoon</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
